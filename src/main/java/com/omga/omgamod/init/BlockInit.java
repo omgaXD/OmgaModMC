@@ -7,8 +7,10 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.ParticleUtils;
 import net.minecraft.util.Tuple;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -21,6 +23,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.RegistryObject;
+import slimeknights.tconstruct.common.TinkerTags;
+import slimeknights.tconstruct.fluids.TinkerFluids;
 
 import java.util.*;
 import java.util.function.ToIntFunction;
@@ -55,12 +59,27 @@ public class BlockInit {
         BLOCKS.getEntries().stream().map(RegistryObject::get).forEach( (block) -> {
             final Item.Properties properties = new Item.Properties().tab(ItemInit.OmgaModCreativeTab.instance);
             final BlockItem blockItem = new BlockItem(block, properties);
+            hardcode(blockItem, properties);
             blockItem.setRegistryName(Objects.requireNonNull(block.getRegistryName()));
             registry.register(blockItem);
         });
         //Blocks.OBSIDIAN
     }
-
+    private static void hardcode(BlockItem blockItem, Item.Properties p) {
+        if (blockItem.getBlock() instanceof GoldsteelBlock) {
+            blockItem = new BlockItem(blockItem.getBlock(), p) {
+                @Override
+                public boolean onEntityItemUpdate(ItemStack stack, ItemEntity entity) {
+                    var f = entity.level.getBlockState(entity.blockPosition()).getFluidState();
+                    if (f.isSource() && !f.is(TinkerFluids.moltenGold.get()) && f.is(TinkerTags.Fluids.METAL_TOOLTIPS)) {
+                        entity.level.setBlock(entity.blockPosition(), TinkerFluids.moltenGold.getBlock().defaultBlockState(), 3);
+                        //stack.shrink(1);
+                    }
+                    return super.onEntityItemUpdate(stack, entity);
+                }
+            };
+        }
+    }
 
     private static ToIntFunction<BlockState> litBlockEmission(int p_50760_) {
         return (p_50763_) -> {

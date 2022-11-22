@@ -1,5 +1,6 @@
 package com.omga.omgamod.items;
 
+import com.mojang.logging.LogUtils;
 import com.omga.omgamod.init.ItemInit;
 import com.simibubi.create.content.curiosities.armor.BackTankUtil;
 import com.simibubi.create.content.curiosities.weapons.PotatoCannonItem;
@@ -17,6 +18,7 @@ import net.minecraft.world.entity.vehicle.MinecartTNT;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
+import org.apache.logging.log4j.Logger;
 
 import java.util.Optional;
 import java.util.function.Predicate;
@@ -50,7 +52,8 @@ public class TntCannon extends ProjectileWeaponItem {
         boolean cr = (player.getAbilities().instabuild);
 
         if (!proj.isEmpty() || cr) {
-            if (proj.isEmpty()) {
+            if (cr) {
+                LogUtils.getLogger().debug("hes creativ");
                 proj = new ItemStack(Items.TNT);
             }
             if (!world.isClientSide) {
@@ -66,7 +69,7 @@ public class TntCannon extends ProjectileWeaponItem {
                 } else if (proj.is(Items.TNT_MINECART)) {
                     MinecartTNT tnt = new MinecartTNT(EntityType.TNT_MINECART, world);
                     tnt.setDeltaMovement(abstractarrow.getDeltaMovement());
-                    tnt.setPos(abstractarrow.position().add(tnt.getDeltaMovement().scale(3f)));
+                    tnt.setPos(abstractarrow.position().add(tnt.getDeltaMovement()));
                     world.addFreshEntity(tnt);
                 }
                 proj.shrink(1);
@@ -83,12 +86,6 @@ public class TntCannon extends ProjectileWeaponItem {
         //BowItem
 
 
-    }
-    private Optional<ItemStack> findAmmoInInventory(Level world, Player player, ItemStack held) {
-        ItemStack findAmmo = player.getProjectile(held);
-        return PotatoProjectileTypeManager.getTypeForStack(findAmmo).map(($) -> {
-            return findAmmo;
-        });
     }
 
 }
