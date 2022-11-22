@@ -1,0 +1,21 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:wires/redsteel",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:wires/redsteel"
+  },
+  "result": {
+    "fluid": "omgamod:molten_redsteel",
+    "amount": 45
+  },
+  "temperature": 650,
+  "time": 11
+}

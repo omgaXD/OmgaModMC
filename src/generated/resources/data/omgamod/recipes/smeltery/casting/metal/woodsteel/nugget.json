@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "forge:nuggets/woodsteel"
+  },
+  "result": {
+    "fluid": "omgamod:molten_woodsteel",
+    "amount": 10
+  },
+  "temperature": 750,
+  "time": 20
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "omgamod:blocks/woodsteel_block",
+    "up": "omgamod:blocks/woodsteel_block",
+    "down": "omgamod:blocks/woodsteel_block_mirror",
+    "north": "omgamod:blocks/woodsteel_block_side_mirror",
+    "west": "omgamod:blocks/woodsteel_block_side",
+    "south": "omgamod:blocks/woodsteel_block_side",
+    "east": "omgamod:blocks/woodsteel_block_side_mirror"
+  }
+}

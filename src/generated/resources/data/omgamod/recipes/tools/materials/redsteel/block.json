@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "forge:storage_blocks/redsteel"
+  },
+  "value": 9,
+  "needed": 1,
+  "material": "omgamod:redsteel",
+  "leftover": {
+    "tag": "forge:ingots/redsteel"
+  }
+}

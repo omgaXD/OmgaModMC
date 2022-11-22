@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "forge:storage_blocks/goldsteel"
+  },
+  "value": 9,
+  "needed": 1,
+  "material": "omgamod:goldsteel",
+  "leftover": {
+    "tag": "forge:ingots/goldsteel"
+  }
+}

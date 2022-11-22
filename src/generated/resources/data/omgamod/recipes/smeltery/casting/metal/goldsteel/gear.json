@@ -1,0 +1,21 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:gears/goldsteel",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:gears/goldsteel"
+  },
+  "result": {
+    "fluid": "omgamod:molten_goldsteel",
+    "amount": 360
+  },
+  "temperature": 850,
+  "time": 123
+}

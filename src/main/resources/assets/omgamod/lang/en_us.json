@@ -1,0 +1,54 @@
+{
+  "itemGroup.omgamodtab": "Omgamod",
+
+
+  "item.omgamod.steel_ingot": "Steel ingot",
+  "item.omgamod.steel_plate": "Steel plate",
+  "item.omgamod.steel_nugget": "Steel nugget",
+  "item.omgamod.steel_block": "Steel block",
+  "block.omgamod.steel_block": "Steel block",
+
+  "item.omgamod.redsteel_ingot": "Redsteel ingot",
+  "item.omgamod.redsteel_plate": "Redsteel plate",
+  "item.omgamod.redsteel_nugget": "Redsteel nugget",
+  "item.omgamod.redsteel_block": "Redsteel block",
+  "block.omgamod.redsteel_block": "Redsteel block",
+  "fluid.omgamod.molten_redsteel": "Molten redsteel",
+
+  "item.omgamod.woodsteel_ingot": "Woodsteel ingot",
+  "item.omgamod.woodsteel_plate": "Woodsteel plate",
+  "item.omgamod.woodsteel_nugget": "Woodsteel nugget",
+  "item.omgamod.woodsteel_block": "Woodsteel block",
+  "block.omgamod.woodsteel_block": "Woodsteel block",
+  "fluid.omgamod.molten_woodsteel": "Molten woodsteel",
+
+  "item.omgamod.goldsteel_ingot": "Goldsteel ingot",
+  "item.omgamod.goldsteel_plate": "Goldsteel plate",
+  "item.omgamod.goldsteel_nugget": "Goldsteel nugget",
+  "item.omgamod.goldsteel_block": "Goldsteel block",
+  "block.omgamod.goldsteel_block": "Goldsteel block",
+  "fluid.omgamod.molten_goldsteel": "Molten goldsteel",
+
+
+  "modifier.omgamod.haste": "Haste",
+  "modifier.omgamod.woodmaster": "Woodmaster",
+  "modifier.omgamod.midas": "Midas",
+  "material.omgamod.redsteel": "Redsteel",
+  "material.omgamod.woodsteel": "Woodsteel",
+  "material.omgamod.goldsteel": "Goldsteel",
+
+  "item.omgamod.goldsteel_blend": "Goldsteel blend",
+
+  "item.omgamod.night_vision_helm": "Night vision helm",
+  "item.omgamod.fertilizer_spray": "Fertilizer spray",
+  "item.omgamod.fertilizer_spray_empty": "Empty woodsteel spray",
+
+
+  "item.omgamod.spectral_catalyst": "Spectral catalyst",
+  "item.omgamod.freed_soul": "Freed soul",
+
+  "item.omgamod.gshroom": "Gshroom",
+  "item.omgamod.saturation_fruit": "Saturation fruit",
+
+  "item.omgamod.netherite_plate": "Netherite plate"
+}

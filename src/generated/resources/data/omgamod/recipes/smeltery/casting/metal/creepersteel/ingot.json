@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "forge:ingots/creepersteel"
+  },
+  "result": {
+    "fluid": "omgamod:molten_creepersteel",
+    "amount": 90
+  },
+  "temperature": 950,
+  "time": 65
+}

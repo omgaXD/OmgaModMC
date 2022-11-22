@@ -1,0 +1,21 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:coins/creepersteel",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:coins/creepersteel"
+  },
+  "result": {
+    "fluid": "omgamod:molten_creepersteel",
+    "amount": 30
+  },
+  "temperature": 950,
+  "time": 43
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "omgamod:blocks/creepersteel_block",
+    "up": "omgamod:blocks/creepersteel_block",
+    "down": "omgamod:blocks/creepersteel_block",
+    "north": "omgamod:blocks/creepersteel_block_side",
+    "west": "omgamod:blocks/creepersteel_block_side",
+    "south": "omgamod:blocks/creepersteel_block_side",
+    "east": "omgamod:blocks/creepersteel_block_side"
+  }
+}

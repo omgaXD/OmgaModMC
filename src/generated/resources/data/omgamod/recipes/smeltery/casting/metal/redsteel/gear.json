@@ -1,0 +1,21 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:gears/redsteel",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:gears/redsteel"
+  },
+  "result": {
+    "fluid": "omgamod:molten_redsteel",
+    "amount": 360
+  },
+  "temperature": 650,
+  "time": 110
+}

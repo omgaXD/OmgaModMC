@@ -1,0 +1,15 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/single_use/nugget"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "tag": "forge:molten_goldsteel",
+    "amount": 10
+  },
+  "result": {
+    "tag": "forge:nuggets/goldsteel"
+  },
+  "cooling_time": 21
+}

@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "forge:ingots/redsteel"
+  },
+  "result": {
+    "fluid": "omgamod:molten_redsteel",
+    "amount": 90
+  },
+  "temperature": 650,
+  "time": 55
+}

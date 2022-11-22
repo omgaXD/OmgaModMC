@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "omgamod:goldsteel",
+  "temperature": 850,
+  "result": {
+    "fluid": "omgamod:molten_goldsteel",
+    "amount": 90
+  }
+}

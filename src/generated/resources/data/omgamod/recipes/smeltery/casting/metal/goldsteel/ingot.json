@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "forge:ingots/goldsteel"
+  },
+  "result": {
+    "fluid": "omgamod:molten_goldsteel",
+    "amount": 90
+  },
+  "temperature": 850,
+  "time": 62
+}

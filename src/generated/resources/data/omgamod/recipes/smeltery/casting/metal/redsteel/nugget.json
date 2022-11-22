@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "forge:nuggets/redsteel"
+  },
+  "result": {
+    "fluid": "omgamod:molten_redsteel",
+    "amount": 10
+  },
+  "temperature": 650,
+  "time": 18
+}

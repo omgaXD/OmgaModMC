@@ -1,0 +1,21 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:plates/woodsteel",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:plates/woodsteel"
+  },
+  "result": {
+    "fluid": "omgamod:molten_woodsteel",
+    "amount": 90
+  },
+  "temperature": 750,
+  "time": 59
+}

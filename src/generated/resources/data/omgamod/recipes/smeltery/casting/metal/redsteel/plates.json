@@ -1,0 +1,21 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:plates/redsteel",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:plates/redsteel"
+  },
+  "result": {
+    "fluid": "omgamod:molten_redsteel",
+    "amount": 90
+  },
+  "temperature": 650,
+  "time": 55
+}

@@ -1,0 +1,14 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/ingot"
+  },
+  "fluid": {
+    "tag": "forge:molten_creepersteel",
+    "amount": 90
+  },
+  "result": {
+    "tag": "forge:ingots/creepersteel"
+  },
+  "cooling_time": 65
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "omgamod:block/redsteel_block"
+    },
+    "lit=true": {
+      "model": "omgamod:block/redsteel_block_activated"
+    }
+  }
+}

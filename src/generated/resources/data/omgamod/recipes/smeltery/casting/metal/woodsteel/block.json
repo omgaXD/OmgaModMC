@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "forge:storage_blocks/woodsteel"
+  },
+  "result": {
+    "fluid": "omgamod:molten_woodsteel",
+    "amount": 810
+  },
+  "temperature": 750,
+  "time": 176
+}
