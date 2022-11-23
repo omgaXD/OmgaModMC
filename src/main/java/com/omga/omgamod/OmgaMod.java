@@ -13,6 +13,7 @@ import net.minecraft.network.chat.TextComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.FluidTags;
+import net.minecraft.world.entity.EntityEvent;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
@@ -63,10 +64,9 @@ public class OmgaMod
         //modEventBus.addListener(this::setup);
         //modEventBus.addListener(this::enqueueIMC);
         //modEventBus.addListener(this::processIMC);
+        BlockInit.BLOCKS.register(modEventBus);
 
         ItemInit.ITEMS.register(modEventBus);
-
-        BlockInit.BLOCKS.register(modEventBus);
 
         FluidInit.FLUIDS.register(modEventBus);
 
@@ -166,5 +166,6 @@ public class OmgaMod
         event.getWorld().setBlock(expPos, BlockInit.CREEPERSTEEL_BLOCK.get().defaultBlockState(), 3);
         //Creeper
     }
+
 
 }

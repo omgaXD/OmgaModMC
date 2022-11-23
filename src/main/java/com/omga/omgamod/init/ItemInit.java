@@ -5,12 +5,15 @@ import com.omga.omgamod.items.*;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
+import slimeknights.tconstruct.common.TinkerTags;
+import slimeknights.tconstruct.fluids.TinkerFluids;
 
 public class ItemInit {
     public static final DeferredRegister<Item> ITEMS =
@@ -56,6 +59,20 @@ public class ItemInit {
     public static final RegistryObject<Item> GOLDSTEEL_DRILL = ITEMS.register("goldsteel_drill", () -> new GoldsteelDrill(1, 0f, OMTab()));
     public static final RegistryObject<Item> TNT_CANNON = ITEMS.register("tnt_cannon", () -> new TntCannon(OMTab()));
     public static final RegistryObject<Item> FERTILIZER_SPRAY_EMPTY = ITEMS.register("fertilizer_spray_empty", () -> new FertilizerSpray.FertilizerSprayEmpty(OMTab()));
+    //*
+    public static final RegistryObject<Item> GOLDSTEEL_BLOCK_ITEM = ITEMS.register(BlockInit.GOLDSTEEL_BLOCK.getId().getPath(), () -> new BlockItem(BlockInit.GOLDSTEEL_BLOCK.get(), OMTab()){
+
+        @Override
+        public boolean onEntityItemUpdate(ItemStack stack, ItemEntity entity) {
+            var f = entity.level.getBlockState(entity.blockPosition()).getFluidState();
+            if (f.isSource() && !f.is(TinkerFluids.moltenGold.get()) && f.is(TinkerTags.Fluids.METAL_TOOLTIPS)) {
+                entity.level.setBlock(entity.blockPosition(), TinkerFluids.moltenGold.getBlock().defaultBlockState(), 3);
+                //stack.shrink(1);
+
+            }
+            return super.onEntityItemUpdate(stack, entity);
+        }
+    });//*/
     public static class OmgaModCreativeTab extends CreativeModeTab {
         public static final OmgaModCreativeTab instance = new OmgaModCreativeTab(CreativeModeTab.TABS.length, "omgamodtab");
         private OmgaModCreativeTab(int index, String label) {

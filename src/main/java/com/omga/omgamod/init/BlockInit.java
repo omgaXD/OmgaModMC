@@ -5,12 +5,8 @@ import com.omga.omgamod.blocks.GoldsteelBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.util.ParticleUtils;
-import net.minecraft.util.Tuple;
-import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -23,8 +19,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.RegistryObject;
-import slimeknights.tconstruct.common.TinkerTags;
-import slimeknights.tconstruct.fluids.TinkerFluids;
 
 import java.util.*;
 import java.util.function.ToIntFunction;
@@ -36,7 +30,7 @@ public class BlockInit {
             DeferredRegister.create(ForgeRegistries.BLOCKS, OmgaMod.MODID);
 
     public static final RegistryObject<Block> STEEL_BLOCK = BLOCKS.register("steel_block", () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(6f, 6f).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> REDSTEEL_BLOCK = BLOCKS.register("redsteel_block", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).lightLevel(litBlockEmission(6)).strength(6f, 6f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> REDSTEEL_BLOCK = BLOCKS.register("redsteel_block", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).lightLevel(litBlockEmission(15)).strength(6f, 6f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> WOODSTEEL_BLOCK = BLOCKS.register("woodsteel_block", () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(6f, 6f).requiresCorrectToolForDrops().randomTicks()){
         @Override
         public void randomTick(BlockState blockState, ServerLevel level, BlockPos blockPos, Random rand) {
@@ -57,29 +51,28 @@ public class BlockInit {
         final IForgeRegistry<Item> registry = event.getRegistry();
 
         BLOCKS.getEntries().stream().map(RegistryObject::get).forEach( (block) -> {
+            boolean flag = shouldSkip(block);
+            if (flag) {
+                return;
+            }
             final Item.Properties properties = new Item.Properties().tab(ItemInit.OmgaModCreativeTab.instance);
-            final BlockItem blockItem = new BlockItem(block, properties);
-            hardcode(blockItem, properties);
+            BlockItem blockItem = new BlockItem(block, properties);
+            //TODO
+
             blockItem.setRegistryName(Objects.requireNonNull(block.getRegistryName()));
             registry.register(blockItem);
         });
         //Blocks.OBSIDIAN
     }
-    private static void hardcode(BlockItem blockItem, Item.Properties p) {
-        if (blockItem.getBlock() instanceof GoldsteelBlock) {
-            blockItem = new BlockItem(blockItem.getBlock(), p) {
-                @Override
-                public boolean onEntityItemUpdate(ItemStack stack, ItemEntity entity) {
-                    var f = entity.level.getBlockState(entity.blockPosition()).getFluidState();
-                    if (f.isSource() && !f.is(TinkerFluids.moltenGold.get()) && f.is(TinkerTags.Fluids.METAL_TOOLTIPS)) {
-                        entity.level.setBlock(entity.blockPosition(), TinkerFluids.moltenGold.getBlock().defaultBlockState(), 3);
-                        //stack.shrink(1);
-                    }
-                    return super.onEntityItemUpdate(stack, entity);
-                }
-            };
+    //*
+    private static boolean shouldSkip(Block block) {
+        // HERE IS THE ISSUE
+
+        if (block instanceof GoldsteelBlock) {
+            return true;
         }
-    }
+        return false;
+    }//*/
 
     private static ToIntFunction<BlockState> litBlockEmission(int p_50760_) {
         return (p_50763_) -> {
