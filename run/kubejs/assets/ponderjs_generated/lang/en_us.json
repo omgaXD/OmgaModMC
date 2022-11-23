@@ -1,0 +1,12 @@
+{
+  "kubejs.ponder.tag.getting_started": "Omgamod",
+  "kubejs.ponder.tag.getting_started.description": "Making sense out of tech and magic!",
+  "kubejs.ponder.creepersteel_block_craft.header": "Crafting creepersteel",
+  "kubejs.ponder.creepersteel_block_craft.text_1": "Exactly four goldsteel blocks should be placed in area adjastent to the explosive.",
+  "kubejs.ponder.creepersteel_block_craft.text_2": "The explosion will then convert them to creepersteel block.",
+  "kubejs.ponder.creepersteel_block_craft.text_3": "The creepersteel block spawns right in the origin of explosion.",
+  "kubejs.ponder.creepersteel_block_craft.text_4": "If amount of goldsteel blocks isn\u0027t four, the conversion won\u0027t happen.",
+  "kubejs.ponder.goldsteel_ingot_crafting.header": "Crafting goldsteel ingot",
+  "kubejs.ponder.goldsteel_ingot_crafting.text_1": "Consumed.",
+  "kubejs.ponder.goldsteel_ingot_crafting.text_2": "No matter the amount of goldsteel blend, it\u0027ll always successfuly convert into goldsteel ingots."
+}
