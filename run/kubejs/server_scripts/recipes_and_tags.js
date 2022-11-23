@@ -51,7 +51,7 @@ onEvent('recipes', event => {
 	)
 
 	// COLORFUL STEEL GEAR
-	let inter1 = 'create:incomplete_precision_mechanism'
+	const inter1 = 'create:incomplete_precision_mechanism'
 	event.recipes.createSequencedAssembly(['omgamod:night_vision_helm'],'minecraft:iron_helmet',[
 		event.recipes.createFilling(inter1, [inter1, Fluid.of('omgamod:molten_redsteel', ingot)]),
 		event.recipes.createDeploying(inter1, [inter1, 'minecraft:glass']),
@@ -59,7 +59,7 @@ onEvent('recipes', event => {
 		event.recipes.createPressing(inter1, inter1)
 	]).transitionalItem(inter1).loops(4) // set the transitional item and the loops (amount of repetitions)
 
-	let inter2 = 'create:incomplete_precision_mechanism'
+	const inter2 = 'create:incomplete_precision_mechanism'
 	event.recipes.createSequencedAssembly(['omgamod:fertilizer_spray_empty'],'minecraft:glass_bottle',[ 
 	event.recipes.createFilling(inter2, [inter2, Fluid.of('omgamod:molten_woodsteel', ingot)]),
 	event.recipes.createDeploying(inter2, [inter2, 'create:mechanical_pump']),
@@ -67,7 +67,7 @@ onEvent('recipes', event => {
 	event.recipes.create.cutting(inter2, inter2)
 	]).transitionalItem(inter2).loops(4) // set the transitional item and the loops (amount of repetitions)
 
-	let inter3 = 'create:incomplete_precision_mechanism'
+	const inter3 = 'create:incomplete_precision_mechanism'
 	event.recipes.createSequencedAssembly(['omgamod:goldsteel_drill'],"create:mechanical_drill",[ 
 	event.recipes.createFilling(inter3, [inter3, Fluid.of('omgamod:molten_goldsteel', ingot)]),
 	event.recipes.createDeploying(inter3, [inter3, 'minecraft:redstone']),
@@ -75,7 +75,7 @@ onEvent('recipes', event => {
 	event.recipes.create.pressing(inter3, inter3)
 	]).transitionalItem(inter3).loops(4) // set the transitional item and the loops (amount of repetitions)
 
-	let inter4 = 'create:incomplete_precision_mechanism'
+	const inter4 = 'create:incomplete_precision_mechanism'
 	event.recipes.createSequencedAssembly(['omgamod:tnt_cannon'],"create:potato_cannon",[ 
 	event.recipes.createFilling(inter4, [inter4, Fluid.of('omgamod:molten_creepersteel', ingot)]),
 	event.recipes.createDeploying(inter4, [inter4, 'minecraft:flint_and_steel']),
@@ -139,20 +139,20 @@ onEvent('block.tags', event => {
 	//event.add('omgamod:steel', "minecraft:")
 })
 
-let has_souls = [
+const has_souls = [
 	"minecraft:zombie",
 	"minecraft:skeleton",
 	"minecraft:creeper",
 	"minecraft:villager",
 	"minecraft:piglin"
 ]
-let guaranteed_souls = [
+const guaranteed_souls = [
 	"minecraft:elder_guardian",
 	"minecraft:ender_dragon",
 	"minecraft:enderman",
 	"minecraft:piglin_brute"
 ]
-let three_souls = ["minecraft:wither"]
+const three_souls = ["minecraft:wither"]
 
 onEvent('fluid.tags', event => {
     event.get("forge:molten_redsteel").add("omgamod:molten_redsteel")

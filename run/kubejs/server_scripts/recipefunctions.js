@@ -7,7 +7,7 @@
  * melt(event, "minecraft:oak_log", "tconstruct:molten_diamond", 900, 200, 10);
  * 
  */
-let melt = (event, itemid, fluidOut, outAmount, temp, time) => {
+const melt = (event, itemid, fluidOut, outAmount, temp, time) => {
     try {
     event.custom({
         "type": "tconstruct:melting",
@@ -30,7 +30,7 @@ let melt = (event, itemid, fluidOut, outAmount, temp, time) => {
  * meltTag(event, "minecraft:wooden_doors", "tconstruct:molten_diamond", 200, 1200, 15);
  * 
  */
-let meltTag = (event, tagid, fluidOut, outAmount, temp, time) => {
+const meltTag = (event, tagid, fluidOut, outAmount, temp, time) => {
     try {
     event.custom({
         "type": "tconstruct:melting",
@@ -53,7 +53,7 @@ let meltTag = (event, tagid, fluidOut, outAmount, temp, time) => {
  * // alloy 2 golden ingots and 1 chocolate bar into 0.5 honey buckets
  * alloy(event, [{"name": "tconstruct:molten_gold", "amount": 200}, {"name": "create:chocolate", "amount": 250}], "create:honey", 500, 50)
  */
-let alloy = (event, inputs, fluidOut, outAmount, temp) => {
+const alloy = (event, inputs, fluidOut, outAmount, temp) => {
     try {
     event.custom({
         "type": "tconstruct:alloy",
@@ -68,7 +68,7 @@ let alloy = (event, inputs, fluidOut, outAmount, temp) => {
         console.log(e)
     }
 }
-let cast_block = (event, fluid, item) => {
+const cast_block = (event, fluid, item) => {
     try {
         event.custom({
             "type": "tconstruct:casting_basin",
@@ -81,7 +81,7 @@ let cast_block = (event, fluid, item) => {
     }
 }
 
-let cast = (event, type, fluid, amount, item, time) => {
+const cast = (event, type, fluid, amount, item, time) => {
     try {
         event.custom({
             "type": "tconstruct:casting_table",
@@ -102,7 +102,7 @@ let cast = (event, type, fluid, amount, item, time) => {
         console.log(e)
     }
 }
-let castCustom = (event, castedOnItem, fluid, amount, item, time) => {
+const castCustom = (event, castedOnItem, fluid, amount, item, time) => {
     try {
         event.custom({
             "type": "tconstruct:casting_table",

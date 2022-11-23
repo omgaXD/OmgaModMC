@@ -1,5 +1,5 @@
 let hiddenIds = []
-let hideInJei = (recipe) => {
+const hideInJei = (recipe) => {
     hiddenIds.add([recipe.getGroup(), recipe.getId()])
 }
 onEvent("jei.remove.recipes", event => {

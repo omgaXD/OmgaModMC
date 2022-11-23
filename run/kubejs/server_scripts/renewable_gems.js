@@ -1,6 +1,6 @@
 onEvent('recipes', event => {
 
-    let renewable = (gemId, inputId, secCatalyst, superHeated) => {
+    const renewable = (gemId, inputId, secCatalyst, superHeated) => {
         const rec1 = event.recipes.create.mixing([gemId, 'minecraft:golden_carrot'], [inputId, secCatalyst, 'minecraft:golden_carrot'])
         const rec2 = event.recipes.create.mixing([gemId, 'omgamod:spectral_catalyst', secCatalyst], [inputId, secCatalyst, 'omgamod:spectral_catalyst'])
         if (superHeated) {
