@@ -1,4 +1,4 @@
-Following the old bizzare tradition of Terraria of naming mods by own nicknames, this mod heavily relies on multiple dependencies, technically making it a small modpack.
+Following the old bizarre tradition of Terraria of naming mods by own nicknames, this mod heavily relies on multiple dependencies, technically making it a small modpack.
 # Technical info: 
 This modpack is based on Create and TConstruct mechanics, but main content comes from the core mod. KubeJS is used to tie everything together.
 # Content:
