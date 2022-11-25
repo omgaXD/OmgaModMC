@@ -14,6 +14,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.entity.EntityEvent;
+import net.minecraft.world.entity.monster.Vindicator;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
@@ -93,6 +94,8 @@ public class OmgaMod
             gen.addProvider(new MaterialPartTextureGenerator(gen, fileHelper, new TinkerPartSpriteProvider(), provider));
             gen.addProvider(new OmgamodRenderInfo(gen, provider));
         }
+        //Vindicator
+
     }
 
 

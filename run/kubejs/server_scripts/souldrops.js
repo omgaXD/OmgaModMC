@@ -19,7 +19,7 @@ let spawnSoulAt = (e, playSound) => {
 
 let soulsLogic = (event) => {
     if (!checkSoulDrops(event)) return;
-    const e = event.getEntity();
+    const e = event.getEntity()
     if (has_souls.includes(e.type)) {
         if (Math.random() <= 0.25) {
             spawnSoulAt(e, true)
