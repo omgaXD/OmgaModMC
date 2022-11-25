@@ -94,7 +94,7 @@ onEvent("ponder.registry", (event) => {
         scene.idle(80)
 
     })
-    event.create(["omgamod:creepersteel_block", "omgamod:goldsteel_block"]).scene("creepersteel_block_craft", "Crafting creepersteel", "kubejs:base_plate", (scene, util) => {
+    event.create(["omgamod:creepersteel_block", "omgamod:goldsteel_block", "tnt"]).scene("creepersteel_block_craft", "Crafting creepersteel", "kubejs:base_plate", (scene, util) => {
         scene.showBasePlate()
         scene.idle(5)
 
@@ -172,7 +172,10 @@ onEvent("ponder.registry", (event) => {
         const ent = scene.world.createEntity("tnt", [2.5, 1, 2.5])
         scene.idle(80)
         scene.world.setBlocks([1, 1, 1, 3, 2, 3], false, 0)
+        scene.world.setBlocks([2, 0, 2, 3, 0, 3], false, 0)
+        scene.world.setBlock([2, 0, 1], 0, false)
         scene.particles.simple(1, "minecraft:explosion", [2.5, 1, 2.5])
-        scene.world.createItemEntity([2.4, 2, 2.8], [0, 0.25, 0], "6x omgamod:goldsteel_block")
+        scene.world.createItemEntity([2.1, 2, 2.8], [0, 0.25, 0], "6x omgamod:goldsteel_block")
+
     })
 })
