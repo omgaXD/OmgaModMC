@@ -9,5 +9,6 @@ public class OmgamodMaterialIds {
     public static final MaterialId GOLDSTEEL = new MaterialId(OmgaMod.getLocation("goldsteel"));
     public static final MaterialId CREEPERSTEEL = new MaterialId(OmgaMod.getLocation("creepersteel"));
 
+    public static final MaterialId PRISMASTEEL = new MaterialId(OmgaMod.getLocation("prismasteel"));
 
 }

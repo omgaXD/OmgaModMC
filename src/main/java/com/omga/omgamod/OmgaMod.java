@@ -7,6 +7,8 @@ import com.omga.omgamod.init.ItemInit;
 import com.mojang.logging.LogUtils;
 import com.omga.omgamod.init.TraitInit;
 import dev.architectury.event.EventResult;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.network.chat.TextComponent;
@@ -31,6 +33,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
@@ -62,7 +65,7 @@ public class OmgaMod
     public OmgaMod()
     {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        //modEventBus.addListener(this::setup);
+        modEventBus.addListener(this::setup);
         //modEventBus.addListener(this::enqueueIMC);
         //modEventBus.addListener(this::processIMC);
         BlockInit.BLOCKS.register(modEventBus);
@@ -99,9 +102,9 @@ public class OmgaMod
     }
 
 
-    private void setup(final FMLCommonSetupEvent event)
+    private void setup(final FMLClientSetupEvent event)
     {
-
+        //ItemBlockRenderTypes.setRenderLayer(BlockInit.PRISMASTEEL_BLOCK.get(), RenderType.cutout());
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)

@@ -1,7 +1,9 @@
 package com.omga.omgamod.init;
 
 import com.omga.omgamod.OmgaMod;
+import com.omga.omgamod.blocks.CreepersteelBlock;
 import com.omga.omgamod.blocks.GoldsteelBlock;
+import com.omga.omgamod.blocks.PrismasteelBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
@@ -43,7 +45,8 @@ public class BlockInit {
         }
     });
     public static final RegistryObject<Block> GOLDSTEEL_BLOCK = BLOCKS.register("goldsteel_block", () -> new GoldsteelBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(6f, 6f).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> CREEPERSTEEL_BLOCK = BLOCKS.register("creepersteel_block", () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(6f, 1200f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> CREEPERSTEEL_BLOCK = BLOCKS.register("creepersteel_block", () -> new CreepersteelBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(6f, 1200f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> PRISMASTEEL_BLOCK = BLOCKS.register("prismasteel_block", () -> new PrismasteelBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(6f, 1200f).requiresCorrectToolForDrops()));
 
 
     @SubscribeEvent
@@ -57,7 +60,6 @@ public class BlockInit {
             }
             final Item.Properties properties = new Item.Properties().tab(ItemInit.OmgaModCreativeTab.instance);
             BlockItem blockItem = new BlockItem(block, properties);
-            //TODO
 
             blockItem.setRegistryName(Objects.requireNonNull(block.getRegistryName()));
             registry.register(blockItem);
@@ -66,8 +68,6 @@ public class BlockInit {
     }
     //*
     private static boolean shouldSkip(Block block) {
-        // HERE IS THE ISSUE
-
         if (block instanceof GoldsteelBlock) {
             return true;
         }

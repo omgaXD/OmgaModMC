@@ -29,7 +29,7 @@ public class OmgamodMaterialStats extends AbstractMaterialStatsDataProvider {
                 ExtraMaterialStats.DEFAULT);
         addMaterialStats(OmgamodMaterialIds.WOODSTEEL,
                 new HeadMaterialStats(550, 5.75f, Tiers.DIAMOND, 1.5f),
-                HandleMaterialStats.DEFAULT.withDurability(1.05f).withMiningSpeed(1.05f).withAttackDamage(1f).withAttackSpeed(1.05f),
+                HandleMaterialStats.DEFAULT.withDurability(0.95f).withMiningSpeed(1.05f).withAttackDamage(1f).withAttackSpeed(1.05f),
                 ExtraMaterialStats.DEFAULT);
         addMaterialStats(OmgamodMaterialIds.GOLDSTEEL,
                 new HeadMaterialStats(600, 7f, Tiers.DIAMOND, 0.5f),
@@ -38,6 +38,10 @@ public class OmgamodMaterialStats extends AbstractMaterialStatsDataProvider {
         addMaterialStats(OmgamodMaterialIds.CREEPERSTEEL,
                 new HeadMaterialStats(650, 7f, Tiers.DIAMOND, 2.5f),
                 HandleMaterialStats.DEFAULT.withDurability(1.05f).withMiningSpeed(1f).withAttackDamage(1.1f).withAttackSpeed(1f),
+                ExtraMaterialStats.DEFAULT);
+        addMaterialStats(OmgamodMaterialIds.PRISMASTEEL,
+                new HeadMaterialStats(700, 7f, Tiers.DIAMOND, 2.5f),
+                HandleMaterialStats.DEFAULT.withDurability(1.05f).withMiningSpeed(1.1f).withAttackDamage(1.05f).withAttackSpeed(1.1f),
                 ExtraMaterialStats.DEFAULT);
 
     }

@@ -18,6 +18,7 @@ public class OmgamodRenderInfo extends AbstractMaterialRenderInfoProvider {
         buildRenderInfo(OmgamodMaterialIds.WOODSTEEL);
         buildRenderInfo(OmgamodMaterialIds.GOLDSTEEL);
         buildRenderInfo(OmgamodMaterialIds.CREEPERSTEEL);
+        buildRenderInfo(OmgamodMaterialIds.PRISMASTEEL);
     }
 
 
