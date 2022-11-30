@@ -23,6 +23,8 @@ onEvent("item.tooltip", t => {
     addTooltip('omgamod:redsteel_block', ["Can act as a strong light source when lit by redstone."])
     addTooltip('omgamod:woodsteel_block', ["Can be used as a plant base.", "Saplings planted on it will grow faster."])
     addTooltip('omgamod:goldsteel_block', ["Can be used in alchemy as philosopher's stone:", "Throw it into any metal fluid source, get molten gold!"])
+    addTooltip('omgamod:prismasteel_block', ["Acts as an infinite water source: just need a bucket to get all that water!"])
+
 
     addTooltip('omgamod:fertilizer_spray', ["Can be used as bonemeal. Should be recharged by spouting fertilizer fluid on it."])
     addTooltip('omgamod:fertilizer_spray_empty', ["An empty bottle with spray. Supposed to be filled with fertilizer fluid"])

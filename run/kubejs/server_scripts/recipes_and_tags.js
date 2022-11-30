@@ -32,6 +32,7 @@ onEvent('recipes', event => {
 					'minecraft:golden_carrot', 'omgamod:woodsteel_plate', 'minecraft:sunflower'
 					]);
 	handleMaterial(event, 'omgamod', 'creepersteel')
+	handleMaterial(event, 'omgamod', 'prismasteel')
 	
 	// NETHERITE
 	event.recipes.create.pressing('omgamod:netherite_plate', "minecraft:netherite_ingot");
@@ -127,7 +128,7 @@ onEvent('item.tags', event => {
 	handleTags(event, 'omgamod', 'woodsteel')
 	handleTags(event, 'omgamod', 'goldsteel')
 	handleTags(event, 'omgamod', 'creepersteel')
-
+	handleTags(event, 'omgamod', 'prismasteel')
 
 
 	event.get('shrooms').add(['minecraft:brown_mushroom', 'minecraft:red_mushroom'])
@@ -159,6 +160,7 @@ onEvent('fluid.tags', event => {
 	event.get("forge:molten_woodsteel").add("omgamod:molten_woodsteel")
 	event.get("forge:molten_goldsteel").add("omgamod:molten_goldsteel")
 	event.get("forge:molten_creepersteel").add("omgamod:molten_creepersteel")
+	event.get("forge:molten_prismasteel").add("omgamod:molten_prismasteel")
 })
 onEvent('block.tags', event => {
     event.get("minecraft:dirt").add("omgamod:woodsteel_block")
