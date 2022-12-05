@@ -13,4 +13,4 @@ I'm working on code and making sprites, while my classmate friends sometimes hel
 # Why does this blend of all the different stuff even exist?:
 The answer is shrimple: during online classes, we played with my friends a lot and we came up with weirdest ideas, which I decided to move into a mod. When I learned about KubeJS, I instantly changed my mind - I should make a modpack instead! I love modding and coding in general - this was an opportunity not to miss.
 # How do I know if I want to play it?:
-It was intentionally made for me and the bois, however, anybody who searches for lightweight modpack that doesn't affect much of Create and TConstruct but heavily rely on them - might actually like this one!
+It was intentionally made for me and the bois, however, anybody who searches for lightweight modpack that doesn't affect much of Create and TConstruct but heavily relies on them - might actually like this one!
