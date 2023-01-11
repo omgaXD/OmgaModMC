@@ -3,6 +3,8 @@
   "values": [
     "omgamod:molten_redsteel",
     "omgamod:molten_woodsteel",
-    "omgamod:molten_goldsteel"
+    "omgamod:molten_goldsteel",
+    "omgamod:molten_creepersteel",
+    "omgamod:molten_prismasteel"
   ]
 }

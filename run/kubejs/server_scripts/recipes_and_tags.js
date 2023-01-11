@@ -5,7 +5,6 @@ settings.logRemovedRecipes = true
 settings.logSkippedRecipes = false
 settings.logErroringRecipes = true
 
-
 onEvent('recipes', event => {
 	// STEEL
 	handleMaterial(event, 'omgamod', 'steel')
@@ -119,11 +118,7 @@ onEvent('recipes', event => {
 })
 
 onEvent('item.tags', event => {
-	// Get the #forge:cobblestone tag collection and add Diamond Ore to it
-	// event.get('forge:cobblestone').add('minecraft:diamond_ore')
 
-	// Get the #forge:cobblestone tag collection and remove Mossy Cobblestone from it
-	// event.get('forge:cobblestone').remove('minecraft:mossy_cobblestone')
 	handleTags(event, 'omgamod', 'steel')
 	handleTags(event, 'omgamod', 'redsteel')
 	handleTags(event, 'omgamod', 'woodsteel')
@@ -136,9 +131,6 @@ onEvent('item.tags', event => {
 	event.get('fungi').add(['minecraft:warped_fungus', 'minecraft:crimson_fungus'])
 	event.get('oak_saplings').add(['minecraft:oak_sapling', 'minecraft:dark_oak_sapling'])
 	
-})
-onEvent('block.tags', event => {
-	//event.add('omgamod:steel', "minecraft:")
 })
 
 const has_souls = [
@@ -156,7 +148,7 @@ const guaranteed_souls = [
 ]
 const three_souls = ["minecraft:wither"]
 
-onEvent('fluid.tags', event => {
+onEvent('tags.fluids', event => {
     event.get("forge:molten_redsteel").add("omgamod:molten_redsteel")
 	event.get("forge:molten_woodsteel").add("omgamod:molten_woodsteel")
 	event.get("forge:molten_goldsteel").add("omgamod:molten_goldsteel")

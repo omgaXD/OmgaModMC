@@ -175,7 +175,6 @@ let handleTags = (event, modid, name) => {
     const nuggetExists = (Item.exists(item("nugget")))
     const plateExists = (Item.exists(item("plate")))
 
-
     if (ingotExists) {
         event.get(tag('ingots')).add(item('ingot'))
         event.get(forgetag('ingots')).add(item('ingot'))
@@ -183,7 +182,7 @@ let handleTags = (event, modid, name) => {
     if (blockExists) {
         event.get(tag('storage_blocks')).add(item('block'))
         event.get(forgetag('storage_blocks')).add(item('block'))
-        event.get(tag("minecraft:beacon_base_blocks")).add(item('block'))
+        event.get("tconstruct:anvil_metal").add(item('block'))
     }
     if (nuggetExists) {
         event.get(tag('nuggets')).add(item('nugget'))
