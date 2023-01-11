@@ -7,18 +7,45 @@ import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.event.world.ExplosionEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 import org.slf4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
-
+@Mod.EventBusSubscriber
 public class GoldsteelBlock extends Block {
     private static final Logger LOGGER = LogUtils.getLogger();
     public GoldsteelBlock(Properties p_49795_) {
         super(p_49795_);
     }
 
+    @SubscribeEvent
+    public void onExplosion(ExplosionEvent.Start event) {
+        LOGGER.debug("HOLY SHIT AAAAAAA");
+        BlockPos expPos = new BlockPos(event.getExplosion().getPosition());
+        ArrayList<BlockPos> bp = new ArrayList<>();
+        for (int x = -1; x <= 1; x++) {
+            for (int y = -1; y <= 1; y++) {
+                for (int z = -1; z <= 1; z++) {
+                    var temp = expPos.offset(x, y, z);
+                    if (event.getWorld().getBlockState(temp).is(BlockInit.GOLDSTEEL_BLOCK.get())) {
+                        bp.add(temp);
+                    }
+                }
+            }
+        }
+        LOGGER.debug("YOU HAVE BEEN EXPLODEN EXACTLY " + bp.size() + " FUCKIN TIMES!!");
+        if (bp.size() != 4) return;
+
+        for (BlockPos b : bp) {
+            event.getWorld().setBlock(b, Blocks.AIR.defaultBlockState(), 3);
+        }
+        event.getWorld().setBlock(expPos, BlockInit.CREEPERSTEEL_BLOCK.get().defaultBlockState(), 3);
+        //Creeper
+    }
     /*
     // lord forgive me for what I am about to code
     @Override
