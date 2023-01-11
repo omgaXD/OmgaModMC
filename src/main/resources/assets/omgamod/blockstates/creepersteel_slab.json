@@ -1,13 +1,13 @@
 {
   "variants": {
     "type=bottom": {
-      "model": "minecraft:block/acacia_slab"
+      "model": "omgamod:block/creepersteel_slab"
     },
     "type=double": {
-      "model": "minecraft:block/acacia_planks"
+      "model": "omgamod:block/creepersteel_slab_double"
     },
     "type=top": {
-      "model": "minecraft:block/acacia_slab_top"
+      "model": "omgamod:block/creepersteel_slab_top"
     }
   }
 }

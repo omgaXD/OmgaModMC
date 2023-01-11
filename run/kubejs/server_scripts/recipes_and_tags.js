@@ -32,6 +32,7 @@ onEvent('recipes', event => {
 					'minecraft:golden_carrot', 'omgamod:woodsteel_plate', 'minecraft:sunflower'
 					]);
 	handleMaterial(event, 'omgamod', 'creepersteel')
+	event.shaped('omgamod:creepersteel_block', ['s','s'], {s: "omgamod:creepersteel_slab"})
 	handleMaterial(event, 'omgamod', 'prismasteel')
 	
 	// NETHERITE

@@ -1,8 +1,12 @@
 {
-  "parent": "minecraft:block/slab_top",
+  "parent": "block/cube",
   "textures": {
-    "bottom": "omgamod:blocks/creepersteel_block",
-    "top": "omgamod:blocks/creepersteel_block",
-    "side": "omgamod:blocks/creepersteel_slab_side"
+    "particle": "omgamod:blocks/creepersteel_block",
+    "up": "omgamod:blocks/creepersteel_block",
+    "down": "omgamod:blocks/creepersteel_block",
+    "north": "omgamod:blocks/creepersteel_slab_side",
+    "west": "omgamod:blocks/creepersteel_slab_side",
+    "south": "omgamod:blocks/creepersteel_slab_side",
+    "east": "omgamod:blocks/creepersteel_slab_side"
   }
 }

@@ -1,9 +1,9 @@
 package com.omga.omgamod.init;
 
 import com.omga.omgamod.OmgaMod;
-import com.omga.omgamod.blocks.CreepersteelBlock;
-import com.omga.omgamod.blocks.GoldsteelBlock;
-import com.omga.omgamod.blocks.PrismasteelBlock;
+import com.omga.omgamod.content.blocks.CreepersteelBlock;
+import com.omga.omgamod.content.blocks.GoldsteelBlock;
+import com.omga.omgamod.content.blocks.PrismasteelBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
@@ -48,6 +48,9 @@ public class BlockInit {
     public static final RegistryObject<Block> CREEPERSTEEL_BLOCK = BLOCKS.register("creepersteel_block", () -> new CreepersteelBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(6f, 1200f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> PRISMASTEEL_BLOCK = BLOCKS.register("prismasteel_block", () -> new PrismasteelBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(6f, 1200f).requiresCorrectToolForDrops()));
 
+
+
+    public static final RegistryObject<Block> CREEPERSTEEL_SLAB = BLOCKS.register("creepersteel_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(6f, 1200f).requiresCorrectToolForDrops()));
 
     @SubscribeEvent
     public static void onRegisterItems(final RegistryEvent.Register<Item> event) {

@@ -1,4 +1,4 @@
-package com.omga.omgamod.blocks;
+package com.omga.omgamod.content.blocks;
 
 import com.mojang.logging.LogUtils;
 import com.simibubi.create.foundation.block.ProperWaterloggedBlock;

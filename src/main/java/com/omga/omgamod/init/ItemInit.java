@@ -1,7 +1,9 @@
 package com.omga.omgamod.init;
 
 import com.omga.omgamod.OmgaMod;
-import com.omga.omgamod.items.*;
+import com.omga.omgamod.content.items.*;
+import net.minecraft.core.NonNullList;
+import net.minecraft.core.Registry;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -17,7 +19,6 @@ import slimeknights.tconstruct.fluids.TinkerFluids;
 
 public class ItemInit {
     public static final DeferredRegister<Item> ITEMS =
-
             DeferredRegister.create(ForgeRegistries.ITEMS, OmgaMod.MODID);
 
     // # # # # #
@@ -60,9 +61,9 @@ public class ItemInit {
 
     public static final RegistryObject<Item> NIGHT_VISION_HELM = ITEMS.register("night_vision_helm", () -> new NightVisionHelm(ModArmorMaterials.NIGHT_VISION_HELM, EquipmentSlot.HEAD, OMTab()));
     public static final RegistryObject<Item> FERTILIZER_SPRAY = ITEMS.register("fertilizer_spray", () -> new FertilizerSpray(OMTab()));
+    public static final RegistryObject<Item> FERTILIZER_SPRAY_EMPTY = ITEMS.register("fertilizer_spray_empty", () -> new FertilizerSpray.FertilizerSprayEmpty(OMTab()));
     public static final RegistryObject<Item> GOLDSTEEL_DRILL = ITEMS.register("goldsteel_drill", () -> new GoldsteelDrill(1, 0f, OMTab()));
     public static final RegistryObject<Item> TNT_CANNON = ITEMS.register("tnt_cannon", () -> new TntCannon(OMTab()));
-    public static final RegistryObject<Item> FERTILIZER_SPRAY_EMPTY = ITEMS.register("fertilizer_spray_empty", () -> new FertilizerSpray.FertilizerSprayEmpty(OMTab()));
     //*
     public static final RegistryObject<Item> GOLDSTEEL_BLOCK_ITEM = ITEMS.register(BlockInit.GOLDSTEEL_BLOCK.getId().getPath(), () -> new BlockItem(BlockInit.GOLDSTEEL_BLOCK.get(), OMTab()){
 
@@ -88,6 +89,18 @@ public class ItemInit {
             return new ItemStack(STEEL_INGOT.get());
         }
 
+
+        @Override
+        public void fillItemList(NonNullList<ItemStack> list) {
+            for(Item item : Registry.ITEM) {
+                if (item.equals(GOLDSTEEL_BLOCK_ITEM.get())) continue;
+
+                if (list.size() > 0 && list.get(list.size()-1).is(BlockInit.WOODSTEEL_BLOCK.get().asItem())) {
+                    GOLDSTEEL_BLOCK_ITEM.get().fillItemCategory(this, list);
+                }
+                item.fillItemCategory(this, list);
+            }
+        }
     }
 
     public static Item OMTabItem() {

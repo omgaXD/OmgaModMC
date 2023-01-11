@@ -1,4 +1,4 @@
-package com.omga.omgamod.blocks;
+package com.omga.omgamod.content.blocks;
 
 import com.mojang.logging.LogUtils;
 import com.omga.omgamod.init.BlockInit;
@@ -24,7 +24,6 @@ public class GoldsteelBlock extends Block {
 
     @SubscribeEvent
     public void onExplosion(ExplosionEvent.Start event) {
-        LOGGER.debug("HOLY SHIT AAAAAAA");
         BlockPos expPos = new BlockPos(event.getExplosion().getPosition());
         ArrayList<BlockPos> bp = new ArrayList<>();
         for (int x = -1; x <= 1; x++) {
@@ -37,14 +36,12 @@ public class GoldsteelBlock extends Block {
                 }
             }
         }
-        LOGGER.debug("YOU HAVE BEEN EXPLODEN EXACTLY " + bp.size() + " FUCKIN TIMES!!");
         if (bp.size() != 4) return;
 
         for (BlockPos b : bp) {
             event.getWorld().setBlock(b, Blocks.AIR.defaultBlockState(), 3);
         }
         event.getWorld().setBlock(expPos, BlockInit.CREEPERSTEEL_BLOCK.get().defaultBlockState(), 3);
-        //Creeper
     }
     /*
     // lord forgive me for what I am about to code

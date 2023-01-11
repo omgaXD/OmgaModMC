@@ -1,4 +1,4 @@
-package com.omga.omgamod.items;
+package com.omga.omgamod.content.items;
 
 import com.omga.omgamod.init.ItemInit;
 import net.minecraft.world.InteractionResult;

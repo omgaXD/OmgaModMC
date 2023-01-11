@@ -178,4 +178,49 @@ onEvent("ponder.registry", (event) => {
         scene.world.createItemEntity([2.1, 2, 2.8], [0, 0.25, 0], "6x omgamod:goldsteel_block")
 
     })
+    event.create(['omgamod:creepersteel_block', 'omgamod:creepersteel_slab']).scene("creepersteel_block_use", "Creepersteel as an explosive", "kubejs:landmine", (scene, util) => {
+        scene.showBasePlate()
+        scene.world.showSection([1, 1, 2], Direction.DOWN)
+        scene.idle(10)
+        scene.text(50, "Creepersteel blocks are a good explosive", [1.5, 1.5, 2.5])
+        scene.idle(60)
+        scene.world.showSection([2, 1, 1, 4, 1, 4], Direction.DOWN)
+        scene.addKeyframe();
+        scene.text(80, "They are triggered by redstone. Strength of power defines strength of explosion", [1.5, 1.5, 2.5])
+        scene.idle(90)
+        scene.text(80, "Minimal power input provides TNT-like explosion. Maximal input results in charged creeper-like explosion", [1.5, 1.5, 2.5])
+        scene.idle(90)
+        scene.addKeyframe();
+        scene.text(80, "Maximal explosion drops mob skulls just like charged creeper explosions", [1.5, 1.5, 2.5])
+        
+        const zomb = scene.world.createEntity("minecraft:zombie", [2, 1, 4])
+        
+
+        scene.world.hideSection([2, 1, 2, 2, 1, 2], Direction.DOWN)
+        scene.idle(10)
+        scene.world.setBlock([2, 1, 2], 'minecraft:repeater', false);
+        scene.world.modifyBlock([2, 1, 2], (state) => state.with("facing", "east"), false)
+        scene.world.modifyBlock([2, 1, 2], (state) => state.with("delay", 4), false)
+        scene.world.showSection([2, 1, 2, 2, 1, 2], Direction.DOWN);
+        scene.idle(60)
+        scene.addKeyframe();
+        scene.idle(20)
+        // the explosion
+        scene.world.toggleRedstonePower([3, 1, 2, 1, 1, 1])
+        scene.idle(4)
+        scene.world.toggleRedstonePower([2, 1, 2])
+        scene.idle(4)
+        scene.world.modifyEntity(zomb, (e) => {
+            e.discard();
+        })
+        scene.world.setBlock([1, 1, 2], "omgamod:creepersteel_slab", false)
+        scene.particles.simple(1, "minecraft:explosion", [1.5, 1, 2.5])
+        // explosion effect
+        scene.world.setBlocks([2, 1, 2, 3, 0, 3], false, 0)
+        scene.world.setBlock([2, 0, 1], 0, false)
+        // spawn skull
+        scene.world.createItemEntity([2, 1.75, 4], [-0.02, 0.2, -0.04], "minecraft:zombie_head")
+        scene.idle(12)
+        scene.world.toggleRedstonePower([3, 1, 2, 1, 1, 1])
+    })
 })

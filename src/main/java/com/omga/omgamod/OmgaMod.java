@@ -1,11 +1,8 @@
 package com.omga.omgamod;
 
 import com.omga.omgamod.datagen.tcon.*;
-import com.omga.omgamod.init.BlockInit;
-import com.omga.omgamod.init.FluidInit;
-import com.omga.omgamod.init.ItemInit;
+import com.omga.omgamod.init.*;
 import com.mojang.logging.LogUtils;
-import com.omga.omgamod.init.TraitInit;
 import dev.architectury.event.EventResult;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -148,30 +145,7 @@ public class OmgaMod
         }
     }
 
-    @SubscribeEvent
-    public void onExplosion(ExplosionEvent.Start event) {
-        LOGGER.debug("HOLY SHIT AAAAAAA");
-        BlockPos expPos = new BlockPos(event.getExplosion().getPosition());
-        ArrayList<BlockPos> bp = new ArrayList<>();
-        for (int x = -1; x <= 1; x++) {
-            for (int y = -1; y <= 1; y++) {
-                for (int z = -1; z <= 1; z++) {
-                    var temp = expPos.offset(x, y, z);
-                    if (event.getWorld().getBlockState(temp).is(BlockInit.GOLDSTEEL_BLOCK.get())) {
-                        bp.add(temp);
-                    }
-                }
-            }
-        }
-        LOGGER.debug("YOU HAVE BEEN EXPLODEN EXACTLY " + bp.size() + " FUCKIN TIMES!!");
-        if (bp.size() != 4) return;
 
-        for (BlockPos b : bp) {
-            event.getWorld().setBlock(b, Blocks.AIR.defaultBlockState(), 3);
-        }
-        event.getWorld().setBlock(expPos, BlockInit.CREEPERSTEEL_BLOCK.get().defaultBlockState(), 3);
-        //Creeper
-    }
 
 
 }

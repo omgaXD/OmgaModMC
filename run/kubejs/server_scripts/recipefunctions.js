@@ -183,6 +183,7 @@ let handleTags = (event, modid, name) => {
     if (blockExists) {
         event.get(tag('storage_blocks')).add(item('block'))
         event.get(forgetag('storage_blocks')).add(item('block'))
+        event.get(tag("minecraft:beacon_base_blocks")).add(item('block'))
     }
     if (nuggetExists) {
         event.get(tag('nuggets')).add(item('nugget'))

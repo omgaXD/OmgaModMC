@@ -6,6 +6,11 @@
   "kubejs.ponder.creepersteel_block_craft.text_2": "The explosion will then convert them to creepersteel block.",
   "kubejs.ponder.creepersteel_block_craft.text_3": "The creepersteel block spawns right in the origin of explosion.",
   "kubejs.ponder.creepersteel_block_craft.text_4": "If amount of goldsteel blocks isn\u0027t four, the conversion won\u0027t happen.",
+  "kubejs.ponder.creepersteel_block_use.header": "Creepersteel as an explosive",
+  "kubejs.ponder.creepersteel_block_use.text_1": "Creepersteel blocks are a good explosive",
+  "kubejs.ponder.creepersteel_block_use.text_2": "They are triggered by redstone. Strength of power defines strength of explosion",
+  "kubejs.ponder.creepersteel_block_use.text_3": "Minimal power input provides TNT-like explosion. Maximal input results in charged creeper-like explosion",
+  "kubejs.ponder.creepersteel_block_use.text_4": "Maximal explosion drops mob skulls just like charged creeper explosions",
   "kubejs.ponder.goldsteel_ingot_crafting.header": "Crafting goldsteel ingot",
   "kubejs.ponder.goldsteel_ingot_crafting.text_1": "Consumed.",
   "kubejs.ponder.goldsteel_ingot_crafting.text_2": "No matter the amount of goldsteel blend, it\u0027ll always successfuly convert into goldsteel ingots."
