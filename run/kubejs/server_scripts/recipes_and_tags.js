@@ -33,7 +33,7 @@ onEvent('recipes', event => {
 	handleMaterial(event, 'omgamod', 'creepersteel')
 	event.shaped('omgamod:creepersteel_block', ['s','s'], {s: "omgamod:creepersteel_slab"})
 	handleMaterial(event, 'omgamod', 'prismasteel')
-	
+	handleMaterial(event, "omgamod", "skysteel")
 	// NETHERITE
 	event.recipes.create.pressing('omgamod:netherite_plate', "minecraft:netherite_ingot");
 	cast(event, "plate", "tconstruct:molten_netherite", ingot, "omgamod:netherite_plate", 60)
@@ -125,6 +125,7 @@ onEvent('item.tags', event => {
 	handleTags(event, 'omgamod', 'goldsteel')
 	handleTags(event, 'omgamod', 'creepersteel')
 	handleTags(event, 'omgamod', 'prismasteel')
+	handleTags(event, 'omgamod', 'skysteel')
 
 
 	event.get('shrooms').add(['minecraft:brown_mushroom', 'minecraft:red_mushroom'])
@@ -154,7 +155,16 @@ onEvent('tags.fluids', event => {
 	event.get("forge:molten_goldsteel").add("omgamod:molten_goldsteel")
 	event.get("forge:molten_creepersteel").add("omgamod:molten_creepersteel")
 	event.get("forge:molten_prismasteel").add("omgamod:molten_prismasteel")
+	event.get("forge:molten_skysteel").add("omgamod:molten_skysteel")
 })
 onEvent('block.tags', event => {
     event.get("minecraft:dirt").add("omgamod:woodsteel_block")
+
+	event.get("minecraft:beacon_base_blocks").add("omgamod:redsteel_block")
+	event.get("minecraft:beacon_base_blocks").add("omgamod:woodsteel_block")
+	event.get("minecraft:beacon_base_blocks").add("omgamod:goldsteel_block")
+	event.get("minecraft:beacon_base_blocks").add("omgamod:creepersteel_block")
+	event.get("minecraft:beacon_base_blocks").add("omgamod:prismasteel_block")
+	event.get("minecraft:beacon_base_blocks").add("omgamod:skysteel_block")
+	
 })

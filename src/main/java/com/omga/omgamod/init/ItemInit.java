@@ -47,6 +47,10 @@ public class ItemInit {
     public static final RegistryObject<Item> PRISMASTEEL_NUGGET = ITEMS.register("prismasteel_nugget", ItemInit::OMTabItem);
     public static final RegistryObject<Item> PRISMASTEEL_PLATE = ITEMS.register("prismasteel_plate", ItemInit::OMTabItem);
 
+    public static final RegistryObject<Item> SKYSTEEL_INGOT = ITEMS.register("skysteel_ingot", ItemInit::OMTabItem);
+    public static final RegistryObject<Item> SKYSTEEL_NUGGET = ITEMS.register("skysteel_nugget", ItemInit::OMTabItem);
+    public static final RegistryObject<Item> SKYSTEEL_PLATE = ITEMS.register("skysteel_plate", ItemInit::OMTabItem);
+
 
     public static final RegistryObject<Item> FREED_SOUL = ITEMS.register("freed_soul", () -> new Item(OMTab().rarity(Rarity.RARE)));
     public static final RegistryObject<Item> SPECTRAL_CATALYST = ITEMS.register("spectral_catalyst", () -> new SimpleFoiledItem(OMTab().rarity(Rarity.EPIC)));

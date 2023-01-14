@@ -29,6 +29,27 @@
   "block.omgamod.goldsteel_block": "Goldsteel block",
   "fluid.omgamod.molten_goldsteel": "Molten goldsteel",
 
+  "item.omgamod.creepersteel_ingot": "Creepersteel ingot",
+  "item.omgamod.creepersteel_plate": "Creepersteel plate",
+  "item.omgamod.creepersteel_nugget": "Creepersteel nugget",
+  "item.omgamod.creepersteel_block": "Creepersteel block",
+  "block.omgamod.creepersteel_block": "Creepersteel block",
+  "fluid.omgamod.molten_creepersteel": "Molten creepersteel",
+
+  "item.omgamod.prismasteel_ingot": "Prismasteel ingot",
+  "item.omgamod.prismasteel_plate": "Prismasteel plate",
+  "item.omgamod.prismasteel_nugget": "Prismasteel nugget",
+  "item.omgamod.prismasteel_block": "Prismasteel block",
+  "block.omgamod.prismasteel_block": "Prismasteel block",
+  "fluid.omgamod.molten_prismasteel": "Molten prismasteel",
+
+  "item.omgamod.skysteel_ingot": "Skysteel ingot",
+  "item.omgamod.skysteel_plate": "Skysteel plate",
+  "item.omgamod.skysteel_nugget": "Skysteel nugget",
+  "item.omgamod.skysteel_block": "Skysteel block",
+  "block.omgamod.skysteel_block": "Skysteel block",
+  "fluid.omgamod.molten_skysteel": "Molten skysteel",
+
 
   "modifier.omgamod.haste": "Haste",
   "modifier.omgamod.woodmaster": "Woodmaster",
@@ -36,6 +57,9 @@
   "material.omgamod.redsteel": "Redsteel",
   "material.omgamod.woodsteel": "Woodsteel",
   "material.omgamod.goldsteel": "Goldsteel",
+  "material.omgamod.creepersteel": "Creepersteel",
+  "material.omgamod.prismasteel": "Prismasteel",
+
 
   "item.omgamod.goldsteel_blend": "Goldsteel blend",
 

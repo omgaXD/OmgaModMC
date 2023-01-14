@@ -67,6 +67,16 @@ public class OmgamodMaterialSpriteProvider extends AbstractMaterialSpriteProvide
                         .addARGB(195, 0xFF44B4B2)
                         .addARGB(255, 0xFFC2E0E2)
                         .build());
+        buildMaterial(OmgamodMaterialIds.SKYSTEEL)
+                .meleeHarvest()
+                .fallbacks("metal")
+                .colorMapper(GreyToColorMapping.builderFromBlack()
+                        .addARGB(63,  0xFF28334c)
+                        .addARGB(95,  0xFF395082)
+                        .addARGB(127, 0xFF3e58ab)
+                        .addARGB(195, 0xFF7178dd)
+                        .addARGB(255, 0xFFb1b5e4)
+                        .build());
 
 
 

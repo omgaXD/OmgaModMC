@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "omgamod:block/skysteel_block"
+    },"lit=true": {
+      "model": "omgamod:block/skysteel_block_lit"
+    }
+  }
+}

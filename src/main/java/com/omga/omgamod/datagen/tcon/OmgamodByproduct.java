@@ -16,7 +16,8 @@ public enum OmgamodByproduct implements IByproduct {
     WOODSTEEL(true, FluidInit.MOLTEN_WOODSTEEL, FluidValues.INGOT ),
     GOLDSTEEL(true, FluidInit.MOLTEN_GOLDSTEEL, FluidValues.INGOT),
     CREEPERSTEEL(true, FluidInit.MOLTEN_CREEPERSTEEL, FluidValues.INGOT),
-    PRISMASTEEL(true, FluidInit.MOLTEN_PRISMASTEEL, FluidValues.INGOT);
+    PRISMASTEEL(true, FluidInit.MOLTEN_PRISMASTEEL, FluidValues.INGOT),
+    SKYSTEEL(true, FluidInit.MOLTEN_SKYSTEEL, FluidValues.INGOT);
 
 
     private final String name;

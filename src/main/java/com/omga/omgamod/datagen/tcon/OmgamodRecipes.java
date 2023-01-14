@@ -56,6 +56,11 @@ public class OmgamodRecipes extends RecipeProvider implements IMaterialRecipeHel
         metalTagCasting(consumer, FluidInit.MOLTEN_PRISMASTEEL, "prismasteel", metalFolder, true);
         metalMelting(consumer, FluidInit.MOLTEN_PRISMASTEEL.get(), "prismasteel", false, metalFolder, false);
 
+        metalMaterialRecipe(consumer, OmgamodMaterialIds.SKYSTEEL, folder, "skysteel", false);
+        materialMeltingCasting(consumer, OmgamodMaterialIds.SKYSTEEL, FluidInit.MOLTEN_SKYSTEEL, true, folder );
+        metalTagCasting(consumer, FluidInit.MOLTEN_SKYSTEEL, "skysteel", metalFolder, true);
+        metalMelting(consumer, FluidInit.MOLTEN_SKYSTEEL.get(), "skysteel", false, metalFolder, false);
+
     }
 
 

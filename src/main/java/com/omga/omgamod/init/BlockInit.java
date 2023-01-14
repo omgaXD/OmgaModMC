@@ -1,9 +1,7 @@
 package com.omga.omgamod.init;
 
 import com.omga.omgamod.OmgaMod;
-import com.omga.omgamod.content.blocks.CreepersteelBlock;
-import com.omga.omgamod.content.blocks.GoldsteelBlock;
-import com.omga.omgamod.content.blocks.PrismasteelBlock;
+import com.omga.omgamod.content.blocks.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
@@ -33,20 +31,11 @@ public class BlockInit {
 
     public static final RegistryObject<Block> STEEL_BLOCK = BLOCKS.register("steel_block", () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(6f, 6f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> REDSTEEL_BLOCK = BLOCKS.register("redsteel_block", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).lightLevel(litBlockEmission(15)).strength(6f, 6f).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> WOODSTEEL_BLOCK = BLOCKS.register("woodsteel_block", () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(6f, 6f).requiresCorrectToolForDrops().randomTicks()){
-        @Override
-        public void randomTick(BlockState blockState, ServerLevel level, BlockPos blockPos, Random rand) {
-            var bl = level.getBlockState(blockPos.above());
-            if (!bl.is(BlockTags.SAPLINGS)) return;
-            if (rand.nextFloat() <= 0.75f) {
-                var sap = (SaplingBlock)bl.getBlock();
-                sap.performBonemeal(level, rand, blockPos.above(), bl);
-            }
-        }
-    });
+    public static final RegistryObject<Block> WOODSTEEL_BLOCK = BLOCKS.register("woodsteel_block", () -> new WoodsteelBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(6f, 6f).requiresCorrectToolForDrops().randomTicks()));
     public static final RegistryObject<Block> GOLDSTEEL_BLOCK = BLOCKS.register("goldsteel_block", () -> new GoldsteelBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(6f, 6f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> CREEPERSTEEL_BLOCK = BLOCKS.register("creepersteel_block", () -> new CreepersteelBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(6f, 1200f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> PRISMASTEEL_BLOCK = BLOCKS.register("prismasteel_block", () -> new PrismasteelBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(6f, 1200f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> SKYSTEEL_BLOCK = BLOCKS.register("skysteel_block", () -> new SkysteelBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(6f, 1200f).requiresCorrectToolForDrops()));
 
 
 

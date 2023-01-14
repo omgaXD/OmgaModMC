@@ -43,6 +43,10 @@ public class OmgamodMaterialStats extends AbstractMaterialStatsDataProvider {
                 new HeadMaterialStats(700, 7f, Tiers.DIAMOND, 2.5f),
                 HandleMaterialStats.DEFAULT.withDurability(1.05f).withMiningSpeed(1.1f).withAttackDamage(1.05f).withAttackSpeed(1.1f),
                 ExtraMaterialStats.DEFAULT);
+        addMaterialStats(OmgamodMaterialIds.SKYSTEEL,
+                new HeadMaterialStats(750, 7.25f, Tiers.DIAMOND, 3f),
+                HandleMaterialStats.DEFAULT.withDurability(1.1f).withMiningSpeed(1.15f).withAttackDamage(1.1f).withAttackSpeed(1.15f),
+                ExtraMaterialStats.DEFAULT);
 
     }
 }

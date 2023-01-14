@@ -23,7 +23,8 @@ public class GoldsteelBlock extends Block {
     }
 
     @SubscribeEvent
-    public void onExplosion(ExplosionEvent.Start event) {
+    public static void onExplosion(ExplosionEvent.Start event) {
+        LOGGER.debug("IT JUST WORKS");
         BlockPos expPos = new BlockPos(event.getExplosion().getPosition());
         ArrayList<BlockPos> bp = new ArrayList<>();
         for (int x = -1; x <= 1; x++) {
@@ -36,12 +37,14 @@ public class GoldsteelBlock extends Block {
                 }
             }
         }
+        LOGGER.debug("POSSIBLE SKILL ISSUE: " + bp.size());
         if (bp.size() != 4) return;
-
+        LOGGER.debug("NO SKILL ISSUES");
         for (BlockPos b : bp) {
             event.getWorld().setBlock(b, Blocks.AIR.defaultBlockState(), 3);
         }
         event.getWorld().setBlock(expPos, BlockInit.CREEPERSTEEL_BLOCK.get().defaultBlockState(), 3);
+        LOGGER.debug("NO SKILL ISSUES AT ALL WHATSEOVER");
     }
     /*
     // lord forgive me for what I am about to code
