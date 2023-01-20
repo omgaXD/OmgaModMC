@@ -1,8 +1,10 @@
 package com.omga.omgamod.content.blocks;
 
 import com.mojang.logging.LogUtils;
+import com.omga.omgamod.init.SoundInit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
@@ -33,21 +35,23 @@ public class SkysteelBlock extends Block {
     }
 
 
-    public void neighborChanged(BlockState bs, Level level, BlockPos p_55668_, Block p_55669_, BlockPos p_55670_, boolean p_55671_) {
+    public void neighborChanged(BlockState bs, Level level, BlockPos bp, Block p_55669_, BlockPos p_55670_, boolean p_55671_) {
         boolean changed = false;
         if (!level.isClientSide) {
             boolean flag = bs.getValue(LIT);
-            if (flag != level.hasNeighborSignal(p_55668_)) {
+            if (flag != level.hasNeighborSignal(bp)) {
                 if (flag) {
-                    level.scheduleTick(p_55668_, this, 4);
+                    level.scheduleTick(bp, this, 4);
                 } else {
-                    level.setBlock(p_55668_, bs.cycle(LIT), 2);
+                    level.setBlock(bp, bs.cycle(LIT), 2);
                 }
                 changed = true;
             }
             if (!changed) return;
-            level.getGameRules().getRule(GameRules.RULE_DAYLIGHT).set(!bs.getValue(LIT), level.getServer());
-            LOGGER.debug("LET'S GOOO NOW THE DAY'S GONNA BE " + level.getGameRules().getRule(GameRules.RULE_DAYLIGHT).get());
+            level.getGameRules().getRule(GameRules.RULE_DAYLIGHT).set(bs.getValue(LIT), level.getServer());
+            level.playSound(null, bp.getX() + 0.5d, bp.getY() + 0.5d, bp.getZ() + 0.5d, flag ? SoundInit.time_resume : SoundInit.time_stop, SoundSource.BLOCKS, 1.0f, 1.0f);
+            //LOGGER.debug("LET'S GOOO NOW THE DAY'S GONNA BE " + level.getGameRules().getRule(GameRules.RULE_DAYLIGHT).get());
+
         }
 
 

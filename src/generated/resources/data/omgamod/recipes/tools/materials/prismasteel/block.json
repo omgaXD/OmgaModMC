@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "forge:storage_blocks/prismasteel"
+  },
+  "value": 9,
+  "needed": 1,
+  "material": "omgamod:prismasteel",
+  "leftover": {
+    "tag": "forge:ingots/prismasteel"
+  }
+}

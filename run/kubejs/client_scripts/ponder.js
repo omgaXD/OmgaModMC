@@ -102,7 +102,7 @@ onEvent("ponder.registry", (event) => {
         scene.world.setBlock([2, 1, 2], Block.id("minecraft:tnt"), true)
         scene.world.showSection([2, 1, 2], Direction.DOWN)
 
-        scene.text(50, "Exactly four goldsteel blocks should be placed in area adjastent to the explosive.", [2.5, 2, 2.5]).placeNearTarget().attachKeyFrame()
+        scene.text(50, "Exactly four goldsteel blocks should be placed in area adjastent to the TNT.", [2.5, 2, 2.5]).placeNearTarget().attachKeyFrame()
         scene.idle(50)
 
         const id = "omgamod:goldsteel_block"
@@ -128,7 +128,9 @@ onEvent("ponder.registry", (event) => {
         scene.showControls(30, [2.5, 2, 2.5], "down").rightClick().withItem("minecraft:flint_and_steel")
         scene.world.setBlock([2, 1, 2], 0, false);
         scene.world.createEntity("tnt", [2.5, 1, 2.5])
-        scene.idle(80)
+        scene.idle(45)
+        scene.text(50, "Only TNT explosions will work.")
+        scene.idle(35)
         scene.world.setBlocks([1, 1, 1, 3, 1, 3], false, 0)
         scene.particles.simple(1, "minecraft:explosion", [2.5, 1, 2.5])
         scene.world.setBlock([2, 1, 2], Block.id("omgamod:creepersteel_block"), false)

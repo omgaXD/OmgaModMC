@@ -25,6 +25,7 @@ onEvent("item.tooltip", t => {
     addTooltip('omgamod:goldsteel_block', ["Can be used in alchemy as philosopher's stone:", "Throw it into {any metal} fluid source, get {molten gold}!"])
     addTooltip('omgamod:creepersteel_block', ["Acts like a {powerful} explosive with an {instant} fuse and {repairable} remainder"])
     addTooltip('omgamod:prismasteel_block', ["Acts as an {infinite} water source: just need a bucket to get all that water!"])
+    addTooltip('omgamod:skysteel_block', ["When powered, will {stop} the {day cycle}. When turned off, will {resume} the {time as normal}.", "Only the {last} changed skysteel block will affect the day cycle!"])
 
 
     addTooltip('omgamod:fertilizer_spray', ["Can be used as {bonemeal}. Should be recharged by {spouting} fertilizer fluid on it."])

@@ -2,7 +2,13 @@ package com.omga.omgamod.content.blocks;
 
 import com.mojang.logging.LogUtils;
 import com.omga.omgamod.init.BlockInit;
+import com.omga.omgamod.init.ItemInit;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.item.PrimedTnt;
+import net.minecraft.world.entity.monster.Creeper;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -25,6 +31,7 @@ public class GoldsteelBlock extends Block {
     @SubscribeEvent
     public static void onExplosion(ExplosionEvent.Start event) {
         LOGGER.debug("IT JUST WORKS");
+        if (!(event.getExplosion().getExploder() instanceof PrimedTnt)) return;
         BlockPos expPos = new BlockPos(event.getExplosion().getPosition());
         ArrayList<BlockPos> bp = new ArrayList<>();
         for (int x = -1; x <= 1; x++) {
@@ -43,6 +50,7 @@ public class GoldsteelBlock extends Block {
         for (BlockPos b : bp) {
             event.getWorld().setBlock(b, Blocks.AIR.defaultBlockState(), 3);
         }
+
         event.getWorld().setBlock(expPos, BlockInit.CREEPERSTEEL_BLOCK.get().defaultBlockState(), 3);
         LOGGER.debug("NO SKILL ISSUES AT ALL WHATSEOVER");
     }

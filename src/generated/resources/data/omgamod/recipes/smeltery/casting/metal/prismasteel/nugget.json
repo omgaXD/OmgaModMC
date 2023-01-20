@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "forge:nuggets/prismasteel"
+  },
+  "result": {
+    "fluid": "omgamod:molten_prismasteel",
+    "amount": 10
+  },
+  "temperature": 1050,
+  "time": 23
+}

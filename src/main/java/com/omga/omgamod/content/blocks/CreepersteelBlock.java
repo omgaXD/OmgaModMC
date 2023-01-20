@@ -64,7 +64,6 @@ public class CreepersteelBlock extends Block {
 
         if (explosions.size() > 32) explosions.clear(); // little optimization. might cause bugs but at least won't crash game :)
     }
-
     public static void landmineTrigger(ScheduledExplosion s) {
         LOGGER.debug("trynna do the thing");
         if (s.bs.is(BlockInit.CREEPERSTEEL_BLOCK.get())) {

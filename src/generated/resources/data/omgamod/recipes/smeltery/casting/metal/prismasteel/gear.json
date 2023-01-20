@@ -1,0 +1,21 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:gears/prismasteel",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:gears/prismasteel"
+  },
+  "result": {
+    "fluid": "omgamod:molten_prismasteel",
+    "amount": 360
+  },
+  "temperature": 1050,
+  "time": 136
+}

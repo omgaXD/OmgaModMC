@@ -4,6 +4,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.server.commands.SaveOffCommand;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.item.BoneMealItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -19,9 +20,9 @@ public class WoodsteelBlock extends Block {
     public void randomTick(BlockState blockState, ServerLevel level, BlockPos blockPos, Random rand) {
         var bl = level.getBlockState(blockPos.above());
         if (!bl.is(BlockTags.SAPLINGS)) return;
+        if (!bl.hasProperty(SaplingBlock.STAGE)) return;
         var sap = (SaplingBlock)bl.getBlock();
-        while (bl.getBlock() instanceof SaplingBlock) {
-            sap.performBonemeal(level, rand, blockPos.above(), blockState);
-        }
+        sap.performBonemeal(level, rand, blockPos.above(), bl);
+        //BoneMealItem
     }
 }

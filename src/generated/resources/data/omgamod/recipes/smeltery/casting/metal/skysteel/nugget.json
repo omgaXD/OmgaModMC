@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "forge:nuggets/skysteel"
+  },
+  "result": {
+    "fluid": "omgamod:molten_skysteel",
+    "amount": 10
+  },
+  "temperature": 1150,
+  "time": 24
+}

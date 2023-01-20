@@ -1,0 +1,10 @@
+{
+  "time_resume": {
+    "subtitle": "omgamod.subtitle.time_resume",
+    "sounds": ["omgamod:time_resume"]
+  },
+  "time_stop": {
+    "subtitle": "omgamod.subtitle.time_stop",
+    "sounds": ["omgamod:time_stop"]
+  }
+}

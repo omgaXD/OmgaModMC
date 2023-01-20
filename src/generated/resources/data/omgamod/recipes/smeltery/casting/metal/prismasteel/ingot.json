@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "forge:ingots/prismasteel"
+  },
+  "result": {
+    "fluid": "omgamod:molten_prismasteel",
+    "amount": 90
+  },
+  "temperature": 1050,
+  "time": 68
+}

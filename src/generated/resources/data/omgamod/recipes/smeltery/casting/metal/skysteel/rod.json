@@ -1,0 +1,21 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:rods/skysteel",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:rods/skysteel"
+  },
+  "result": {
+    "fluid": "omgamod:molten_skysteel",
+    "amount": 45
+  },
+  "temperature": 1150,
+  "time": 14
+}

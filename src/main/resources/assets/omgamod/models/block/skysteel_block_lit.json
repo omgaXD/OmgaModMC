@@ -1,6 +1,12 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/cube",
   "textures": {
-    "all": "omgamod:blocks/skysteel_block_lit"
+    "particle": "omgamod:blocks/skysteel_block_lit",
+    "up": "omgamod:blocks/skysteel_block_lit",
+    "down": "omgamod:blocks/skysteel_block_lit",
+    "north": "omgamod:blocks/skysteel_block_lit_side",
+    "west": "omgamod:blocks/skysteel_block_lit_side",
+    "south": "omgamod:blocks/skysteel_block_lit_side",
+    "east": "omgamod:blocks/skysteel_block_lit_side"
   }
 }

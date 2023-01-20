@@ -83,14 +83,14 @@ public class PrismasteelBlock extends Block implements SimpleWaterloggedBlock {
     }
     @Override
     public boolean placeLiquid(LevelAccessor la, BlockPos bp, BlockState bs, FluidState fs) {
-        LOGGER.debug("HOLY CRAP LETS GO LIQUID PLCAED (" + fs.getType().getRegistryName() + " btw)");
+        //LOGGER.debug("HOLY CRAP LETS GO LIQUID PLCAED (" + fs.getType().getRegistryName() + " btw)");
         if (fs.getType() == Fluids.WATER) {
             if (!la.isClientSide()) {
                 la.setBlock(bp, bs.setValue(BlockStateProperties.WATERLOGGED, Boolean.valueOf(true)), 3);
                 la.scheduleTick(bp, fs.getType(), fs.getType().getTickDelay(la));
             }
 
-            LOGGER.debug("H,,mmmm dam no cap thers " + bs.getFluidState().getType().getRegistryName() + " liquid!!");
+            //LOGGER.debug("H,,mmmm dam no cap thers " + bs.getFluidState().getType().getRegistryName() + " liquid!!");
             return true;
         } else {
             return false;
