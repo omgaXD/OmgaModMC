@@ -77,7 +77,6 @@ public class ItemInit {
             if (f.isSource() && !f.is(TinkerFluids.moltenGold.get()) && f.is(TinkerTags.Fluids.METAL_TOOLTIPS)) {
                 entity.level.setBlock(entity.blockPosition(), TinkerFluids.moltenGold.getBlock().defaultBlockState(), 3);
                 //stack.shrink(1);
-
             }
             return super.onEntityItemUpdate(stack, entity);
         }

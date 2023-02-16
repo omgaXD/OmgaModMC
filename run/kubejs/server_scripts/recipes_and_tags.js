@@ -92,7 +92,12 @@ onEvent('recipes', event => {
 
 	event.shapeless('omgamod:spectral_catalyst', ['8x omgamod:freed_soul', 'minecraft:lapis_lazuli'])
 	event.recipes.create.mixing(Fluid.of('kubejs:fertilizer', 250), ['minecraft:bone_meal', Fluid.of('minecraft:water', 250), '2x ' + "#minecraft:flowers"])
-	event.recipes.create.mixing(Fluid.of('kubejs:fertilizer', 500), [Fluid.of('minecraft:water', 250), Fluid.of('omgamod:molten_woodsteel', 250)])
+	event.recipes.create.mixing(Fluid.of('kubejs:fertilizer', 500), [Fluid.of('minecraft:water', 500), Fluid.of('omgamod:molten_woodsteel', 50)])
+
+	// renewable lava
+	event.recipes.create.mixing(Fluid.of("lava", 5), ["#forge:cobblestone"])
+
+	
 
 	Ingredient.of('#minecraft:tall_flowers').itemIds.forEach(element => {
 		event.recipes.create.filling('2x ' + element, [element, Fluid.of('kubejs:fertilizer', 25)])

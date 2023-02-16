@@ -226,6 +226,10 @@ dependencies {
     //402256:3758004
 
     runtimeOnly fg.deobf("curse.maven:appleskin-248787:3927564")
+    runtimeOnly fg.deobf("curse.maven:libx-412525:3829113")
+    runtimeOnly fg.deobf("curse.maven:skyblock_builder-446691:4166372")
+
+    runtimeOnly fg.deobf("curse.maven:jer-240630:3831559")
     //implementation fg.deobf("me.shedaniel:RoughlyEnoughItems-forge:8.3.502")
     // Examples using mod jars from ./libs
     // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")
