@@ -187,6 +187,7 @@ repositories {
             includeGroup "curse.maven"
         }
     }
+    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
 }
 
 dependencies {
@@ -230,6 +231,8 @@ dependencies {
     runtimeOnly fg.deobf("curse.maven:skyblock_builder-446691:4166372")
 
     runtimeOnly fg.deobf("curse.maven:jer-240630:3831559")
+
+    implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.18:3.0.57')
     //implementation fg.deobf("me.shedaniel:RoughlyEnoughItems-forge:8.3.502")
     // Examples using mod jars from ./libs
     // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")

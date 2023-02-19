@@ -1,5 +1,7 @@
 package com.omga.omgamod;
 
+import com.omga.omgamod.content.items.armor.flippers.PrismasteelFlippersArmorItem;
+import com.omga.omgamod.content.items.armor.flippers.PrismasteelFlippersArmorRenderer;
 import com.omga.omgamod.datagen.tcon.*;
 import com.omga.omgamod.init.*;
 import com.mojang.logging.LogUtils;
@@ -19,9 +21,11 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.event.world.ExplosionEvent;
@@ -44,6 +48,7 @@ import slimeknights.tconstruct.library.data.material.AbstractMaterialDataProvide
 import slimeknights.tconstruct.library.events.TinkerToolEvent;
 import slimeknights.tconstruct.tools.data.sprite.TinkerMaterialSpriteProvider;
 import slimeknights.tconstruct.tools.data.sprite.TinkerPartSpriteProvider;
+import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
 
 import java.util.ArrayList;
 
@@ -122,6 +127,10 @@ public class OmgaMod
     }
 
 
+    @SubscribeEvent
+    public static void registerArmorRenderer(final EntityRenderersEvent.AddLayers event) {
+        GeoArmorRenderer.registerArmorRenderer(PrismasteelFlippersArmorItem.class, new PrismasteelFlippersArmorRenderer());
+    }
 
 
     @SubscribeEvent

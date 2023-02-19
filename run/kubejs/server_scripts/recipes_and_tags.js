@@ -34,6 +34,8 @@ onEvent('recipes', event => {
 	event.shaped('omgamod:creepersteel_block', ['s','s'], {s: "omgamod:creepersteel_slab"})
 	handleMaterial(event, 'omgamod', 'prismasteel')
 	handleMaterial(event, "omgamod", "skysteel")
+	handleMaterial(event, "omgamod", "endersteel")
+	
 	// NETHERITE
 	event.recipes.create.pressing('omgamod:netherite_plate', "minecraft:netherite_ingot");
 	cast(event, "plate", "tconstruct:molten_netherite", ingot, "omgamod:netherite_plate", 60)
@@ -84,6 +86,14 @@ onEvent('recipes', event => {
 	event.recipes.create.cutting(inter4, inter4)
 	]).transitionalItem(inter4).loops(4) // set the transitional item and the loops (amount of repetitions)
 
+	const inter5 = 'create:incomplete_precision_mechanism'
+	event.recipes.createSequencedAssembly(['omgamod:prismasteel_flippers'],"diamond_boots",[ 
+	event.recipes.createFilling(inter5, [inter5, Fluid.of('omgamod:molten_prismasteel', ingot)]),
+	event.recipes.createDeploying(inter5, [inter5, Item.of('tconstruct:large_plate', '{Material:"tconstruct:cobalt"}')]),
+	event.recipes.createDeploying(inter5, [inter5, "minecraft:phantom_membrane"]),
+	event.recipes.create.cutting(inter5, inter5)
+	]).transitionalItem(inter5).loops(4) // set the transitional item and the loops (amount of repetitions)
+
 	
 	
 
@@ -94,10 +104,23 @@ onEvent('recipes', event => {
 	event.recipes.create.mixing(Fluid.of('kubejs:fertilizer', 250), ['minecraft:bone_meal', Fluid.of('minecraft:water', 250), '2x ' + "#minecraft:flowers"])
 	event.recipes.create.mixing(Fluid.of('kubejs:fertilizer', 500), [Fluid.of('minecraft:water', 500), Fluid.of('omgamod:molten_woodsteel', 50)])
 
+	// RENEWABILITY
 	// renewable lava
 	event.recipes.create.mixing(Fluid.of("lava", 5), ["#forge:cobblestone"])
-
-	
+	// renewable netherrack and other stones
+	event.recipes.create.filling('netherrack', ['#forge:gravel', Fluid.of('lava', 50)])
+	event.recipes.create.filling('dripstone_block', ['#forge:gravel', Fluid.of('water', 50)])
+	event.recipes.create.filling('calcite', ['#forge:gravel', Fluid.of('milk', 50)])
+	// calcite -> bonemeal
+	event.recipes.create.crushing([Item.of('sand'), Item.of('bone_meal').withChance(0.5)], 'calcite')
+	// dripstone -> pointed dripstone
+	event.recipes.minecraft.stonecutting('4x pointed_dripstone', 'dripstone_block')
+	// soul sand
+	event.recipes.create.crushing('soul_sand', 'netherrack')
+	event.recipes.create.pressing('soul_soil', '2x soul_sand')
+	// tall grass/fern
+	event.shaped('tall_grass', ['h','h'], {h: 'grass'})
+	event.shaped('large_fern', ['h','h'], {h: 'fern'})
 
 	Ingredient.of('#minecraft:tall_flowers').itemIds.forEach(element => {
 		event.recipes.create.filling('2x ' + element, [element, Fluid.of('kubejs:fertilizer', 25)])
@@ -131,6 +154,7 @@ onEvent('item.tags', event => {
 	handleTags(event, 'omgamod', 'creepersteel')
 	handleTags(event, 'omgamod', 'prismasteel')
 	handleTags(event, 'omgamod', 'skysteel')
+	handleTags(event, 'omgamod', 'endersteel')
 
 
 	event.get('shrooms').add(['minecraft:brown_mushroom', 'minecraft:red_mushroom'])
@@ -154,22 +178,30 @@ const guaranteed_souls = [
 ]
 const three_souls = ["minecraft:wither"]
 
+
+
+let metals = [
+	"redsteel",
+    "woodsteel",
+    "goldsteel",
+    "creepersteel",
+    "prismasteel",
+    "skysteel",
+    "endersteel"
+]
 onEvent('tags.fluids', event => {
-    event.get("forge:molten_redsteel").add("omgamod:molten_redsteel")
-	event.get("forge:molten_woodsteel").add("omgamod:molten_woodsteel")
-	event.get("forge:molten_goldsteel").add("omgamod:molten_goldsteel")
-	event.get("forge:molten_creepersteel").add("omgamod:molten_creepersteel")
-	event.get("forge:molten_prismasteel").add("omgamod:molten_prismasteel")
-	event.get("forge:molten_skysteel").add("omgamod:molten_skysteel")
+	metals.forEach(metal => {
+		event.get("forge:molten_" + metal).add("omgamod:molten_" + metal)
+		event.get("tconstruct:tooltips/metal").add("#forge:molten_" + metal)
+	})
 })
+
 onEvent('block.tags', event => {
     event.get("minecraft:dirt").add("omgamod:woodsteel_block")
 
-	event.get("minecraft:beacon_base_blocks").add("omgamod:redsteel_block")
-	event.get("minecraft:beacon_base_blocks").add("omgamod:woodsteel_block")
-	event.get("minecraft:beacon_base_blocks").add("omgamod:goldsteel_block")
-	event.get("minecraft:beacon_base_blocks").add("omgamod:creepersteel_block")
-	event.get("minecraft:beacon_base_blocks").add("omgamod:prismasteel_block")
-	event.get("minecraft:beacon_base_blocks").add("omgamod:skysteel_block")
-	
+	metals.forEach(metal => {
+		event.get("minecraft:beacon_base_blocks").add("omgamod:" + metal + "_block")
+	})
 })
+
+

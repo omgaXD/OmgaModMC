@@ -1,4 +1,4 @@
-package com.omga.omgamod.content.items;
+package com.omga.omgamod.content.items.armor.nightvisionhelm;
 
 import com.omga.omgamod.init.ItemInit;
 import net.minecraft.sounds.SoundEvent;

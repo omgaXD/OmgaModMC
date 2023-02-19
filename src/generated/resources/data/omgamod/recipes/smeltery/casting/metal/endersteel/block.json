@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "forge:storage_blocks/endersteel"
+  },
+  "result": {
+    "fluid": "omgamod:molten_endersteel",
+    "amount": 810
+  },
+  "temperature": 1250,
+  "time": 221
+}

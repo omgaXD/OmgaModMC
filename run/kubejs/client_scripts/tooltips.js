@@ -30,8 +30,11 @@ function init() {
     add('omgamod:saturation_fruit', [['en_us', "Gives {Saturation I (0:05)} effect which restores most of your hunger"]], TooltipType.WhenEaten)
 
     
-    add('omgamod:night_vision_helm', [['en_us', "Gives {Night Vision} effect"]], TooltipType.WhenWorn)
-    
+    add('omgamod:night_vision_helm', [['en_us', "Grants {Night Vision} effect"]], TooltipType.WhenWorn)
+
+    add('omgamod:prismasteel_flippers', [['en_us', "{Lightweight} flippers to make your water journey {faster}!"]])
+    add('omgamod:prismasteel_flippers', [['en_us', "Swimming speed {+150%}\nThis effect stacks with {Dolphin's Grace}"]], TooltipType.WhenWorn)
+
 }
 
 
@@ -137,6 +140,9 @@ onEvent("client.generate_assets", event => {
     // call the init to generate all needed stuff
     init()
 
+    // reverse the list because that optimizes the insertion in future (when we print it out)
+    //tooltipList.reverse()
+
     /**using map to hold every locale's json separately
      * @type {Map<string, Object>}
      */ 
@@ -197,32 +203,33 @@ onEvent("item.tooltip", event => {
     itemHaveTooltipsSet.forEach(item => {
         event.addAdvanced(item, (_1, _2, component) => {
             if (!event.shift) {
-                component.add(Component.translate(hold_shift_off))
+                component.add(1, Component.translate(hold_shift_off))
             } else {
-                component.add(Component.translate(hold_shift_on))
+                component.add(1, Component.translate(hold_shift_on))
             }
         })
     })
-    tooltipList.forEach(obj => {
+    tooltipList.slice().reverse().forEach(obj => {
         let i = obj[0]
         let item = obj[1]
         let type = obj[2]
         event.addAdvanced(item, (_1, _2, component) => {
             if (!event.shift) {
             } else {
+                let index = 2;
                 switch (type) {
                     case (TooltipType.WhenEaten):
-                        component.add(Component.translate(when_eaten))
+                        component.add(index++, Component.translate(when_eaten))
                         break;
                     case (TooltipType.WhenUsed):
-                        component.add(Component.translate(when_used))
+                        component.add(index++, Component.translate(when_used))
                         break;
                     case (TooltipType.WhenWorn):
-                        component.add(Component.translate(when_worn))
+                        component.add(index++, Component.translate(when_worn))
                         break;
                 }
-                Component.translate(langKey(i)).getString().split('\n').forEach(str => {
-                    component.add(str)
+                Component.translate(langKey(i)).getString().split('\n').reverse().forEach(str => {
+                    component.add(index, str)
                 })
                 
             }

@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "forge:nuggets/endersteel"
+  },
+  "result": {
+    "fluid": "omgamod:molten_endersteel",
+    "amount": 10
+  },
+  "temperature": 1250,
+  "time": 25
+}

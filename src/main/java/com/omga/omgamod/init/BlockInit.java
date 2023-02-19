@@ -36,6 +36,7 @@ public class BlockInit {
     public static final RegistryObject<Block> CREEPERSTEEL_BLOCK = BLOCKS.register("creepersteel_block", () -> new CreepersteelBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(6f, 1200f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> PRISMASTEEL_BLOCK = BLOCKS.register("prismasteel_block", () -> new PrismasteelBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(6f, 1200f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> SKYSTEEL_BLOCK = BLOCKS.register("skysteel_block", () -> new SkysteelBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(6f, 1200f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ENDERSTEEL_BLOCK = BLOCKS.register("endersteel_block", () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(6f, 1200f).requiresCorrectToolForDrops()));
 
 
 

@@ -71,13 +71,22 @@ public class OmgamodMaterialSpriteProvider extends AbstractMaterialSpriteProvide
                 .meleeHarvest()
                 .fallbacks("metal")
                 .colorMapper(GreyToColorMapping.builderFromBlack()
-                        .addARGB(63,  0xFF28334c)
-                        .addARGB(95,  0xFF395082)
-                        .addARGB(127, 0xFF3e58ab)
-                        .addARGB(195, 0xFF7178dd)
-                        .addARGB(255, 0xFFb1b5e4)
+                        .addARGB(63,  0xFF283310)
+                        .addARGB(95,  0xFF395018)
+                        .addARGB(127, 0xFF3e5825)
+                        .addARGB(195, 0xFF717833)
+                        .addARGB(255, 0xFFb1b544)
                         .build());
-
+        buildMaterial(OmgamodMaterialIds.ENDERSTEEL)
+                .meleeHarvest()
+                .fallbacks("metal")
+                .colorMapper(GreyToColorMapping.builderFromBlack()
+                        .addARGB(63,  0xFF391139)
+                        .addARGB(95,  0xFF482256)
+                        .addARGB(127, 0xFF7F337A)
+                        .addARGB(195, 0xFFB444B2)
+                        .addARGB(255, 0xFFE0C2E2)
+                        .build());
 
 
 

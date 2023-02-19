@@ -18,6 +18,7 @@ public class FluidInit {
     public static final FluidObject<ForgeFlowingFluid> MOLTEN_CREEPERSTEEL = register("molten_creepersteel", 1250);
     public static final FluidObject<ForgeFlowingFluid> MOLTEN_PRISMASTEEL = register("molten_prismasteel", 1350);
     public static final FluidObject<ForgeFlowingFluid> MOLTEN_SKYSTEEL = register("molten_skysteel", 1450);
+    public static final FluidObject<ForgeFlowingFluid> MOLTEN_ENDERSTEEL = register("molten_endersteel", 1550);
 
     private static FluidObject<ForgeFlowingFluid> register(String name, int temp) {
 

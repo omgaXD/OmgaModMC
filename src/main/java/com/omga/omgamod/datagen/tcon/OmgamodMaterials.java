@@ -20,6 +20,7 @@ public class OmgamodMaterials extends AbstractMaterialDataProvider {
         addMaterial(new MaterialId(OmgamodMaterialIds.CREEPERSTEEL), 3, ORDER_SPECIAL, false);
         addMaterial(new MaterialId(OmgamodMaterialIds.PRISMASTEEL), 3, ORDER_SPECIAL, false);
         addMaterial(new MaterialId(OmgamodMaterialIds.SKYSTEEL), 3, ORDER_SPECIAL, false);
+        addMaterial(new MaterialId(OmgamodMaterialIds.ENDERSTEEL), 3, ORDER_SPECIAL, false);
     }
 
     @Nonnull

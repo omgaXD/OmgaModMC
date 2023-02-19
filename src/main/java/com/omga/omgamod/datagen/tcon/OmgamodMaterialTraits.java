@@ -29,6 +29,7 @@ public class OmgamodMaterialTraits extends AbstractMaterialTraitDataProvider {
         addDefaultTraits(OmgamodMaterialIds.CREEPERSTEEL, MIDAS_TRAIT);
         addDefaultTraits(OmgamodMaterialIds.PRISMASTEEL, MIDAS_TRAIT);
         addDefaultTraits(OmgamodMaterialIds.SKYSTEEL, MIDAS_TRAIT);
+        addDefaultTraits(OmgamodMaterialIds.ENDERSTEEL, MIDAS_TRAIT);
     }
 
     @Nonnull

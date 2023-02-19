@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "omgamod:endersteel",
+  "temperature": 1250,
+  "result": {
+    "fluid": "omgamod:molten_endersteel",
+    "amount": 90
+  }
+}

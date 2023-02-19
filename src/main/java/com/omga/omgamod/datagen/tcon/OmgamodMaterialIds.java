@@ -10,5 +10,6 @@ public class OmgamodMaterialIds {
     public static final MaterialId CREEPERSTEEL = new MaterialId(OmgaMod.getLocation("creepersteel"));
     public static final MaterialId PRISMASTEEL = new MaterialId(OmgaMod.getLocation("prismasteel"));
     public static final MaterialId SKYSTEEL = new MaterialId(OmgaMod.getLocation("skysteel"));
+    public static final MaterialId ENDERSTEEL = new MaterialId(OmgaMod.getLocation("endersteel"));
 
 }

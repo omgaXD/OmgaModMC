@@ -2,6 +2,8 @@ package com.omga.omgamod.init;
 
 import com.omga.omgamod.OmgaMod;
 import com.omga.omgamod.content.items.*;
+import com.omga.omgamod.content.items.armor.flippers.PrismasteelFlippersArmorItem;
+import com.omga.omgamod.content.items.armor.nightvisionhelm.NightVisionHelm;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.Registry;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -24,12 +26,11 @@ public class ItemInit {
     // # # # # #
 
     public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register("steel_ingot", ItemInit::OMTabItem);
-    public static final RegistryObject<Item> STEEL_PLATE = ITEMS.register("steel_plate", ItemInit::OMTabItem);
     public static final RegistryObject<Item> STEEL_NUGGET = ITEMS.register("steel_nugget", ItemInit::OMTabItem);
-
+    public static final RegistryObject<Item> STEEL_PLATE = ITEMS.register("steel_plate", ItemInit::OMTabItem);
     public static final RegistryObject<Item> REDSTEEL_INGOT = ITEMS.register("redsteel_ingot", ItemInit::OMTabItem);
-    public static final RegistryObject<Item> REDSTEEL_PLATE = ITEMS.register("redsteel_plate", ItemInit::OMTabItem);
     public static final RegistryObject<Item> REDSTEEL_NUGGET = ITEMS.register("redsteel_nugget", ItemInit::OMTabItem);
+    public static final RegistryObject<Item> REDSTEEL_PLATE = ITEMS.register("redsteel_plate", ItemInit::OMTabItem);
 
     public static final RegistryObject<Item> WOODSTEEL_INGOT = ITEMS.register("woodsteel_ingot", ItemInit::OMTabItem);
     public static final RegistryObject<Item> WOODSTEEL_NUGGET = ITEMS.register("woodsteel_nugget", ItemInit::OMTabItem);
@@ -51,6 +52,9 @@ public class ItemInit {
     public static final RegistryObject<Item> SKYSTEEL_NUGGET = ITEMS.register("skysteel_nugget", ItemInit::OMTabItem);
     public static final RegistryObject<Item> SKYSTEEL_PLATE = ITEMS.register("skysteel_plate", ItemInit::OMTabItem);
 
+    public static final RegistryObject<Item> ENDERSTEEL_INGOT = ITEMS.register("endersteel_ingot", ItemInit::OMTabItem);
+    public static final RegistryObject<Item> ENDERSTEEL_NUGGET = ITEMS.register("endersteel_nugget", ItemInit::OMTabItem);
+    public static final RegistryObject<Item> ENDERSTEEL_PLATE = ITEMS.register("endersteel_plate", ItemInit::OMTabItem);
 
     public static final RegistryObject<Item> FREED_SOUL = ITEMS.register("freed_soul", () -> new Item(OMTab().rarity(Rarity.RARE)));
     public static final RegistryObject<Item> SPECTRAL_CATALYST = ITEMS.register("spectral_catalyst", () -> new SimpleFoiledItem(OMTab().rarity(Rarity.EPIC)));
@@ -68,6 +72,10 @@ public class ItemInit {
     public static final RegistryObject<Item> FERTILIZER_SPRAY_EMPTY = ITEMS.register("fertilizer_spray_empty", () -> new FertilizerSpray.FertilizerSprayEmpty(OMTab()));
     public static final RegistryObject<Item> GOLDSTEEL_DRILL = ITEMS.register("goldsteel_drill", () -> new GoldsteelDrill(1, 0f, OMTab()));
     public static final RegistryObject<Item> TNT_CANNON = ITEMS.register("tnt_cannon", () -> new TntCannon(OMTab()));
+
+    public static final RegistryObject<Item> PRISMASTEEL_FLIPPERS = ITEMS.register("prismasteel_flippers", () -> new PrismasteelFlippersArmorItem(ArmorMaterials.DIAMOND, EquipmentSlot.FEET, OMTab()));
+
+
     //*
     public static final RegistryObject<Item> GOLDSTEEL_BLOCK_ITEM = ITEMS.register(BlockInit.GOLDSTEEL_BLOCK.getId().getPath(), () -> new BlockItem(BlockInit.GOLDSTEEL_BLOCK.get(), OMTab()){
 
