@@ -2,6 +2,8 @@ package com.omga.omgamod;
 
 import com.omga.omgamod.content.items.armor.flippers.PrismasteelFlippersArmorItem;
 import com.omga.omgamod.content.items.armor.flippers.PrismasteelFlippersArmorRenderer;
+import com.omga.omgamod.content.items.armor.flippers.SkyseekersArmorItem;
+import com.omga.omgamod.content.items.armor.flippers.SkyseekersArmorRenderer;
 import com.omga.omgamod.datagen.tcon.*;
 import com.omga.omgamod.init.*;
 import com.mojang.logging.LogUtils;
@@ -130,6 +132,8 @@ public class OmgaMod
     @SubscribeEvent
     public static void registerArmorRenderer(final EntityRenderersEvent.AddLayers event) {
         GeoArmorRenderer.registerArmorRenderer(PrismasteelFlippersArmorItem.class, new PrismasteelFlippersArmorRenderer());
+        GeoArmorRenderer.registerArmorRenderer(SkyseekersArmorItem.class, new SkyseekersArmorRenderer());
+
     }
 
 

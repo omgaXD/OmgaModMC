@@ -51,6 +51,14 @@
   "fluid.omgamod.molten_skysteel": "Molten skysteel",
 
 
+  "item.omgamod.skysteel_ingot": "Endersteel ingot",
+  "item.omgamod.skysteel_plate": "Endersteel plate",
+  "item.omgamod.skysteel_nugget": "Endersteel nugget",
+  "item.omgamod.skysteel_block": "Endersteel block",
+  "block.omgamod.skysteel_block": "Endersteel block",
+  "fluid.omgamod.molten_skysteel": "Molten endersteel",
+
+
   "modifier.omgamod.haste": "Haste",
   "modifier.omgamod.woodmaster": "Woodmaster",
   "modifier.omgamod.midas": "Midas",
@@ -60,6 +68,7 @@
   "material.omgamod.creepersteel": "Creepersteel",
   "material.omgamod.prismasteel": "Prismasteel",
   "material.omgamod.skysteel": "Skysteel",
+  "material.omgamod.endersteel": "Endersteel",
 
 
   "item.omgamod.goldsteel_blend": "Goldsteel blend",
@@ -67,6 +76,10 @@
   "item.omgamod.night_vision_helm": "Night vision helm",
   "item.omgamod.fertilizer_spray": "Fertilizer spray",
   "item.omgamod.fertilizer_spray_empty": "Empty woodsteel spray",
+  "item.omgamod.tnt_cannon": "TNT cannon",
+  "item.omgamod.prismasteel_flippers": "Prismaflippers",
+  "item.omgamod.skyseekers": "Skyseekers",
+
 
 
   "item.omgamod.spectral_catalyst": "Spectral catalyst",

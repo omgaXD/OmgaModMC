@@ -3,6 +3,7 @@ package com.omga.omgamod.init;
 import com.omga.omgamod.OmgaMod;
 import com.omga.omgamod.content.items.*;
 import com.omga.omgamod.content.items.armor.flippers.PrismasteelFlippersArmorItem;
+import com.omga.omgamod.content.items.armor.flippers.SkyseekersArmorItem;
 import com.omga.omgamod.content.items.armor.nightvisionhelm.NightVisionHelm;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.Registry;
@@ -74,6 +75,7 @@ public class ItemInit {
     public static final RegistryObject<Item> TNT_CANNON = ITEMS.register("tnt_cannon", () -> new TntCannon(OMTab()));
 
     public static final RegistryObject<Item> PRISMASTEEL_FLIPPERS = ITEMS.register("prismasteel_flippers", () -> new PrismasteelFlippersArmorItem(ArmorMaterials.DIAMOND, EquipmentSlot.FEET, OMTab()));
+    public static final RegistryObject<Item> SKYSEEKERS = ITEMS.register("skyseekers", () -> new SkyseekersArmorItem(ArmorMaterials.DIAMOND, EquipmentSlot.CHEST, OMTab()));
 
 
     //*

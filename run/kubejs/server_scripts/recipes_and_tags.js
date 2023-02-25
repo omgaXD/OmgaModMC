@@ -117,7 +117,7 @@ onEvent('recipes', event => {
 	event.recipes.minecraft.stonecutting('4x pointed_dripstone', 'dripstone_block')
 	// soul sand
 	event.recipes.create.crushing('soul_sand', 'netherrack')
-	event.recipes.create.pressing('soul_soil', '2x soul_sand')
+	event.recipes.create.compacting('soul_soil', '4x soul_sand')
 	// tall grass/fern
 	event.shaped('tall_grass', ['h','h'], {h: 'grass'})
 	event.shaped('large_fern', ['h','h'], {h: 'fern'})
