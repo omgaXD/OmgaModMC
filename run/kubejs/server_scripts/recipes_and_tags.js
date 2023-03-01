@@ -49,8 +49,8 @@ onEvent('recipes', event => {
     3: '#fungi'
     })
 	event.recipes.createMixing(
-		['omgamod:saturation_fruit', 'minecraft:glistering_melon_slice'], 
-		['minecraft:glistering_melon_slice', 'omgamod:gshroom', '2x minecraft:sugar']
+		['omgamod:saturation_fruit'], 
+		['minecraft:glistering_melon_slice', 'omgamod:gshroom', '2x minecraft:sugar', "omgamod:goldsteel_nugget"]
 	)
 
 	// COLORFUL STEEL GEAR
@@ -94,6 +94,14 @@ onEvent('recipes', event => {
 	event.recipes.create.cutting(inter5, inter5)
 	]).transitionalItem(inter5).loops(4) // set the transitional item and the loops (amount of repetitions)
 
+	const inter6 = 'create:incomplete_precision_mechanism'
+	event.recipes.createSequencedAssembly(['omgamod:skyseekers'],"elytra",[ 
+	event.recipes.createFilling(inter6, [inter6, Fluid.of('omgamod:molten_skysteel', ingot)]),
+	event.recipes.createDeploying(inter6, [inter6, "minecraft:leather_chestplate"]),
+	event.recipes.createDeploying(inter6, [inter6, "feather"]),
+	event.recipes.create.pressing(inter6, inter6)
+	]).transitionalItem(inter6).loops(4) // set the transitional item and the loops (amount of repetitions)
+
 	
 	
 
@@ -122,6 +130,13 @@ onEvent('recipes', event => {
 	event.shaped('tall_grass', ['h','h'], {h: 'grass'})
 	event.shaped('large_fern', ['h','h'], {h: 'fern'})
 
+
+
+	// CHANGING
+	
+
+
+	//#region Fertilizer
 	Ingredient.of('#minecraft:tall_flowers').itemIds.forEach(element => {
 		event.recipes.create.filling('2x ' + element, [element, Fluid.of('kubejs:fertilizer', 25)])
 	});
@@ -142,7 +157,7 @@ onEvent('recipes', event => {
 		['omgamod:fertilizer_spray_empty',
 		Fluid.of('kubejs:fertilizer', repairFluidAm)]
 	).id("create:filling/fertilizer_spray_from_empty")
-	
+	//#endregion
 })
 
 onEvent('item.tags', event => {
@@ -203,5 +218,3 @@ onEvent('block.tags', event => {
 		event.get("minecraft:beacon_base_blocks").add("omgamod:" + metal + "_block")
 	})
 })
-
-

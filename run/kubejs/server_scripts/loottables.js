@@ -1,3 +1,5 @@
+
+
 onEvent('entity.loot_tables', (e) => {
     e.modifyEntity('wandering_trader', table =>{
         table.addPool(pool => {

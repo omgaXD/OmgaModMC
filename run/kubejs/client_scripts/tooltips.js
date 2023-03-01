@@ -23,18 +23,20 @@ function init() {
     add('omgamod:fertilizer_spray_empty', [['en_us', "An empty bottle with spray. Supposed to be {filled} with fertilizer fluid"]])
     add('omgamod:tnt_cannon', [['en_us', ["Can {shoot TNT} or {TNT minecarts}!", "(Latter is {NOT} recommended)."]]])
 
-    add('golden_apple', [['en_us', ["Gives {Regeneration II (0:05)} effect which restores 4HP", "Gives {Absorbtion I (2:00)} effect which grants additional 4HP"]]], TooltipType.WhenEaten)
-    add('enchanted_golden_apple', [['en_us', ["Gives {Regeneration II (0:20)} effect which restores 16HP", "Gives {Absorbtion IV (2:00)} effect which grants additional 16HP",
-                    "Gives {Resistance I (5:00)} effect, which blocks 20% of incoming damage", "Gives {Fire Resistance (5:00)} effect which grants immunity to fire and lava damage"]]], TooltipType.WhenEaten)
+    add('golden_apple', [['en_us', ["Gives {<effect.minecraft.regeneration> II (0:05)} effect which restores 4HP", "Gives {<effect.minecraft.absorption> I (2:00)} effect which grants additional 4HP"]]], TooltipType.WhenEaten)
+    add('enchanted_golden_apple', [['en_us', ["Gives {<effect.minecraft.regeneration> II (0:20)} effect which restores 16HP", "Gives {<effect.minecraft.absorption> IV (2:00)} effect which grants additional 16HP",
+                    "Gives {<effect.minecraft.resistance> I (5:00)} effect, which blocks 20% of incoming damage", "Gives {<effect.minecraft.fire_resistance> (5:00)} effect which grants immunity to fire and lava damage"]]], TooltipType.WhenEaten)
 
-    add('omgamod:saturation_fruit', [['en_us', "Gives {Saturation I (0:05)} effect which restores most of your hunger"]], TooltipType.WhenEaten)
+    add('omgamod:saturation_fruit', [['en_us', "Gives {<effect.minecraft.saturation> I (0:05)} effect which restores most of your hunger"]], TooltipType.WhenEaten)
 
     
-    add('omgamod:night_vision_helm', [['en_us', "Grants {Night Vision} effect"]], TooltipType.WhenWorn)
+    add('omgamod:night_vision_helm', [['en_us', "Grants {<effect.minecraft.night_vision>} effect"]], TooltipType.WhenWorn)
 
     add('omgamod:prismasteel_flippers', [['en_us', "{Lightweight} flippers to make your water journey {faster}!"]])
-    add('omgamod:prismasteel_flippers', [['en_us', "Swimming speed {+150%}\nThis effect stacks with {Dolphin's Grace}"]], TooltipType.WhenWorn)
+    add('omgamod:prismasteel_flippers', [['en_us', "Swimming speed {+150%}\nThis effect stacks with {<effect.minecraft.dolphins_grace>}"]], TooltipType.WhenWorn)
 
+    add('omgamod:skyseekers', [['en_us', "Very {durable} wings used by builders and factory designers. Let {sky} be your {friend}!"]])
+    add('omgamod:skyseekers', [['en_us', "Grants ability to {fly}\nGrants {slow fall}\nHold {Shift} to fall faster\nImmunity to fall damage"]], TooltipType.WhenWorn)
 }
 
 
@@ -156,6 +158,9 @@ onEvent("client.generate_assets", event => {
         let arr = obj[3]
         arr.forEach(obj2 => {
             let lang = obj2[0]
+            /**
+             * @type {String}
+             */
             let tt_entry = obj2[1]
             if (Array.isArray(tt_entry)) {
                 tt_entry = Array.from(tt_entry).join('\n')
@@ -178,7 +183,6 @@ onEvent("client.generate_assets", event => {
                     tt_entry = '§9- ' + tt_entry.replace(/{/g, '§a').replace(/}/g, '§9').replace(/\n/g, '\n§9- ');
                     break;
             }
-
 
             if (lang_jsonMap.has(lang)) {
                 let jsonEntry =  lang_jsonMap.get(lang);
@@ -229,7 +233,27 @@ onEvent("item.tooltip", event => {
                         break;
                 }
                 Component.translate(langKey(i)).getString().split('\n').reverse().forEach(str => {
-                    component.add(index, str)
+                    let str2 = ""
+                    let open = -1
+                    let i = 0
+                    str.split('').forEach(c => {
+                        if (c == '<') {
+                            open = i
+                        } else if (c == '>') {
+                            if (open >= 0) {
+                                console.log(str.slice(open + 1, i))
+                                str2 += Component.translate(str.slice(open + 1, i)).getString()
+                                open = -1
+                            }
+                        } else {
+                            if (open == -1) {
+                                str2 += c
+                            }
+                        }
+                        
+                        i++
+                    })
+                    component.add(index, str2)
                 })
                 
             }
