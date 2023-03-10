@@ -2,8 +2,9 @@ package com.omga.omgamod.init;
 
 import com.omga.omgamod.OmgaMod;
 import com.omga.omgamod.content.items.*;
+import com.omga.omgamod.content.items.armor.enderpants.EnderpantsArmorItem;
 import com.omga.omgamod.content.items.armor.flippers.PrismasteelFlippersArmorItem;
-import com.omga.omgamod.content.items.armor.flippers.SkyseekersArmorItem;
+import com.omga.omgamod.content.items.armor.skyseekers.SkyseekersArmorItem;
 import com.omga.omgamod.content.items.armor.nightvisionhelm.NightVisionHelm;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.Registry;
@@ -24,6 +25,7 @@ public class ItemInit {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, OmgaMod.MODID);
 
+    public static final RegistryObject<Item> MUSIC_DISC_TREE = ITEMS.register("music_disc_tree", () -> new RecordItem(5, () -> SoundInit.MUSIC_DISC_TREE, OMTab().stacksTo(1).rarity(Rarity.RARE)));
     // # # # # #
 
     public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register("steel_ingot", ItemInit::OMTabItem);
@@ -65,7 +67,7 @@ public class ItemInit {
 
     public static final RegistryObject<Item> GSHROOM = ITEMS.register("gshroom", () -> new Item(new Item.Properties().tab(OmgaModCreativeTab.instance).food(new FoodProperties.Builder().nutrition(3).saturationMod(1f).build())));
     public static final RegistryObject<Item> SATURATION_FRUIT = ITEMS.register("saturation_fruit", () -> new EnchantedGoldenAppleItem(new Item.Properties().tab(OmgaModCreativeTab.instance).food(new FoodProperties.Builder().nutrition(3).saturationMod(1.2f).effect(() -> new MobEffectInstance(MobEffects.SATURATION, 100, 0), 1f).build())));
-    //{Items.NETHERITE_INGOT}
+
     // # # # # #
 
     public static final RegistryObject<Item> NIGHT_VISION_HELM = ITEMS.register("night_vision_helm", () -> new NightVisionHelm(ModArmorMaterials.NIGHT_VISION_HELM, EquipmentSlot.HEAD, OMTab()));
@@ -76,6 +78,7 @@ public class ItemInit {
 
     public static final RegistryObject<Item> PRISMASTEEL_FLIPPERS = ITEMS.register("prismasteel_flippers", () -> new PrismasteelFlippersArmorItem(ArmorMaterials.DIAMOND, EquipmentSlot.FEET, OMTab()));
     public static final RegistryObject<Item> SKYSEEKERS = ITEMS.register("skyseekers", () -> new SkyseekersArmorItem(ArmorMaterials.DIAMOND, EquipmentSlot.CHEST, OMTab()));
+    public static final RegistryObject<Item> ENDERPANTS = ITEMS.register("enderpants", () -> new EnderpantsArmorItem(ArmorMaterials.NETHERITE, EquipmentSlot.LEGS, OMTab()));
 
 
     //*

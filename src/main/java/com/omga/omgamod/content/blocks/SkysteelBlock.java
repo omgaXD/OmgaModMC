@@ -8,10 +8,8 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RedstoneLampBlock;
-import net.minecraft.world.level.block.RedstoneTorchBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
@@ -49,7 +47,7 @@ public class SkysteelBlock extends Block {
             }
             if (!changed) return;
             level.getGameRules().getRule(GameRules.RULE_DAYLIGHT).set(bs.getValue(LIT), level.getServer());
-            level.playSound(null, bp.getX() + 0.5d, bp.getY() + 0.5d, bp.getZ() + 0.5d, flag ? SoundInit.time_resume : SoundInit.time_stop, SoundSource.BLOCKS, 1.0f, 1.0f);
+            level.playSound(null, bp.getX() + 0.5d, bp.getY() + 0.5d, bp.getZ() + 0.5d, flag ? SoundInit.TIME_RESUME : SoundInit.TIME_STOP, SoundSource.BLOCKS, 1.0f, 1.0f);
             //LOGGER.debug("LET'S GOOO NOW THE DAY'S GONNA BE " + level.getGameRules().getRule(GameRules.RULE_DAYLIGHT).get());
 
         }

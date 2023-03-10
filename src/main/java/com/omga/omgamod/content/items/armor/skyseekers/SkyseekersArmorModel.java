@@ -1,4 +1,4 @@
-package com.omga.omgamod.content.items.armor.flippers;
+package com.omga.omgamod.content.items.armor.skyseekers;
 
 import com.omga.omgamod.OmgaMod;
 import net.minecraft.resources.ResourceLocation;

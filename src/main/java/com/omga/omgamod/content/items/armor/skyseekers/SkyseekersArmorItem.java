@@ -1,4 +1,4 @@
-package com.omga.omgamod.content.items.armor.flippers;
+package com.omga.omgamod.content.items.armor.skyseekers;
 
 import com.mojang.logging.LogUtils;
 import com.omga.omgamod.init.ItemInit;
@@ -10,8 +10,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.LogicalSide;
 import net.minecraftforge.fml.common.Mod;
 import org.slf4j.Logger;
 import software.bernie.geckolib3.core.AnimationState;

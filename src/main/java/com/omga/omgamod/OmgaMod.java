@@ -1,43 +1,28 @@
 package com.omga.omgamod;
 
+import com.omga.omgamod.content.items.armor.enderpants.EnderpantsArmorItem;
+import com.omga.omgamod.content.items.armor.enderpants.EnderpantsArmorRenderer;
 import com.omga.omgamod.content.items.armor.flippers.PrismasteelFlippersArmorItem;
 import com.omga.omgamod.content.items.armor.flippers.PrismasteelFlippersArmorRenderer;
-import com.omga.omgamod.content.items.armor.flippers.SkyseekersArmorItem;
-import com.omga.omgamod.content.items.armor.flippers.SkyseekersArmorRenderer;
+import com.omga.omgamod.content.items.armor.skyseekers.SkyseekersArmorItem;
+import com.omga.omgamod.content.items.armor.skyseekers.SkyseekersArmorRenderer;
 import com.omga.omgamod.datagen.tcon.*;
 import com.omga.omgamod.init.*;
 import com.mojang.logging.LogUtils;
-import dev.architectury.event.EventResult;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.FluidTags;
-import net.minecraft.world.entity.EntityEvent;
-import net.minecraft.world.entity.monster.Vindicator;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
-import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.world.BlockEvent;
-import net.minecraftforge.event.world.ExplosionEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -47,12 +32,9 @@ import org.slf4j.Logger;
 import slimeknights.tconstruct.library.client.data.material.AbstractMaterialSpriteProvider;
 import slimeknights.tconstruct.library.client.data.material.MaterialPartTextureGenerator;
 import slimeknights.tconstruct.library.data.material.AbstractMaterialDataProvider;
-import slimeknights.tconstruct.library.events.TinkerToolEvent;
 import slimeknights.tconstruct.tools.data.sprite.TinkerMaterialSpriteProvider;
 import slimeknights.tconstruct.tools.data.sprite.TinkerPartSpriteProvider;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
-
-import java.util.ArrayList;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod("omgamod")
@@ -133,6 +115,7 @@ public class OmgaMod
     public static void registerArmorRenderer(final EntityRenderersEvent.AddLayers event) {
         GeoArmorRenderer.registerArmorRenderer(PrismasteelFlippersArmorItem.class, new PrismasteelFlippersArmorRenderer());
         GeoArmorRenderer.registerArmorRenderer(SkyseekersArmorItem.class, new SkyseekersArmorRenderer());
+        GeoArmorRenderer.registerArmorRenderer(EnderpantsArmorItem.class, new EnderpantsArmorRenderer());
 
     }
 

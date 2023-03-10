@@ -1,4 +1,4 @@
-package com.omga.omgamod.content.items.armor.flippers;
+package com.omga.omgamod.content.items.armor.skyseekers;
 
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
 

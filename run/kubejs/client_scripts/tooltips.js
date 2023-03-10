@@ -36,7 +36,9 @@ function init() {
     add('omgamod:prismasteel_flippers', [['en_us', "Swimming speed {+150%}\nThis effect stacks with {<effect.minecraft.dolphins_grace>}"]], TooltipType.WhenWorn)
 
     add('omgamod:skyseekers', [['en_us', "Very {durable} wings used by builders and factory designers. Let {sky} be your {friend}!"]])
-    add('omgamod:skyseekers', [['en_us', "Grants ability to {fly}\nGrants {slow fall}\nHold {Shift} to fall faster\nImmunity to fall damage"]], TooltipType.WhenWorn)
+    add('omgamod:skyseekers', [['en_us', "Grants ability to {fly}\nGrants {slow fall}\nHold {Shift} to fall faster\nImmunity to fall damage"]], "worn")
+
+    addBasic('forge.attack')
 }
 
 
@@ -51,6 +53,7 @@ const util_tooltips = {
         "item.kubejs.tooltip.when_worn": "§7When worn:",
         "item.kubejs.tooltip.when_used": "§7When used:",
         "item.kubejs.tooltip.when_eaten": "§7When eaten:",
+        "item.kubejs.tooltip.full_set": "§7Full set bonus:"
     },
     'ru_ru': {
         "item.kubejs.tooltip.hold_shift_off": "§8Удерживайте [§7Shift§8], чтобы узнать больше",
@@ -58,6 +61,7 @@ const util_tooltips = {
         "item.kubejs.tooltip.when_worn": "§7Когда надето:",
         "item.kubejs.tooltip.when_used": "§7Когда использовано:",
         "item.kubejs.tooltip.when_eaten": "§7Когда съедено:",
+        "item.kubejs.tooltip.full_set": "§7Бонус полного комплекта:"
     }
 }
 
@@ -77,26 +81,29 @@ const util_tooltips = {
 
 
 
-
-
-
-
-
-
 // # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # BEHIND THE SCENES # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # //
 // # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # BEHIND THE SCENES # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # //
 // # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # BEHIND THE SCENES # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # //
+/** 
+ * @returns {Internal.Minecraft}
+ */
+function getMinecraft() {return Minecraft.getInstance()}
+
+const Minecraft = java('net.minecraft.client.Minecraft')
 
 const hold_shift_off = "item.kubejs.tooltip.hold_shift_off";
 const hold_shift_on = "item.kubejs.tooltip.hold_shift_on";
 const when_worn = "item.kubejs.tooltip.when_worn";
 const when_used = "item.kubejs.tooltip.when_used";
 const when_eaten = "item.kubejs.tooltip.when_eaten";
+const full_set = "item.kubejs.tooltip.full_set";
+
 
 
 // enum for different tooltip presets
 /**
- * @enum
+ * @typedef {"create" | "worn" | "eaten" | "used"} TooltipType
+ * @type {TooltipType}
  */
 const TooltipType = {
     Create: "create",
@@ -110,7 +117,8 @@ let indexCounter = 0
 
 /** initializes a create-style tooltip
  * @param {Internal.Item} item
- * @param {string} tooltipEntry
+ * @param {[String, [String]]} lang_entry_pair_array
+ * @param {TooltipType} type
  * @returns {[Number, Internal.Item, TooltipType, [[String, [String]]]]}
  */
 function add(item, lang_entry_pair_array, type) {
@@ -123,6 +131,30 @@ function add(item, lang_entry_pair_array, type) {
     // return is not necessary but I keep it in case I need it in future
     return result
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/** adds a lang entry
+ * @param {String} key
+ * @param {[String, [String]]} values
+ */
+function addBasic(key, values) {
+   
+}
+
+
+
+
+
 /** list for all the tooltips
  * @type {[Number, Internal.Item, TooltipType, [[String, [String]]]]}
  */
@@ -133,17 +165,27 @@ let tooltipList = []
  */
 let itemHaveTooltipsSet = new Set()
 
+
+
+
+
+
+
 // shortcut function for index-langkey generator
 let langKey = (i) => {
     return ('item.kubejs.tooltip.tooltip_' + i)
 }
 
+
+
+let defaultDashEntry = (tt_entry) => tt_entry = '§9- ' + tt_entry.replace(/{/g, '§a').replace(/}/g, '§9').replace(/\n/g, '\n§9- ');
+
+
+
+
 onEvent("client.generate_assets", event => {
     // call the init to generate all needed stuff
     init()
-
-    // reverse the list because that optimizes the insertion in future (when we print it out)
-    //tooltipList.reverse()
 
     /**using map to hold every locale's json separately
      * @type {Map<string, Object>}
@@ -174,13 +216,13 @@ onEvent("client.generate_assets", event => {
                     break;
                 case TooltipType.WhenEaten:
                     // add "- " instead of "\n" (as in enumerating properties). Also highlight parts in {curly braces}
-                    tt_entry = '§9- ' + tt_entry.replace(/{/g, '§a').replace(/}/g, '§9').replace(/\n/g, '\n§9- ');
+                    defaultDashEntry(tt_entry)
                     break;
                 case TooltipType.WhenUsed:
-                    tt_entry = '§9- ' + tt_entry.replace(/{/g, '§a').replace(/}/g, '§9').replace(/\n/g, '\n§9- ');
+                    defaultDashEntry(tt_entry)
                     break;
                 case TooltipType.WhenWorn:
-                    tt_entry = '§9- ' + tt_entry.replace(/{/g, '§a').replace(/}/g, '§9').replace(/\n/g, '\n§9- ');
+                    defaultDashEntry(tt_entry)
                     break;
             }
 
@@ -200,19 +242,50 @@ onEvent("client.generate_assets", event => {
     })
 })
 
+
+
+
+
+let addShift = (event, item) => {
+    event.addAdvanced(item, (_1, _2, component) => {
+        if (!event.shift) {
+            component.add(1, Component.translate(hold_shift_off))
+        } else {
+            component.add(1, Component.translate(hold_shift_on))
+        }
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
 // Event that (I believe) runs when game wants to create a tooltip for an item (or maybe prepare all tooltips for all items?)
 onEvent("item.tooltip", event => {
+    /**
+    * @type {TooltipInfos}
+    */
+    const tooltip_infos = global.tooltip_infos
+    if (global.defined_tooltips === undefined) {
+        console.log("SKULL ISSSUEEEEE SKULL EMOJI")
+    }
     /**@type {Set<Internal.Item>} */
-    
     itemHaveTooltipsSet.forEach(item => {
-        event.addAdvanced(item, (_1, _2, component) => {
-            if (!event.shift) {
-                component.add(1, Component.translate(hold_shift_off))
-            } else {
-                component.add(1, Component.translate(hold_shift_on))
-            }
-        })
+       addShift(event, item)
     })
+    tooltip_infos.all_items.forEach(item => {
+        addShift(event, item)
+    })
+    
+    /**@type {Set<Internal.Item>} */
+    let whenwornSet = new Set()
+    
     tooltipList.slice().reverse().forEach(obj => {
         let i = obj[0]
         let item = obj[1]
@@ -230,6 +303,7 @@ onEvent("item.tooltip", event => {
                         break;
                     case (TooltipType.WhenWorn):
                         component.add(index++, Component.translate(when_worn))
+                        whenwornSet.add(item)
                         break;
                 }
                 Component.translate(langKey(i)).getString().split('\n').reverse().forEach(str => {
@@ -253,11 +327,78 @@ onEvent("item.tooltip", event => {
                         
                         i++
                     })
-                    component.add(index, str2)
+                    
+                    component.add(index, defaultDashEntry(str2))
                 })
                 
             }
         })
         
     })
+    
+    
+
+    tooltip_infos.single_bonuses.forEach((bonuses, item) => {
+        event.addAdvanced(item, (_1, _2, component) => {
+            if (!event.shift) {
+            }
+            else {
+                let index = 2
+                if (!whenwornSet.has(item)) {
+                    component.add(index++, Component.translate(when_worn))
+                    whenwornSet.add(item)
+                }
+                bonuses.forEach(bonus => {
+                    let attr = Component.translate('attribute.name.' + bonus.attribute).getString()
+                    let op = bonus.operation
+                    let opsign = (op == 'addition') ? '+' : 'x'
+                    let value = bonus.value
+                    let redIfNeeded = ''
+                    if (op != 'addition') {
+                        value += 1
+                        if (value < 1)
+                            redIfNeeded = '§4'
+                    } else {
+                        if (value < 0)
+                            redIfNeeded = '§4'
+                    }
+                    component.add(index, defaultDashEntry(`${attr} {${redIfNeeded}${opsign}${value}}`)) 
+                })
+            }
+        })
+    }) 
+    tooltip_infos.fullset_bonuses.forEach((fsbonuses, item) => {
+        event.addAdvanced(item, (_1, _2, component) => {
+            if (!event.shift) {
+            }
+            else {
+                let index = 2
+                if (!whenwornSet.has(item)) {
+                    component.add(index++, Component.translate(when_worn))
+                    whenwornSet.add(item)
+                }
+                fsbonuses.slice().forEach(fsbonus => {
+                    
+                    component.add(index++, defaultDashEntry(`{${fsbonus.set.map(item => Component.translate('item.' + (item.toString().includes(':')?'':'minecraft.') + item.toString().split(':').join('.'))
+                        .getString()).join('}, {')}}:`))
+                    fsbonus.bonuses.forEach(bonus =>  {
+                        let attr = Component.translate('attribute.name.' + bonus.attribute).getString()
+                        let op = bonus.operation
+                        let opsign = (op == 'addition') ? '+' : 'x'
+                        let value = bonus.value
+                        let redIfNeeded = ''
+                        if (op != 'addition') {
+                            value += 1
+                            if (value < 1)
+                                redIfNeeded = '§4'
+                        } else {
+                            if (value < 0)
+                                redIfNeeded = '§4'
+                        }
+                        component.add(index++, defaultDashEntry(defaultDashEntry(`${attr} {${redIfNeeded}${opsign}${value}}`))) 
+                    })
+                })
+            }
+        })
+    }) 
 })

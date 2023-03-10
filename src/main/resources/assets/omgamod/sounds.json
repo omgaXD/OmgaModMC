@@ -6,5 +6,23 @@
   "time_stop": {
     "subtitle": "omgamod.subtitle.time_stop",
     "sounds": ["omgamod:time_stop"]
+  },
+  "music_disc.tree": {
+    "subtitle": "omgamod.subtitle.music_disc.tree",
+    "sounds": [
+      {
+        "name": "omgamod:music_disc/tree",
+        "stream":  true
+      }
+    ]
+  },
+  "music_disc.gears": {
+    "subtitle": "omgamod.subtitle.music_disc.gears",
+    "sounds": [
+      {
+        "name": "omgamod:music_disc/gears",
+        "stream":  true
+      }
+    ]
   }
 }
