@@ -9,4 +9,6 @@ public class SoundInit {
     public static final SoundEvent TIME_STOP = new SoundEvent(new ResourceLocation(OmgaMod.MODID, "time_stop"));
 
     public static final SoundEvent MUSIC_DISC_TREE = new SoundEvent(new ResourceLocation(OmgaMod.MODID, "music_disc.tree"));
+    public static final SoundEvent MUSIC_DISC_GEARS = new SoundEvent(new ResourceLocation(OmgaMod.MODID, "music_disc.gears"));
+
 }

@@ -26,6 +26,8 @@ public class ItemInit {
             DeferredRegister.create(ForgeRegistries.ITEMS, OmgaMod.MODID);
 
     public static final RegistryObject<Item> MUSIC_DISC_TREE = ITEMS.register("music_disc_tree", () -> new RecordItem(5, () -> SoundInit.MUSIC_DISC_TREE, OMTab().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> MUSIC_DISC_GEARS= ITEMS.register("music_disc_gears", () -> new RecordItem(6, () -> SoundInit.MUSIC_DISC_GEARS, OMTab().stacksTo(1).rarity(Rarity.RARE)));
+
     // # # # # #
 
     public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register("steel_ingot", ItemInit::OMTabItem);
@@ -78,7 +80,7 @@ public class ItemInit {
 
     public static final RegistryObject<Item> PRISMASTEEL_FLIPPERS = ITEMS.register("prismasteel_flippers", () -> new PrismasteelFlippersArmorItem(ArmorMaterials.DIAMOND, EquipmentSlot.FEET, OMTab()));
     public static final RegistryObject<Item> SKYSEEKERS = ITEMS.register("skyseekers", () -> new SkyseekersArmorItem(ArmorMaterials.DIAMOND, EquipmentSlot.CHEST, OMTab()));
-    public static final RegistryObject<Item> ENDERPANTS = ITEMS.register("enderpants", () -> new EnderpantsArmorItem(ArmorMaterials.NETHERITE, EquipmentSlot.LEGS, OMTab()));
+    public static final RegistryObject<Item> ENDERPANTS = ITEMS.register("enderpants", () -> new EnderpantsArmorItem(ArmorMaterials.NETHERITE, EquipmentSlot.LEGS, LTTab()));
 
 
     //*
@@ -125,4 +127,8 @@ public class ItemInit {
     public static Item.Properties OMTab() {
         return new Item.Properties().tab(OmgaModCreativeTab.instance);
     }
+    public static Item.Properties LTTab() {
+        return new Item.Properties().tab(LoottableChestsTab.instance);
+    }
+
 }

@@ -4,3 +4,4 @@ onEvent("fluid.registry", event => {
         .bucketColor(0xEBAB34)
         .displayName("Fertilizer")
 })
+

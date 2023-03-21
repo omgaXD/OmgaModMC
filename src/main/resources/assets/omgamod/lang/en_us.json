@@ -1,5 +1,6 @@
 {
   "itemGroup.omgamodtab": "Omgamod",
+  "itemGroup.loottablechesttab": "Omgamod Crates",
 
 
   "item.omgamod.steel_ingot": "Steel ingot",
@@ -51,12 +52,12 @@
   "fluid.omgamod.molten_skysteel": "Molten skysteel",
 
 
-  "item.omgamod.skysteel_ingot": "Endersteel ingot",
-  "item.omgamod.skysteel_plate": "Endersteel plate",
-  "item.omgamod.skysteel_nugget": "Endersteel nugget",
-  "item.omgamod.skysteel_block": "Endersteel block",
-  "block.omgamod.skysteel_block": "Endersteel block",
-  "fluid.omgamod.molten_skysteel": "Molten endersteel",
+  "item.omgamod.endersteel_ingot": "Endersteel ingot",
+  "item.omgamod.enderteel_plate": "Endersteel plate",
+  "item.omgamod.endersteel_nugget": "Endersteel nugget",
+  "item.omgamod.endersteel_block": "Endersteel block",
+  "block.omgamod.endersteel_block": "Endersteel block",
+  "fluid.omgamod.molten_endersteel": "Molten endersteel",
 
 
   "modifier.omgamod.haste": "Haste",
@@ -79,6 +80,7 @@
   "item.omgamod.tnt_cannon": "TNT cannon",
   "item.omgamod.prismasteel_flippers": "Prismaflippers",
   "item.omgamod.skyseekers": "Skyseekers",
+  "item.omgamod.enderpants": "Enderpants",
 
 
 
@@ -88,5 +90,13 @@
   "item.omgamod.gshroom": "Gshroom",
   "item.omgamod.saturation_fruit": "Saturation fruit",
 
-  "item.omgamod.netherite_plate": "Netherite plate"
+  "item.omgamod.netherite_plate": "Netherite plate",
+
+  "item.omgamod.crates.skyblock_i": "Skyblock crate I",
+  "item.omgamod.crates.skyblock_i.leg": "Stoneful pickaxe",
+
+  "item.omgamod.crates.skyblock_ii": "Skyblock crate II",
+
+
+  "item.omgamod.crates.create_i": "Create crate I"
 }

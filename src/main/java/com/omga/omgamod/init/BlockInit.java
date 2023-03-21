@@ -2,9 +2,6 @@ package com.omga.omgamod.init;
 
 import com.omga.omgamod.OmgaMod;
 import com.omga.omgamod.content.blocks.*;
-import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -38,7 +35,7 @@ public class BlockInit {
     public static final RegistryObject<Block> SKYSTEEL_BLOCK = BLOCKS.register("skysteel_block", () -> new SkysteelBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(6f, 1200f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> ENDERSTEEL_BLOCK = BLOCKS.register("endersteel_block", () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(6f, 1200f).requiresCorrectToolForDrops()));
 
-
+    public static final RegistryObject<Block> MAGMATITE_CHARGER = BLOCKS.register("magmatite_charger", () -> new MagmatiteChargerBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).noOcclusion().isViewBlocking((_1, _2, _3) -> false).lightLevel(litBlockEmission(15)).strength(6f, 6f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> CREEPERSTEEL_SLAB = BLOCKS.register("creepersteel_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(6f, 1200f).requiresCorrectToolForDrops()));
 

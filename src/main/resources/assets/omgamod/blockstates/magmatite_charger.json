@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "omgamod:block/magmatite_charger_empty"
+    },
+    "lit=true": {
+      "model": "omgamod:block/magmatite_charger_full"
+    }
+  }
+}

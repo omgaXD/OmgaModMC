@@ -1,0 +1,10 @@
+{
+  "crates": [
+    "skyblock_i",
+    "skyblock_ii",
+    "skyblock_iii",
+    "create_i",
+    "create_ii",
+    "create_iii"
+  ]
+}

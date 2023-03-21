@@ -23,7 +23,6 @@ import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.slf4j.Logger;
-import software.bernie.example.item.GeckoArmorItem;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
 import software.bernie.geckolib3.core.builder.AnimationBuilder;
@@ -32,31 +31,26 @@ import software.bernie.geckolib3.core.controller.AnimationController;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
+import software.bernie.geckolib3.item.GeoArmorItem;
 import software.bernie.geckolib3.util.GeckoLibUtil;
 
 import java.util.Random;
 import java.util.random.RandomGenerator;
 
 @Mod.EventBusSubscriber(modid = OmgaMod.MODID)
-public class EnderpantsArmorItem extends GeckoArmorItem implements IAnimatable {
+public class EnderpantsArmorItem extends GeoArmorItem implements IAnimatable {
 
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final Random RAND = new Random();
     final static int CHANCE_NOT_TO_CONSUME_ENDERPEAL = 66/*%*/;
     @SubscribeEvent
     public static void enderpearlThrowSave(PlayerInteractEvent.RightClickItem event) {
-
-        LOGGER.debug("AAAAAAAAAAAAAAAAAAAAA");
         if (event.getEntity() instanceof LivingEntity entity) {
-            LOGGER.debug("IM AN ENTITY TOOOOOOO");
             if (entity.getItemBySlot(EquipmentSlot.LEGS).is(ItemInit.ENDERPANTS.get())) {
-                LOGGER.debug("ENDERPANTS ON AAAAAA");
                 if (!event.getItemStack().is(Tags.Items.ENDER_PEARLS)) {
                     return;
                 }
-                LOGGER.debug("ALSO ENDER PEARL! AAAA");
                 if (RAND.nextInt(100) < CHANCE_NOT_TO_CONSUME_ENDERPEAL) {
-                    LOGGER.debug("YEEEEEEEEEEEEEEEEEEEEEEEEEEEEES");
                     if (event.getEntity() instanceof Player player && player.getAbilities().instabuild) {
                         return;
                     }
@@ -70,7 +64,6 @@ public class EnderpantsArmorItem extends GeckoArmorItem implements IAnimatable {
         if (event.getEntity() instanceof LivingEntity entity) {
             if (entity.getItemBySlot(EquipmentSlot.LEGS).is(ItemInit.ENDERPANTS.get())) {
                 event.setAttackDamage(0);
-                LOGGER.debug("NO MORE DMAAE!!!!");
             }
         }
     }

@@ -9,6 +9,8 @@ import com.omga.omgamod.content.items.armor.skyseekers.SkyseekersArmorRenderer;
 import com.omga.omgamod.datagen.tcon.*;
 import com.omga.omgamod.init.*;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
@@ -90,7 +92,7 @@ public class OmgaMod
 
     private void setup(final FMLClientSetupEvent event)
     {
-        //ItemBlockRenderTypes.setRenderLayer(BlockInit.PRISMASTEEL_BLOCK.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockInit.MAGMATITE_CHARGER.get(), RenderType.cutout());
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)

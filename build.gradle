@@ -194,10 +194,12 @@ dependencies {
     // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.18.2-40.1.84'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.2.0'
     // Real mod deobf dependency examples - these get remapped to your current mappings
-    // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
-    runtimeOnly fg.deobf("mezz.jei:jei-1.18.2:9.7.0.193") // Adds the full JEI mod as a runtime dependency
+    compileOnly fg.deobf("mezz.jei:jei-1.18.2-forge-api:10.2.1.283") // Adds JEI API as a compile dependency
+    runtimeOnly fg.deobf("mezz.jei:jei-1.18.2-forge:10.2.1.283") // Adds the full JEI mod as a runtime dependency
+
+    implementation fg.deobf("curse.maven:just-enough-effect-descriptions-jeed-532286:3820697")
     // implementation fg.deobf("com.tterrag.registrate:Registrate:MC${mc_version}-${registrate_version}") // Adds registrate as a dependency
 
     // ForgeGradle
@@ -212,9 +214,9 @@ dependencies {
     implementation fg.deobf("curse.maven:kubejs_create-429371:3923657")
     implementation fg.deobf("curse.maven:ponder-622888:3881555")
 
-    runtimeOnly fg.deobf("curse.maven:probejs-585406:4074113")
-    implementation fg.deobf("curse.maven:mantle-74924:3829975")
-    implementation fg.deobf("curse.maven:tconstruct-74072:3998764")
+    runtimeOnly fg.deobf("curse.maven:probejs-585406:4365860")
+    implementation fg.deobf("curse.maven:mantle-74924:4353120")
+    implementation fg.deobf("curse.maven:tconstruct-74072:4395997")
     //https://www.curseforge.com/minecraft/mc-mods/ctweaker/files/3998764
     runtimeOnly fg.deobf("dev.ftb.mods:ftb-quests-forge:1802.3.14-build.191")
     runtimeOnly fg.deobf("dev.ftb.mods:ftb-library-forge:1802.3.11-build.177")
@@ -224,11 +226,12 @@ dependencies {
     //implementation fg.deobf("curse.maven:contenttweaker-237065:3957096")
     //implementation fg.deobf("curse.maven:crafttweaker-239197:4050366")
     runtimeOnly fg.deobf("curse.maven:cobblegenrandomizer-402256:3758004")
-    //402256:3758004
 
     runtimeOnly fg.deobf("curse.maven:appleskin-248787:3927564")
     runtimeOnly fg.deobf("curse.maven:libx-412525:3829113")
     runtimeOnly fg.deobf("curse.maven:skyblock_builder-446691:4166372")
+
+    runtimeOnly fg.deobf("curse.maven:farmers_delight-398521:3999153")
 
     runtimeOnly fg.deobf("curse.maven:jer-240630:3831559")
 

@@ -245,7 +245,6 @@ onEvent("client.generate_assets", event => {
 
 
 
-
 let addShift = (event, item) => {
     event.addAdvanced(item, (_1, _2, component) => {
         if (!event.shift) {
