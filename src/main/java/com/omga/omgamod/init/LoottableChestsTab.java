@@ -41,7 +41,7 @@ public class LoottableChestsTab extends CreativeModeTab {
     @Override
     public void fillItemList(@NotNull NonNullList<ItemStack> list) {
         super.fillItemList(list);
-        LOGGER.debug("you're the judge oh no set me freeeeeeeeee");
+        //LOGGER.debug("you're the judge oh no set me freeeeeeeeee");
         // iterating through all file names to substitute that name as loottable.
         try (InputStreamReader reader = new InputStreamReader(
                 Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream(CRATES_JSON_DIR)), StandardCharsets.UTF_8)) {

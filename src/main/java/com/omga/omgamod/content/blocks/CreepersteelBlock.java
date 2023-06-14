@@ -50,7 +50,7 @@ public class CreepersteelBlock extends Block {
         waitForIt = true;
         var e = new ScheduledExplosion(level, bs, bp, power);
         explosions.add(e);
-        LOGGER.debug("Did the thing!!!");
+        //LOGGER.debug("Did the thing!!!");
     }
     @SubscribeEvent
     public static void tick(TickEvent.WorldTickEvent event) {
@@ -65,7 +65,7 @@ public class CreepersteelBlock extends Block {
         if (explosions.size() > 32) explosions.clear(); // little optimization. might cause bugs but at least won't crash game :)
     }
     public static void landmineTrigger(ScheduledExplosion s) {
-        LOGGER.debug("trynna do the thing");
+        //LOGGER.debug("trynna do the thing");
         if (s.bs.is(BlockInit.CREEPERSTEEL_BLOCK.get())) {
             float explosiveEffect = 3.75F + s.power / 4F;
             s.level.removeBlock(s.bp, false);

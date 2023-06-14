@@ -37,7 +37,7 @@ public class GoldsteelBlend extends Item {
         BlockState bs = entity.level.getBlockState(bp);
         if (bs.getFluidState().is(honey)) {
             timerSinceHoney = maxTimer;
-            LOGGER.debug("HONEY time");
+            //LOGGER.debug("HONEY time");
         }
 
         if (timerSinceHoney == 0) {
@@ -47,13 +47,13 @@ public class GoldsteelBlend extends Item {
 
         if (bs.getFluidState().is(TinkerFluids.blazingBlood.get())) {
             blazingBlood = true;
-            LOGGER.debug("BLAZIN BLOD time");
+            //LOGGER.debug("BLAZIN BLOD time");
         }
         if (blazingBlood && bs.getFluidState().is(TinkerFluids.moltenGold.get()) && bs.getFluidState().isSource()) {
             entity.level.setBlock(bp, Blocks.AIR.defaultBlockState(), 3);
             ItemStack newStack = new ItemStack(ItemInit.GOLDSTEEL_INGOT.get(), stack.getCount());
             entity.setItem(newStack);
-            LOGGER.debug("CONVERSION time");
+            //LOGGER.debug("CONVERSION time");
             return false;
         }
 
