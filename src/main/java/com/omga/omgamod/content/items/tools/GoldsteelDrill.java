@@ -1,4 +1,4 @@
-package com.omga.omgamod.content.items;
+package com.omga.omgamod.content.items.tools;
 
 import com.omga.omgamod.init.ItemInit;
 import net.minecraft.core.BlockPos;

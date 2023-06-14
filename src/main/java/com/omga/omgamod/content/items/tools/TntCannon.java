@@ -1,4 +1,4 @@
-package com.omga.omgamod.content.items;
+package com.omga.omgamod.content.items.tools;
 
 import com.mojang.logging.LogUtils;
 import com.omga.omgamod.init.ItemInit;
