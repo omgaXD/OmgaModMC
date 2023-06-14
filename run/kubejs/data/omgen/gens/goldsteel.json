@@ -1,0 +1,8 @@
+{
+    "below": "blue_ice",
+    "above": "minecraft:blackstone",
+    "primary": "omgamod:flowing_molten_goldsteel",
+    "gens": [
+        [100, "minecraft:gilded_blackstone"]
+    ]
+}

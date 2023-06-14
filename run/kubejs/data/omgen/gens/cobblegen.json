@@ -1,0 +1,10 @@
+{
+    "primary": "minecraft:flowing_lava",
+    "secondary": "#omgamod:normal_water",
+    "secondary_pos":"Neighbour",
+    "gens": [
+        [100, "minecraft:cobblestone"],
+        [2, "minecraft:deepslate"]
+    ],
+    "priority": 100
+}
