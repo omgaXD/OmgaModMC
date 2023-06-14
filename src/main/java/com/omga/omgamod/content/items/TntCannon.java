@@ -83,9 +83,6 @@ public class TntCannon extends ProjectileWeaponItem {
             return InteractionResultHolder.pass(stack);
         }
 
-        //BowItem
-
-
     }
 
 }

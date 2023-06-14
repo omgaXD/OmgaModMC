@@ -18,8 +18,8 @@ apply plugin: 'net.minecraftforge.gradle'
 
 
 version = '1.0'
-group = 'com.yourname.modid' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'modid'
+group = 'com.omga.omgamod' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'omgamod'
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -225,17 +225,22 @@ dependencies {
     runtimeOnly fg.deobf("dev.latvian.mods:item-filters-forge:1802.2.8-build.47")
     //implementation fg.deobf("curse.maven:contenttweaker-237065:3957096")
     //implementation fg.deobf("curse.maven:crafttweaker-239197:4050366")
-    runtimeOnly fg.deobf("curse.maven:cobblegenrandomizer-402256:3758004")
+    //implementation fg.deobf("curse.maven:cobblegenrandomizer-402256:3758004")
 
     runtimeOnly fg.deobf("curse.maven:appleskin-248787:3927564")
     runtimeOnly fg.deobf("curse.maven:libx-412525:3829113")
-    runtimeOnly fg.deobf("curse.maven:skyblock_builder-446691:4166372")
+    runtimeOnly fg.deobf("curse.maven:skyblock_builder-446691:4434161")
 
     runtimeOnly fg.deobf("curse.maven:farmers_delight-398521:3999153")
 
     runtimeOnly fg.deobf("curse.maven:jer-240630:3831559")
 
+    runtimeOnly fg.deobf("curse.maven:omgen-842355:4554421")
+    runtimeOnly fg.deobf("curse.maven:distant_spawners-873439:4582050")
+
     implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.18:3.0.57')
+
+
     //implementation fg.deobf("me.shedaniel:RoughlyEnoughItems-forge:8.3.502")
     // Examples using mod jars from ./libs
     // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")

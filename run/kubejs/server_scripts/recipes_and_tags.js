@@ -7,34 +7,26 @@ settings.logErroringRecipes = true
 
 onEvent('recipes', event => {
 	// STEEL
-	handleMaterial(event, 'omgamod', 'steel')
-	event.shaped('omgamod:steel_ingot', ['nnn', 'nIn', 'nnn'], {
-		n: '#forge:nuggets/copper',
-		I: 'minecraft:iron_ingot'
-	})
-	event.recipes.create.mixing('2x omgamod:steel_ingot', ['minecraft:iron_ingot', 'minecraft:copper_ingot']).heated()
+	event.shapeless('omgamod:steel_ingot', ['minecraft:iron_ingot', '4x #coal'])
+	event.recipes.create.mixing('4x omgamod:steel_ingot', ['2x minecraft:iron_ingot', '3x #coal', '1x redstone']).heated()
+	event.recipes.create.mixing('2x omgamod:steel_block', ['minecraft:iron_block', '6x #coal', '2x omgamod:arsenicum', '1x redstone']).heated()
 
 	// COLORFUL MATERIALS
-	handleMaterial(event, 'omgamod', 'redsteel')
+	all_metals.forEach(metal => handleMaterial(event, 'omgamod', metal))
+
 	event.shapeless('omgamod:redsteel_ingot', ['omgamod:steel_ingot', '4x minecraft:redstone'])
 
-	handleMaterial(event, 'omgamod', 'woodsteel')
 	event.shapeless('omgamod:woodsteel_ingot', 
 					['minecraft:birch_sapling', 'omgamod:redsteel_ingot', 'minecraft:acacia_sapling', 
 					'omgamod:redsteel_ingot', '#oak_saplings', 'omgamod:redsteel_ingot', 
 					'minecraft:jungle_sapling', 'omgamod:redsteel_ingot', 'minecraft:spruce_sapling'])
 
-	handleMaterial(event, 'omgamod', 'goldsteel')
 	event.shapeless('omgamod:goldsteel_blend', 
 					['minecraft:golden_apple', 'omgamod:woodsteel_plate', 'minecraft:glistering_melon_slice',
 					'omgamod:woodsteel_plate', 'minecraft:glow_berries', 'omgamod:woodsteel_plate',
 					'minecraft:golden_carrot', 'omgamod:woodsteel_plate', 'minecraft:sunflower'
 					]);
-	handleMaterial(event, 'omgamod', 'creepersteel')
 	event.shaped('omgamod:creepersteel_block', ['s','s'], {s: "omgamod:creepersteel_slab"})
-	handleMaterial(event, 'omgamod', 'prismasteel')
-	handleMaterial(event, "omgamod", "skysteel")
-	handleMaterial(event, "omgamod", "endersteel")
 	
 	// NETHERITE
 	event.recipes.create.pressing('omgamod:netherite_plate', "minecraft:netherite_ingot");
@@ -103,7 +95,8 @@ onEvent('recipes', event => {
 	]).transitionalItem(inter6).loops(4) // set the transitional item and the loops (amount of repetitions)
 
 	
-	
+	// DABIUM LINE
+	event.recipes.create.mixing(['omgamod:arsenicum', 'wet_sponge'], [Fluid.of('create:potion', 125, {Potion: 'minecraft:poison'}), 'sponge'])
 
 
 	// MISC
@@ -132,10 +125,25 @@ onEvent('recipes', event => {
 
 
 
-	// CHANGING
-	
+	// CHANGES
+	// cogwheels
+	event.remove({'output':'create:cogwheel'})
+	event.shaped('8x create:cogwheel', ['bbb', 'bsb', 'bbb'], {
+		'b': "#minecraft:wooden_buttons",
+		's': "create:shaft"
+	})
 
+	event.remove({'output':'create:large_cogwheel'})
+	event.shaped('4x create:large_cogwheel', ['bPb', 'PsP', 'bPb'], {
+		'b': "#minecraft:wooden_buttons",
+		'P': "#minecraft:planks",
+		's': "create:shaft"
+	})
 
+	// remove red sand millstone - only leave red sand crushing wheel (the gold is locked behind blazes)
+	event.remove({'output':'minecraft:red_sand', 'type':'create:milling'})
+	event.recipes.create.crushing('minecraft:red_sand', 'minecraft:granite')
+	event.recipes.create.crushing('3x minecraft:red_sand', 'minecraft:red_sandstone')
 	//#region Fertilizer
 	Ingredient.of('#minecraft:tall_flowers').itemIds.forEach(element => {
 		event.recipes.create.filling('2x ' + element, [element, Fluid.of('kubejs:fertilizer', 25)])
@@ -161,21 +169,12 @@ onEvent('recipes', event => {
 })
 
 onEvent('item.tags', event => {
-
-	handleTags(event, 'omgamod', 'steel')
-	handleTags(event, 'omgamod', 'redsteel')
-	handleTags(event, 'omgamod', 'woodsteel')
-	handleTags(event, 'omgamod', 'goldsteel')
-	handleTags(event, 'omgamod', 'creepersteel')
-	handleTags(event, 'omgamod', 'prismasteel')
-	handleTags(event, 'omgamod', 'skysteel')
-	handleTags(event, 'omgamod', 'endersteel')
-
+	all_metals.forEach(metal => handleTags(event, 'omgamod', metal))
 
 	event.get('shrooms').add(['minecraft:brown_mushroom', 'minecraft:red_mushroom'])
 	event.get('fungi').add(['minecraft:warped_fungus', 'minecraft:crimson_fungus'])
 	event.get('oak_saplings').add(['minecraft:oak_sapling', 'minecraft:dark_oak_sapling'])
-	
+	event.get('coal').add(['coal', 'charcoal'])
 })
 
 const has_souls = [
@@ -195,7 +194,7 @@ const three_souls = ["minecraft:wither"]
 
 
 
-let metals = [
+let colorful_metals = [
 	"redsteel",
     "woodsteel",
     "goldsteel",
@@ -204,17 +203,23 @@ let metals = [
     "skysteel",
     "endersteel"
 ]
+let all_metals = [
+	"steel"
+].concat(colorful_metals)
+
 onEvent('tags.fluids', event => {
-	metals.forEach(metal => {
+	colorful_metals.forEach(metal => {
 		event.get("forge:molten_" + metal).add("omgamod:molten_" + metal)
 		event.get("tconstruct:tooltips/metal").add("#forge:molten_" + metal)
 	})
+
+	event.get("omgamod:normal_water").add(["minecraft:water", "minecraft:flowing_water"])
 })
 
 onEvent('block.tags', event => {
     event.get("minecraft:dirt").add("omgamod:woodsteel_block")
 
-	metals.forEach(metal => {
+	colorful_metals.forEach(metal => {
 		event.get("minecraft:beacon_base_blocks").add("omgamod:" + metal + "_block")
 	})
 })

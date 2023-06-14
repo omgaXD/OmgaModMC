@@ -6,15 +6,18 @@ import com.omga.omgamod.content.items.armor.flippers.PrismasteelFlippersArmorIte
 import com.omga.omgamod.content.items.armor.flippers.PrismasteelFlippersArmorRenderer;
 import com.omga.omgamod.content.items.armor.skyseekers.SkyseekersArmorItem;
 import com.omga.omgamod.content.items.armor.skyseekers.SkyseekersArmorRenderer;
+import com.omga.omgamod.content.menus.MagmatiteChargerScreen;
 import com.omga.omgamod.datagen.tcon.*;
 import com.omga.omgamod.init.*;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -58,11 +61,15 @@ public class OmgaMod
         //modEventBus.addListener(this::processIMC);
         BlockInit.BLOCKS.register(modEventBus);
 
+        BlockEntityInit.BLOCK_ENTITIES.register(modEventBus);
+
         ItemInit.ITEMS.register(modEventBus);
 
         FluidInit.FLUIDS.register(modEventBus);
 
         TraitInit.MODIFIERS.register(modEventBus);
+
+        MenuInit.INVS.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -93,6 +100,9 @@ public class OmgaMod
     private void setup(final FMLClientSetupEvent event)
     {
         ItemBlockRenderTypes.setRenderLayer(BlockInit.MAGMATITE_CHARGER.get(), RenderType.cutout());
+        event.enqueueWork(() -> {
+            MenuScreens.register(MenuInit.MAGMATITE_C_INVENTORY.get(), MagmatiteChargerScreen::new);
+        });
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)

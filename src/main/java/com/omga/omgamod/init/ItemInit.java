@@ -82,6 +82,16 @@ public class ItemInit {
     public static final RegistryObject<Item> SKYSEEKERS = ITEMS.register("skyseekers", () -> new SkyseekersArmorItem(ArmorMaterials.DIAMOND, EquipmentSlot.CHEST, OMTab()));
     public static final RegistryObject<Item> ENDERPANTS = ITEMS.register("enderpants", () -> new EnderpantsArmorItem(ArmorMaterials.NETHERITE, EquipmentSlot.LEGS, LTTab()));
 
+    // # # # # #
+    public static final RegistryObject<Item> ARSENICUM = ITEMS.register("arsenicum", () -> new Item(OMTab().food(new FoodProperties.Builder()
+            .nutrition(2)
+            .saturationMod(0.1f)
+            .effect(() -> new MobEffectInstance(MobEffects.POISON, 100, 3), 1F)
+            .effect(() -> new MobEffectInstance(MobEffects.WITHER, 100, 3), 1F)
+            .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 100, 0), 1F)
+            .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 1), 1F)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 3), 1F)
+            .build())));
 
     //*
     public static final RegistryObject<Item> GOLDSTEEL_BLOCK_ITEM = ITEMS.register(BlockInit.GOLDSTEEL_BLOCK.getId().getPath(), () -> new BlockItem(BlockInit.GOLDSTEEL_BLOCK.get(), OMTab()){
