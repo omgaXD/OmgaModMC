@@ -20,6 +20,8 @@ public class FluidInit {
     public static final FluidObject<ForgeFlowingFluid> MOLTEN_SKYSTEEL = register("molten_skysteel", 1450);
     public static final FluidObject<ForgeFlowingFluid> MOLTEN_ENDERSTEEL = register("molten_endersteel", 1550);
 
+    public static final FluidObject<ForgeFlowingFluid> MOLTEN_RAW_OMGIUM = register("molten_raw_omgium", 370);
+
     private static FluidObject<ForgeFlowingFluid> register(String name, int temp) {
 
         String still = String.format("%s:block/fluid/%s/still", OmgaMod.MODID, name);
