@@ -1,0 +1,7 @@
+{
+  "loader": "mantle:fluid_texture",
+  "textures": {
+    "still": "omgamod:blocks/fluids/raw_omgium/still",
+    "flowing": "omgamod:blocks/fluids/raw_omgium/flowing"
+  }
+}
