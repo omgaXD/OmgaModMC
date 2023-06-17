@@ -3,61 +3,61 @@
   "itemGroup.loottablechesttab": "Omgamod Crates",
 
 
-  "item.omgamod.steel_ingot": "Steel ingot",
-  "item.omgamod.steel_plate": "Steel plate",
-  "item.omgamod.steel_nugget": "Steel nugget",
-  "item.omgamod.steel_block": "Steel block",
-  "block.omgamod.steel_block": "Steel block",
+  "item.omgamod.steel_ingot": "Steel Ingot",
+  "item.omgamod.steel_plate": "Steel Plate",
+  "item.omgamod.steel_nugget": "Steel Nugget",
+  "item.omgamod.steel_block": "Steel Block",
+  "block.omgamod.steel_block": "Steel Block",
 
-  "item.omgamod.redsteel_ingot": "Redsteel ingot",
-  "item.omgamod.redsteel_plate": "Redsteel plate",
-  "item.omgamod.redsteel_nugget": "Redsteel nugget",
-  "item.omgamod.redsteel_block": "Redsteel block",
-  "block.omgamod.redsteel_block": "Redsteel block",
-  "fluid.omgamod.molten_redsteel": "Molten redsteel",
+  "item.omgamod.redsteel_ingot": "Redsteel Ingot",
+  "item.omgamod.redsteel_plate": "Redsteel Plate",
+  "item.omgamod.redsteel_nugget": "Redsteel Nugget",
+  "item.omgamod.redsteel_block": "Redsteel Block",
+  "block.omgamod.redsteel_block": "Redsteel Block",
+  "fluid.omgamod.molten_redsteel": "Molten Redsteel",
 
-  "item.omgamod.woodsteel_ingot": "Woodsteel ingot",
-  "item.omgamod.woodsteel_plate": "Woodsteel plate",
-  "item.omgamod.woodsteel_nugget": "Woodsteel nugget",
-  "item.omgamod.woodsteel_block": "Woodsteel block",
-  "block.omgamod.woodsteel_block": "Woodsteel block",
-  "fluid.omgamod.molten_woodsteel": "Molten woodsteel",
+  "item.omgamod.woodsteel_ingot": "Woodsteel Ingot",
+  "item.omgamod.woodsteel_plate": "Woodsteel Plate",
+  "item.omgamod.woodsteel_nugget": "Woodsteel Nugget",
+  "item.omgamod.woodsteel_block": "Woodsteel Block",
+  "block.omgamod.woodsteel_block": "Woodsteel Block",
+  "fluid.omgamod.molten_woodsteel": "Molten Woodsteel",
 
-  "item.omgamod.goldsteel_ingot": "Goldsteel ingot",
-  "item.omgamod.goldsteel_plate": "Goldsteel plate",
-  "item.omgamod.goldsteel_nugget": "Goldsteel nugget",
-  "item.omgamod.goldsteel_block": "Goldsteel block",
-  "block.omgamod.goldsteel_block": "Goldsteel block",
-  "fluid.omgamod.molten_goldsteel": "Molten goldsteel",
+  "item.omgamod.goldsteel_ingot": "Goldsteel Ingot",
+  "item.omgamod.goldsteel_plate": "Goldsteel Plate",
+  "item.omgamod.goldsteel_nugget": "Goldsteel Nugget",
+  "item.omgamod.goldsteel_block": "Goldsteel Block",
+  "block.omgamod.goldsteel_block": "Goldsteel Block",
+  "fluid.omgamod.molten_goldsteel": "Molten Goldsteel",
 
-  "item.omgamod.creepersteel_ingot": "Creepersteel ingot",
-  "item.omgamod.creepersteel_plate": "Creepersteel plate",
-  "item.omgamod.creepersteel_nugget": "Creepersteel nugget",
-  "item.omgamod.creepersteel_block": "Creepersteel block",
-  "block.omgamod.creepersteel_block": "Creepersteel block",
-  "fluid.omgamod.molten_creepersteel": "Molten creepersteel",
+  "item.omgamod.creepersteel_ingot": "Creepersteel Ingot",
+  "item.omgamod.creepersteel_plate": "Creepersteel Plate",
+  "item.omgamod.creepersteel_nugget": "Creepersteel Nugget",
+  "item.omgamod.creepersteel_block": "Creepersteel Block",
+  "block.omgamod.creepersteel_block": "Creepersteel Block",
+  "fluid.omgamod.molten_creepersteel": "Molten Creepersteel",
 
-  "item.omgamod.prismasteel_ingot": "Prismasteel ingot",
-  "item.omgamod.prismasteel_plate": "Prismasteel plate",
-  "item.omgamod.prismasteel_nugget": "Prismasteel nugget",
-  "item.omgamod.prismasteel_block": "Prismasteel block",
-  "block.omgamod.prismasteel_block": "Prismasteel block",
-  "fluid.omgamod.molten_prismasteel": "Molten prismasteel",
+  "item.omgamod.prismasteel_ingot": "Prismasteel Ingot",
+  "item.omgamod.prismasteel_plate": "Prismasteel Plate",
+  "item.omgamod.prismasteel_nugget": "Prismasteel Nugget",
+  "item.omgamod.prismasteel_block": "Prismasteel Block",
+  "block.omgamod.prismasteel_block": "Prismasteel Block",
+  "fluid.omgamod.molten_prismasteel": "Molten Prismasteel",
 
-  "item.omgamod.skysteel_ingot": "Skysteel ingot",
-  "item.omgamod.skysteel_plate": "Skysteel plate",
-  "item.omgamod.skysteel_nugget": "Skysteel nugget",
-  "item.omgamod.skysteel_block": "Skysteel block",
-  "block.omgamod.skysteel_block": "Skysteel block",
-  "fluid.omgamod.molten_skysteel": "Molten skysteel",
+  "item.omgamod.skysteel_ingot": "Skysteel Ingot",
+  "item.omgamod.skysteel_plate": "Skysteel Plate",
+  "item.omgamod.skysteel_nugget": "Skysteel Nugget",
+  "item.omgamod.skysteel_block": "Skysteel Block",
+  "block.omgamod.skysteel_block": "Skysteel Block",
+  "fluid.omgamod.molten_skysteel": "Molten Skysteel",
 
 
-  "item.omgamod.endersteel_ingot": "Endersteel ingot",
-  "item.omgamod.enderteel_plate": "Endersteel plate",
-  "item.omgamod.endersteel_nugget": "Endersteel nugget",
-  "item.omgamod.endersteel_block": "Endersteel block",
-  "block.omgamod.endersteel_block": "Endersteel block",
-  "fluid.omgamod.molten_endersteel": "Molten endersteel",
+  "item.omgamod.endersteel_ingot": "Endersteel Ingot",
+  "item.omgamod.endersteel_plate": "Endersteel Plate",
+  "item.omgamod.endersteel_nugget": "Endersteel Nugget",
+  "item.omgamod.endersteel_block": "Endersteel Block",
+  "block.omgamod.endersteel_block": "Endersteel Block",
+  "fluid.omgamod.molten_endersteel": "Molten Endersteel",
 
 
   "modifier.omgamod.haste": "Haste",
@@ -72,31 +72,66 @@
   "material.omgamod.endersteel": "Endersteel",
 
 
-  "item.omgamod.goldsteel_blend": "Goldsteel blend",
+  "item.omgamod.goldsteel_blend": "Goldsteel Blend",
 
-  "item.omgamod.night_vision_helm": "Night vision helm",
-  "item.omgamod.fertilizer_spray": "Fertilizer spray",
-  "item.omgamod.fertilizer_spray_empty": "Empty woodsteel spray",
-  "item.omgamod.tnt_cannon": "TNT cannon",
+  "item.omgamod.night_vision_helm": "Night Vision Helm",
+  "item.omgamod.fertilizer_spray": "Fertilizer Spray",
+  "item.omgamod.fertilizer_spray_empty": "Empty Woodsteel Spray",
+  "item.omgamod.goldsteel_drill": "Goldsteel Drill",
+  "item.omgamod.tnt_cannon": "TNT Cannon",
   "item.omgamod.prismasteel_flippers": "Prismaflippers",
   "item.omgamod.skyseekers": "Skyseekers",
   "item.omgamod.enderpants": "Enderpants",
 
 
 
-  "item.omgamod.spectral_catalyst": "Spectral catalyst",
-  "item.omgamod.freed_soul": "Freed soul",
+  "item.omgamod.spectral_catalyst": "Spectral Catalyst",
+  "item.omgamod.freed_soul": "Freed Soul",
 
   "item.omgamod.gshroom": "Gshroom",
-  "item.omgamod.saturation_fruit": "Saturation fruit",
+  "item.omgamod.saturation_fruit": "Saturation Fruit",
 
-  "item.omgamod.netherite_plate": "Netherite plate",
+  "item.omgamod.netherite_plate": "Netherite Plate",
 
-  "item.omgamod.crates.skyblock_i": "Skyblock crate I",
-  "item.omgamod.crates.skyblock_i.leg": "Stoneful pickaxe",
+  "item.omgamod.crates.skyblock_i": "Skyblock Crate I",
+  "item.omgamod.crates.skyblock_i.leg": "Stoneful Pickaxe",
 
-  "item.omgamod.crates.skyblock_ii": "Skyblock crate II",
+  "item.omgamod.crates.skyblock_ii": "Skyblock Crate II",
 
 
-  "item.omgamod.crates.create_i": "Create crate I"
+  "item.omgamod.crates.create_i": "Create Crate I",
+
+  "item.omgamod.music_disc_tree": "Music Disc",
+  "item.omgamod.music_disc_tree.desc": "vzizbek - Tree",
+
+  "item.omgamod.music_disc_gears": "Music Disc",
+  "item.omgamod.music_disc_gears.desc": "vzizbek - Gears",
+
+  "item.omgamod.arsenicum": "Arsenicum",
+  
+  "block.omgamod.magmatite_charger": "Magmatite Charger",
+  "block.omgamod.creepersteel_slab": "Creepersteel Slab",
+  "item.omgamod.omgium": "Omgium",
+  "item.omgamod.raw_omgium": "Raw Omgium",
+  "fluid.omgamod.molten_raw_omgium": "Molten Raw Omgium",
+
+  "modifier.omgamod.haste.flavor": "Tires on fire!",
+  "modifier.omgamod.haste.description": "You're not late, but you're still going fast!",
+  "modifier.omgamod.redsteel.encyclopedia": "Increases mining speed by 12% per level and attack speed by 4% per level",
+
+  "modifier.omgamod.woodmaster.flavor": "Chopping em enemies!",
+  "modifier.omgamod.woodmaster.description": "Are the zombies made of wood, or is it your tool? WE DON'T CARE!",
+  "modifier.omgamod.woodsteel.encyclopedia": "Mobs have a chance to drop various tree logs and planks when hit. Scales with level and damage dealt",
+
+  "modifier.omgamod.midas.flavor": "Shiny!",
+  "modifier.omgamod.midas.description": "Cobblestone also drops gold nuggets",
+  "modifier.omgamod.goldsteel.encyclopedia": "Cobblestone drops gold nuggets, the bigger the level, the more nuggets",
+
+  "item.omgamod.molten_redsteel_bucket": "Molten Redsteel Bucket",
+  "item.omgamod.molten_woodsteel_bucket": "Molten Woodsteel Bucket",
+  "item.omgamod.molten_goldsteel_bucket": "Molten Goldsteelsteel Bucket",
+  "item.omgamod.molten_creepersteel_bucket": "Molten Creepersteel Bucket",
+  "item.omgamod.molten_prismasteel_bucket": "Molten Prismasteel Bucket",
+  "item.omgamod.molten_skysteel_bucket": "Molten Skysteel Bucket",
+  "item.omgamod.molten_endersteel_bucket": "Molten Endersteel Bucket"
 }
