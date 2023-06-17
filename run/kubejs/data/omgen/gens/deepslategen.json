@@ -4,12 +4,14 @@
     "below": "minecraft:cobbled_deepslate",
     "secondary_pos":"Neighbour",
     "gens": [
-        [50, "minecraft:cobblestone"],
+        [44, "minecraft:cobblestone"],
         [6, "minecraft:deepslate"],
         [4, "minecraft:iron_ore"],
         [4, "minecraft:copper_ore"],
         [4, "minecraft:deepslate_iron_ore"],
-        [4, "minecraft:deepslate_copper_ore"]
+        [4, "minecraft:deepslate_copper_ore"],
+        [3, "create:zinc_ore"],
+        [3, "create:deepslate_zinc_ore"]
     ],
     "priority": 105
 }

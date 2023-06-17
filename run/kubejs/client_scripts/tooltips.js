@@ -243,8 +243,6 @@ onEvent("client.generate_assets", event => {
 })
 
 
-
-
 let addShift = (event, item) => {
     event.addAdvanced(item, (_1, _2, component) => {
         if (!event.shift) {
@@ -267,19 +265,10 @@ let addShift = (event, item) => {
 
 // Event that (I believe) runs when game wants to create a tooltip for an item (or maybe prepare all tooltips for all items?)
 onEvent("item.tooltip", event => {
-    /**
-    * @type {TooltipInfos}
-    */
-    const tooltip_infos = global.tooltip_infos
-    if (global.defined_tooltips === undefined) {
-        console.log("SKULL ISSSUEEEEE SKULL EMOJI")
-    }
+
     /**@type {Set<Internal.Item>} */
     itemHaveTooltipsSet.forEach(item => {
        addShift(event, item)
-    })
-    tooltip_infos.all_items.forEach(item => {
-        addShift(event, item)
     })
     
     /**@type {Set<Internal.Item>} */
@@ -334,70 +323,4 @@ onEvent("item.tooltip", event => {
         })
         
     })
-    
-    
-
-    tooltip_infos.single_bonuses.forEach((bonuses, item) => {
-        event.addAdvanced(item, (_1, _2, component) => {
-            if (!event.shift) {
-            }
-            else {
-                let index = 2
-                if (!whenwornSet.has(item)) {
-                    component.add(index++, Component.translate(when_worn))
-                    whenwornSet.add(item)
-                }
-                bonuses.forEach(bonus => {
-                    let attr = Component.translate('attribute.name.' + bonus.attribute).getString()
-                    let op = bonus.operation
-                    let opsign = (op == 'addition') ? '+' : 'x'
-                    let value = bonus.value
-                    let redIfNeeded = ''
-                    if (op != 'addition') {
-                        value += 1
-                        if (value < 1)
-                            redIfNeeded = '§4'
-                    } else {
-                        if (value < 0)
-                            redIfNeeded = '§4'
-                    }
-                    component.add(index, defaultDashEntry(`${attr} {${redIfNeeded}${opsign}${value}}`)) 
-                })
-            }
-        })
-    }) 
-    tooltip_infos.fullset_bonuses.forEach((fsbonuses, item) => {
-        event.addAdvanced(item, (_1, _2, component) => {
-            if (!event.shift) {
-            }
-            else {
-                let index = 2
-                if (!whenwornSet.has(item)) {
-                    component.add(index++, Component.translate(when_worn))
-                    whenwornSet.add(item)
-                }
-                fsbonuses.slice().forEach(fsbonus => {
-                    
-                    component.add(index++, defaultDashEntry(`{${fsbonus.set.map(item => Component.translate('item.' + (item.toString().includes(':')?'':'minecraft.') + item.toString().split(':').join('.'))
-                        .getString()).join('}, {')}}:`))
-                    fsbonus.bonuses.forEach(bonus =>  {
-                        let attr = Component.translate('attribute.name.' + bonus.attribute).getString()
-                        let op = bonus.operation
-                        let opsign = (op == 'addition') ? '+' : 'x'
-                        let value = bonus.value
-                        let redIfNeeded = ''
-                        if (op != 'addition') {
-                            value += 1
-                            if (value < 1)
-                                redIfNeeded = '§4'
-                        } else {
-                            if (value < 0)
-                                redIfNeeded = '§4'
-                        }
-                        component.add(index++, defaultDashEntry(defaultDashEntry(`${attr} {${redIfNeeded}${opsign}${value}}`))) 
-                    })
-                })
-            }
-        })
-    }) 
 })

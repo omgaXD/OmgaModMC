@@ -97,7 +97,7 @@ onEvent('recipes', event => {
 	
 	// DABIUM LINE
 	event.recipes.create.mixing(['omgamod:arsenicum', 'wet_sponge'], [Fluid.of('create:potion', 125, {Potion: 'minecraft:poison'}), 'sponge'])
-
+	event.recipes.create.filling('omgamod:omgium', ['minecraft:emerald', Fluid.of('omgamod:molten_raw_omgium', ingot)])
 
 	// MISC
 
@@ -116,6 +116,8 @@ onEvent('recipes', event => {
 	event.recipes.create.crushing([Item.of('sand'), Item.of('bone_meal').withChance(0.5)], 'calcite')
 	// dripstone -> pointed dripstone
 	event.recipes.minecraft.stonecutting('4x pointed_dripstone', 'dripstone_block')
+	// sand
+	event.recipes.create.milling('sand', 'gravel')
 	// soul sand
 	event.recipes.create.crushing('soul_sand', 'netherrack')
 	event.recipes.create.compacting('soul_soil', '4x soul_sand')
