@@ -1,0 +1,1091 @@
+{
+	id: "170396D180291191"
+	group: "5623998BE532BC21"
+	order_index: 0
+	filename: "main_line"
+	title: "Chapter 1: Skyblock and Create"
+	icon: "minecraft:grass_block"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "The Journey Begins!"
+			icon: "minecraft:grass_block"
+			x: 0.0d
+			y: 0.0d
+			shape: "hexagon"
+			subtitle: "It starts with one thing..."
+			description: ["First step in skyblock is getting wood. So get wood."]
+			size: 1.5d
+			id: "61298B66B65C63DB"
+			tasks: [{
+				id: "4267C779AB1309B0"
+				type: "item"
+				title: "Any logs"
+				icon: "minecraft:oak_log"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "minecraft:logs"
+					}
+				}
+			}]
+			rewards: [{
+				id: "6130011D7A3EB78C"
+				type: "item"
+				item: "minecraft:apple"
+			}]
+		}
+		{
+			title: "Get Dirt"
+			x: 1.0d
+			y: -1.25d
+			subtitle: "Who needs the island anyway?"
+			description: ["Collecting the dirt from the island is not an important step, but it is generally considered a good practice. Try not to lose any dirt in the process. \\n\\nVery important: leave at least one grass block."]
+			dependencies: ["61298B66B65C63DB"]
+			id: "7880D0DA303C541E"
+			tasks: [{
+				id: "4F8109E053C44A6D"
+				type: "item"
+				item: "minecraft:dirt"
+				count: 52L
+			}]
+			rewards: [{
+				id: "1DB0245D5D631646"
+				type: "item"
+				item: {
+					id: "minecraft:grass_block"
+					Count: 1b
+					tag: {
+						display: {
+							Name: "{\"text\":\"Backup\"}"
+						}
+					}
+				}
+			}]
+		}
+		{
+			title: "Replanting Time!"
+			x: 1.5d
+			y: 0.0d
+			subtitle: "Mind Tree, that is."
+			description: ["Plant a sapling so it grows into a tree later."]
+			dependencies: ["61298B66B65C63DB"]
+			id: "5AFFE541710C7C5D"
+			tasks: [{
+				id: "177A16060620989F"
+				type: "observation"
+				title: "Place oak sapling"
+				icon: "minecraft:oak_sapling"
+				timer: 0L
+				observe_type: 0
+				to_observe: "minecraft:oak_sapling"
+			}]
+			rewards: [{
+				id: "4C94261E55F36E59"
+				type: "item"
+				item: "minecraft:bone_meal"
+			}]
+		}
+		{
+			x: 3.0d
+			y: 0.0d
+			subtitle: "So we back in the mine..."
+			description: ["Get a pickaxe for future steps."]
+			dependencies: ["5AFFE541710C7C5D"]
+			id: "2B1A658843AF6EFA"
+			tasks: [{
+				id: "1804890D20EAC824"
+				type: "item"
+				item: {
+					id: "minecraft:wooden_pickaxe"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+			rewards: [{
+				id: "57D258E2C7DBF490"
+				type: "item"
+				item: "farmersdelight:honey_cookie"
+			}]
+		}
+		{
+			title: "Cobblegen"
+			x: 4.5d
+			y: 0.0d
+			subtitle: "That's not what they meant by \"world generation\"..."
+			description: ["Create a basic cobblestone generator. Aquire cobblestone from it using a pickaxe."]
+			dependencies: ["2B1A658843AF6EFA"]
+			id: "302C1E7F45C022DD"
+			tasks: [{
+				id: "73D4A09789D9096C"
+				type: "item"
+				item: "minecraft:cobblestone"
+			}]
+			rewards: [{
+				id: "121E2A1CA561C942"
+				type: "item"
+				item: "minecraft:cobblestone"
+				count: 16
+			}]
+		}
+		{
+			title: "Deepslategen"
+			x: 5.5d
+			y: -2.5d
+			subtitle: "A wild Deepslate appears!"
+			description: ["Rarely, cobblestone generator will generate deepslate block.\\n\\nMine it and substitute under the cobblestone gen to start aquiring ores."]
+			dependencies: ["302C1E7F45C022DD"]
+			id: "7DAD32B7BD208F7D"
+			tasks: [{
+				id: "448417C59B21CAE5"
+				type: "item"
+				item: "minecraft:cobbled_deepslate"
+			}]
+			rewards: [{
+				id: "68F0CA303C348C87"
+				type: "item"
+				item: "minecraft:cobblestone"
+				count: 16
+			}]
+		}
+		{
+			title: "Cobblestone Tools"
+			icon: {
+				id: "minecraft:stone_sword"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: 6.0d
+			y: 0.0d
+			subtitle: "Stone age time!"
+			description: ["Aquire all types of stone tools, you'll make a good use of them later."]
+			dependencies: ["302C1E7F45C022DD"]
+			id: "5257431095CA215D"
+			tasks: [
+				{
+					id: "7A5672754AEAE9C5"
+					type: "item"
+					item: {
+						id: "minecraft:stone_sword"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "6369F9FFBF422456"
+					type: "item"
+					item: {
+						id: "minecraft:stone_pickaxe"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "14C4BA26B5EAD016"
+					type: "item"
+					item: {
+						id: "minecraft:stone_axe"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "2E8624D822469D87"
+					type: "item"
+					item: {
+						id: "minecraft:stone_shovel"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "33CD4FCC73ABD6C5"
+					type: "item"
+					item: {
+						id: "minecraft:stone_hoe"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+			]
+			rewards: [{
+				id: "54B562B507E5AF77"
+				type: "item"
+				item: "minecraft:cobblestone"
+				count: 11
+			}]
+		}
+		{
+			x: 5.5d
+			y: -3.75d
+			subtitle: "Wait, is that even fair?"
+			description: ["Deepslategen rarely creates ores. That'll make a good passive income later, when we get to automation!"]
+			dependencies: ["7DAD32B7BD208F7D"]
+			id: "3F89AC51D9E76163"
+			tasks: [{
+				id: "54FF283E350A345A"
+				type: "observation"
+				title: "Discover an Ore"
+				icon: "minecraft:iron_ore"
+				timer: 0L
+				observe_type: 1
+				to_observe: "#forge:ores"
+			}]
+			rewards: [{
+				id: "37B545A8381E8D05"
+				type: "item"
+				item: "farmersdelight:fried_egg"
+			}]
+		}
+		{
+			x: 3.75d
+			y: -2.5d
+			subtitle: "That's kinda hot"
+			description: ["Furnaces are useful in early game for smelting stuff and making charcoal."]
+			dependencies: ["302C1E7F45C022DD"]
+			id: "5799597AA90CA733"
+			tasks: [{
+				id: "515C18C3CDF62DA6"
+				type: "item"
+				item: "minecraft:furnace"
+			}]
+			rewards: [{
+				id: "1161F05EBC14F497"
+				type: "item"
+				item: "minecraft:cobblestone"
+				count: 16
+			}]
+		}
+		{
+			x: 3.75d
+			y: -3.75d
+			subtitle: "Turn the lights on!"
+			description: ["Get some charcoal by smelting wooden logs."]
+			dependencies: ["5799597AA90CA733"]
+			id: "39932E4A3189B602"
+			tasks: [{
+				id: "3148F34DF5899A85"
+				type: "item"
+				item: "minecraft:charcoal"
+				count: 4L
+			}]
+			rewards: [{
+				id: "1A693BE1CF2D59F5"
+				type: "item"
+				item: "minecraft:torch"
+				count: 8
+			}]
+		}
+		{
+			x: 8.25d
+			y: -1.5d
+			shape: "diamond"
+			subtitle: "There's a zombie on your lawn!"
+			description: ["Zombies may drop your early game primary food source - rotten flesh. They might also drop crops, and an iron ingot."]
+			dependencies: ["5257431095CA215D"]
+			id: "145FF826D3B5FD9E"
+			tasks: [{
+				id: "5C09AB326AA6273F"
+				type: "kill"
+				icon: "minecraft:zombie_head"
+				entity: "minecraft:zombie"
+				value: 1L
+			}]
+			rewards: [{
+				id: "15D02F66CDF4D8F2"
+				type: "item"
+				item: "minecraft:zombie_villager_spawn_egg"
+			}]
+		}
+		{
+			x: 8.25d
+			y: -2.5d
+			subtitle: "Field of Hopes and Dreams"
+			description: ["Getting an early game food income is cool - dying all the time to restore hunger and losing XP aint cool!"]
+			dependencies: ["5257431095CA215D"]
+			id: "1B5A48E4A225C3DC"
+			tasks: [{
+				id: "565B558CBADD97E3"
+				type: "observation"
+				title: "Plant a Crop"
+				icon: {
+					id: "ftbquests:custom_icon"
+					Count: 1b
+					tag: {
+						Icon: "minecraft:textures/block/wheat_stage7.png"
+					}
+				}
+				timer: 0L
+				observe_type: 1
+				to_observe: "minecraft:crops"
+			}]
+			rewards: [{
+				id: "0487BF464ED67547"
+				type: "item"
+				item: "minecraft:bone_meal"
+			}]
+		}
+		{
+			title: "Farm Frenzy"
+			icon: {
+				id: "minecraft:stone_hoe"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: 9.25d
+			y: -2.0d
+			subtitle: "It ain't much, but it's honest work"
+			description: ["Harvest some crops kindly provided by local grass and zombies. This will be automated sooner or later too, by the way!"]
+			dependencies: [
+				"145FF826D3B5FD9E"
+				"1B5A48E4A225C3DC"
+			]
+			id: "71A89E1FA3B4C718"
+			tasks: [
+				{
+					id: "14647631F9CB33F8"
+					type: "item"
+					item: "minecraft:carrot"
+					count: 4L
+				}
+				{
+					id: "5BA7F834A369D8DA"
+					type: "item"
+					item: "minecraft:potato"
+					count: 4L
+				}
+				{
+					id: "4D06A87CD47F7839"
+					type: "item"
+					item: "minecraft:wheat"
+					count: 4L
+				}
+			]
+			rewards: [{
+				id: "403FA38A80542B01"
+				type: "item"
+				item: {
+					id: "minecraft:stone_hoe"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+		}
+		{
+			x: 8.25d
+			y: 0.5d
+			shape: "diamond"
+			subtitle: "sans."
+			description: ["Skeletons drop bones which can then be converted to bone meal. They might also drop arrows, a bow and a steel ingot."]
+			dependencies: ["5257431095CA215D"]
+			id: "64BC6E63B9E7C24D"
+			tasks: [{
+				id: "19441D16A1124460"
+				type: "kill"
+				icon: "minecraft:skeleton_skull"
+				entity: "minecraft:skeleton"
+				value: 1L
+			}]
+			rewards: [
+				{
+					id: "2100983B2CE2BE48"
+					type: "item"
+					item: {
+						id: "minecraft:bow"
+						Count: 1b
+						tag: {
+							Damage: 383
+							display: {
+								Name: "{\"text\":\"you only get one shot\"}"
+							}
+						}
+					}
+				}
+				{
+					id: "162EA147C4103121"
+					type: "item"
+					item: "minecraft:arrow"
+				}
+			]
+		}
+		{
+			icon: "minecraft:iron_ingot"
+			x: 3.75d
+			y: -5.0d
+			subtitle: "Bread -> Iron ingot conversion"
+			description: ["Smelt raw ore aquired from deepslategen to iron ingot."]
+			dependencies: [
+				"39932E4A3189B602"
+				"3F89AC51D9E76163"
+			]
+			id: "10F681D3EF19585D"
+			tasks: [
+				{
+					id: "218C1DC987FF3E2D"
+					type: "item"
+					item: "minecraft:raw_iron"
+				}
+				{
+					id: "1AD9A89F076EED16"
+					type: "item"
+					item: "minecraft:iron_ingot"
+				}
+			]
+			rewards: [{
+				id: "145D6B57B4A45565"
+				type: "item"
+				item: "minecraft:stick"
+				count: 2
+			}]
+		}
+		{
+			title: "Infinite Water Source"
+			icon: "minecraft:water_bucket"
+			x: 8.25d
+			y: 2.5d
+			subtitle: "Infinite, infi-infinite power!"
+			description: ["Put kelp into a flowing water block to turn it to source block. That'll give you infinite water source with no struggle!"]
+			dependencies: ["5257431095CA215D"]
+			id: "274A203DC82073ED"
+			tasks: [
+				{
+					id: "676B128E43208D86"
+					type: "item"
+					item: "minecraft:water_bucket"
+				}
+				{
+					id: "63B5EA303014524B"
+					type: "checkmark"
+					title: "gotcha"
+				}
+			]
+			rewards: [{
+				id: "3FB139AE1FF1B3BF"
+				type: "item"
+				item: "minecraft:cookie"
+			}]
+		}
+		{
+			x: 8.25d
+			y: 1.5d
+			shape: "diamond"
+			subtitle: "But this thing... it scares me."
+			description: ["Spiders drop strings for early wool and other things, and spider eyes for food and potions."]
+			dependencies: ["5257431095CA215D"]
+			id: "4FB4AEFFE6D9DAC8"
+			tasks: [{
+				id: "116AE1CEA7B6FC0F"
+				type: "kill"
+				icon: "tconstruct:spider_head"
+				entity: "minecraft:spider"
+				value: 1L
+			}]
+			rewards: [{
+				id: "0D4AF915E8EB54B6"
+				type: "item"
+				item: "minecraft:white_wool"
+				count: 3
+			}]
+		}
+		{
+			x: 8.25d
+			y: -0.5d
+			shape: "diamond"
+			subtitle: "Got our pickaxe swinging from side to side..."
+			description: ["Creepers drop gunpowder, which is... cool, I guess?"]
+			dependencies: ["5257431095CA215D"]
+			id: "03BCB153FF14B8FF"
+			tasks: [{
+				id: "6DE7BE711CD407A5"
+				type: "kill"
+				icon: "minecraft:creeper_head"
+				entity: "minecraft:creeper"
+				value: 1L
+			}]
+			rewards: [{
+				id: "441ABED1C1AA0A15"
+				type: "item"
+				item: {
+					id: "tconstruct:pickaxe"
+					Count: 1b
+					tag: {
+						tic_stats: {
+							"tconstruct:attack_speed": 1.2f
+							"tconstruct:mining_speed": 4.2f
+							"tconstruct:attack_damage": 1.0f
+							"tconstruct:harvest_tier": "minecraft:stone"
+							"tconstruct:durability": 116.0f
+						}
+						tic_broken: 0b
+						tic_modifiers: [
+							{
+								name: "tconstruct:piercing"
+								level: 1s
+							}
+							{
+								name: "tconstruct:stonebound"
+								level: 3s
+							}
+						]
+						tic_materials: [
+							"tconstruct:rock"
+							"tconstruct:rock"
+							"tconstruct:rock"
+						]
+						Damage: 0
+						tic_persistent_data: {
+							abilities: 1
+							upgrades: 3
+						}
+					}
+				}
+			}]
+		}
+		{
+			title: "Build a Mob Farm"
+			x: 10.0d
+			y: 0.0d
+			subtitle: "Lol gg ez skill issue"
+			description: ["Look up how to create a good easy skyblock mob farm. I prefer the one with trapdoors and water, however you can get whichever you want, just make sure you get XP from it too!"]
+			dependencies: [
+				"274A203DC82073ED"
+				"145FF826D3B5FD9E"
+				"03BCB153FF14B8FF"
+				"64BC6E63B9E7C24D"
+				"4FB4AEFFE6D9DAC8"
+			]
+			id: "4A9EBF8872568602"
+			tasks: [
+				{
+					id: "41FD2E87D4BA45EC"
+					type: "stat"
+					title: "Kill 100 mobs"
+					stat: "minecraft:mob_kills"
+					value: 100
+				}
+				{
+					id: "439E9CD0748CDB9D"
+					type: "checkmark"
+					title: "gotcha"
+				}
+			]
+			rewards: [{
+				id: "21849CDBE0E28719"
+				type: "item"
+				item: "minecraft:barrel"
+				count: 4
+			}]
+		}
+		{
+			x: 10.0d
+			y: -1.0d
+			shape: "diamond"
+			subtitle: "Hello. How are you? I'm under the water..."
+			description: ["Drowned can be made from normal zombie by forcing its head into water for a prolonged period of time."]
+			dependencies: ["145FF826D3B5FD9E"]
+			id: "0345CAC803E7CB48"
+			tasks: [{
+				id: "3B2927F0D8F4FF8C"
+				type: "kill"
+				icon: "tconstruct:drowned_head"
+				entity: "minecraft:drowned"
+				value: 1L
+			}]
+			rewards: [{
+				id: "5DA1D1BB6E3ADE51"
+				type: "item"
+				item: "minecraft:lightning_rod"
+			}]
+		}
+		{
+			title: "Andesite"
+			x: 4.5d
+			y: 2.75d
+			subtitle: "The essentialiest stone kind"
+			description: ["Start by placing cobblestone on top of bedrock found in your island. Then place water to side, encapsulate it from all sides.\\nPlace lava above the cobblestone, also make sure it's contained properly. Now break the cobblestone.\\n\\nYou got an advanced stone generator, which will produce you andesite and other similar stones!"]
+			dependencies: ["302C1E7F45C022DD"]
+			id: "746902990FB35637"
+			tasks: [{
+				id: "6A93748F9D8E3FB9"
+				type: "item"
+				item: "minecraft:andesite"
+			}]
+			rewards: [{
+				id: "0A594CDD3DD42866"
+				type: "item"
+				item: "omgamod:bedrock_substitute"
+			}]
+		}
+		{
+			x: 4.5d
+			y: 4.0d
+			subtitle: "No way, alloying in crafting table"
+			dependencies: ["746902990FB35637"]
+			id: "3A27173F1B576C98"
+			tasks: [{
+				id: "1246B2998FA4F55B"
+				type: "item"
+				item: "create:andesite_alloy"
+			}]
+			rewards: [
+				{
+					id: "5B9F0EBD4DC05649"
+					type: "item"
+					item: "minecraft:oak_button"
+					count: 12
+				}
+				{
+					id: "6A0B666CCDC431C9"
+					type: "item"
+					item: "minecraft:oak_planks"
+					count: 4
+				}
+			]
+		}
+		{
+			x: 5.75d
+			y: 5.0d
+			subtitle: "It's average"
+			dependencies: ["3A27173F1B576C98"]
+			id: "67698A385930AABE"
+			tasks: [{
+				id: "2C6374D99EE03AC0"
+				type: "item"
+				item: "create:cogwheel"
+			}]
+			rewards: [{
+				id: "2FE3F06BA0FF4477"
+				type: "item"
+				item: "create:zinc_block"
+			}]
+		}
+		{
+			x: 4.5d
+			y: 5.5d
+			subtitle: "Andesite stick, basically"
+			dependencies: ["3A27173F1B576C98"]
+			id: "5A4BC9AD23E4BBE1"
+			tasks: [{
+				id: "7D5CBA52FBBB6CAA"
+				type: "item"
+				item: "create:shaft"
+			}]
+			rewards: [{
+				id: "69A4CD16B0F29745"
+				type: "item"
+				item: "minecraft:copper_block"
+			}]
+		}
+		{
+			x: 6.25d
+			y: 4.0d
+			subtitle: "Clockwork!"
+			dependencies: ["3A27173F1B576C98"]
+			id: "051FFA38B367EBCA"
+			tasks: [{
+				id: "3EFAC2AF4236787C"
+				type: "item"
+				item: "create:large_cogwheel"
+			}]
+			rewards: [{
+				id: "313E3D74CF1D220D"
+				type: "item"
+				item: "minecraft:coal_block"
+			}]
+		}
+		{
+			title: "Power a Waterwheel"
+			x: 7.5d
+			y: 7.75d
+			subtitle: "Senku would be proud of you"
+			dependencies: ["051FFA38B367EBCA"]
+			id: "4689AC28D2C6CE87"
+			tasks: [
+				{
+					id: "7169DA85404FD05E"
+					type: "item"
+					item: "create:water_wheel"
+				}
+				{
+					id: "3CF4F5CC40B58000"
+					type: "advancement"
+					advancement: "create:water_wheel"
+					criterion: ""
+				}
+			]
+			rewards: [{
+				id: "50CA5806CC420297"
+				type: "item"
+				item: "minecraft:pink_tulip"
+			}]
+		}
+		{
+			x: 3.25d
+			y: 5.0d
+			subtitle: "Get your hands on it!"
+			description: ["Andesite casing is used to craft most of Create machines and logistics.\\n\\nYou should always have some around for ease of life."]
+			dependencies: ["3A27173F1B576C98"]
+			id: "0DEA4AB41FF9276D"
+			tasks: [{
+				id: "72302EDF9E966B84"
+				type: "item"
+				item: "create:andesite_casing"
+			}]
+			rewards: [{
+				id: "6A0BB0D320F4A112"
+				type: "item"
+				item: "minecraft:iron_block"
+			}]
+		}
+		{
+			title: "Logistics"
+			icon: "create:andesite_encased_large_cogwheel"
+			x: 4.5d
+			y: 7.25d
+			subtitle: "Blessing for compact designs"
+			description: ["Get some basic utility to transfer rotational force in Create mod.\\n\\nDon't forget to ponder everything you make!"]
+			dependencies: [
+				"0DEA4AB41FF9276D"
+				"5A4BC9AD23E4BBE1"
+				"67698A385930AABE"
+			]
+			id: "0088F810883DC9C8"
+			tasks: [
+				{
+					id: "4DD3F1CD3F6A735C"
+					type: "item"
+					item: "create:gearbox"
+					count: 4L
+				}
+				{
+					id: "7857512826F22F7F"
+					type: "item"
+					item: "create:encased_chain_drive"
+					count: 4L
+				}
+				{
+					id: "19CE05634FD0B509"
+					type: "item"
+					item: "create:vertical_gearbox"
+					count: 4L
+				}
+				{
+					id: "7509BD4F8F76CF05"
+					type: "item"
+					item: "create:shaft"
+					count: 16L
+				}
+			]
+			rewards: [{
+				id: "0013A30AE89A99DC"
+				type: "item"
+				item: "create:andesite_alloy"
+				count: 32
+			}]
+		}
+		{
+			title: "B O N K"
+			x: 3.25d
+			y: 6.75d
+			subtitle: "Hydraulic press, anyone?"
+			description: ["Mechanical press plays a massive role in crafting other essential Create machines.\\n\\nProcess an iron ingot to proceed."]
+			dependencies: ["0DEA4AB41FF9276D"]
+			id: "552F009339857399"
+			tasks: [
+				{
+					id: "7E381080A6B212A1"
+					type: "item"
+					item: "create:mechanical_press"
+				}
+				{
+					id: "224617AA0CA2B42B"
+					type: "advancement"
+					advancement: "create:mechanical_press"
+					criterion: ""
+				}
+			]
+			rewards: [{
+				id: "6D4894BA8D5B495A"
+				type: "item"
+				item: "minecraft:poppy"
+			}]
+		}
+		{
+			x: 2.75d
+			y: 4.0d
+			subtitle: "Not a Biasin."
+			description: ["Basin is needed for all mixer recipes and some pressing automation."]
+			dependencies: ["3A27173F1B576C98"]
+			id: "0FA422395AC810F5"
+			tasks: [{
+				id: "148F2C201E4E70EE"
+				type: "item"
+				item: "create:basin"
+			}]
+			rewards: [{
+				id: "467EAE1A08DF88E2"
+				type: "item"
+				item: "create:andesite_alloy_block"
+			}]
+		}
+		{
+			x: 1.5d
+			y: 7.75d
+			subtitle: "We got mixed opinions on this one"
+			description: ["Mixers are used to mix stuff and brew potions.\\n\\nNote: you'll need to go to Nether and get some gold nuggets before making this one."]
+			dependencies: [
+				"552F009339857399"
+				"0FA422395AC810F5"
+			]
+			id: "15A1BC708FA9EEA3"
+			tasks: [{
+				id: "48778FBB13FA6AB3"
+				type: "item"
+				item: "create:mechanical_mixer"
+			}]
+			rewards: [{
+				id: "31ECDFF9479BB554"
+				type: "item"
+				item: "minecraft:dandelion"
+			}]
+		}
+		{
+			icon: "create:encased_fan"
+			x: 3.25d
+			y: 7.75d
+			subtitle: "Well, I just wanna say that I'm a huge fan"
+			description: ["Use a fan to process anything. If you don't know what, just ponder!"]
+			dependencies: ["552F009339857399"]
+			id: "30581B38DC8B84FD"
+			tasks: [
+				{
+					id: "2CB2D3A2F3A36009"
+					type: "item"
+					item: "create:encased_fan"
+				}
+				{
+					id: "3D3AB5988241E57B"
+					type: "advancement"
+					advancement: "create:fan_processing"
+					criterion: ""
+				}
+				{
+					id: "1990262929B42FB1"
+					type: "item"
+					item: "create:depot"
+				}
+			]
+			rewards: [{
+				id: "3007010CCAC3C38F"
+				type: "item"
+				item: "minecraft:blue_orchid"
+			}]
+		}
+		{
+			x: 5.75d
+			y: 7.75d
+			subtitle: "Producing bread efficiently!"
+			dependencies: ["67698A385930AABE"]
+			id: "433E385ED032872C"
+			tasks: [{
+				id: "19B4BDA0BE167265"
+				type: "item"
+				item: "create:millstone"
+			}]
+			rewards: [{
+				id: "29A2138F4A6F3216"
+				type: "item"
+				item: "minecraft:allium"
+			}]
+		}
+		{
+			icon: "minecraft:gravel"
+			x: 4.5d
+			y: 10.0d
+			shape: "gear"
+			subtitle: "It... falls!"
+			description: ["Gravel is great for (semi-)automating iron; so mill yourself some.\\n\\nAlso bulk wash it (using fan) to get some iron nuggets! (This modpack heavily buffs and encourages this way of iron automation)"]
+			dependencies: [
+				"30581B38DC8B84FD"
+				"433E385ED032872C"
+			]
+			id: "7FBA548C29F61A66"
+			tasks: [
+				{
+					id: "1587AA8F681B7F7A"
+					type: "item"
+					item: "minecraft:gravel"
+					count: 16L
+				}
+				{
+					id: "76194EA5E39C8E04"
+					type: "item"
+					item: "minecraft:iron_nugget"
+				}
+				{
+					id: "52DFD114C6F0A95D"
+					type: "checkmark"
+					title: "gotcha"
+				}
+			]
+			rewards: [{
+				id: "7E0119EFB07C64C9"
+				type: "item"
+				item: {
+					id: "minecraft:chest"
+					Count: 1b
+					tag: {
+						BlockEntityTag: {
+							LootTable: "omgamod:chests/crates/create_i"
+						}
+						display: {
+							Name: "{\"translate\":\"item.omgamod.crates.create_i\"}"
+						}
+					}
+				}
+			}]
+		}
+		{
+			title: "Discover Various Ores"
+			icon: "minecraft:raw_iron_block"
+			x: 5.5d
+			y: -5.0d
+			subtitle: "Hope this one doesn't take you years"
+			description: ["Those are all ores the deepslategen provides you. Discover them all!"]
+			dependencies: ["3F89AC51D9E76163"]
+			id: "3F7E33C997985B54"
+			tasks: [
+				{
+					id: "2F65134E0B385814"
+					type: "observation"
+					title: "Discover Copper Ore"
+					icon: "minecraft:copper_ore"
+					timer: 0L
+					observe_type: 0
+					to_observe: "minecraft:copper_ore"
+				}
+				{
+					id: "62F6399F7EDF4A0D"
+					type: "observation"
+					title: "Discover Deepslate Copper Ore"
+					icon: "minecraft:deepslate_copper_ore"
+					timer: 0L
+					observe_type: 0
+					to_observe: "minecraft:deepslate_copper_ore"
+				}
+				{
+					id: "2CFFC3CF3BCDE7AD"
+					type: "observation"
+					title: "Discover Iron Ore"
+					icon: "minecraft:iron_ore"
+					timer: 0L
+					observe_type: 0
+					to_observe: "minecraft:iron_ore"
+				}
+				{
+					id: "724EB4D9042773CB"
+					type: "observation"
+					title: "Discover Deepslate Iron Ore"
+					icon: "minecraft:deepslate_iron_ore"
+					timer: 0L
+					observe_type: 0
+					to_observe: "minecraft:deepslate_iron_ore"
+				}
+			]
+			rewards: [{
+				id: "082F8AFEA3632C63"
+				type: "item"
+				item: "minecraft:raw_iron_block"
+			}]
+		}
+		{
+			title: "Go to The Nether"
+			x: 11.5d
+			y: 0.0d
+			subtitle: "Google en passant"
+			description: ["Build a portal frame, behind the entrance place some oak planks, before the portal - place lava. Wait till planks catch on fire - that'll instantly light the portal!\\n\\nOr use flint and steel, whichever."]
+			dependencies: ["274A203DC82073ED"]
+			id: "65669232F0003FE2"
+			tasks: [{
+				id: "766194330E176C2E"
+				type: "dimension"
+				dimension: "minecraft:the_nether"
+			}]
+			rewards: [{
+				id: "100D8D584A98F6CD"
+				type: "item"
+				item: "minecraft:cobblestone_slab"
+				count: 64
+			}]
+		}
+		{
+			title: "The Millstone #1"
+			icon: "create:millstone"
+			x: 13.5d
+			y: 0.0d
+			shape: "hexagon"
+			subtitle: "Milestone, Millstone... Get it? :D"
+			description: ["Get ready to finish chapter #1, very soon, the REAL fun will begin!"]
+			dependencies: ["65669232F0003FE2"]
+			size: 1.5d
+			id: "724F56633802E8FF"
+			tasks: [{
+				id: "0DA8DE77175D745B"
+				type: "item"
+				item: "create:millstone"
+			}]
+			rewards: [
+				{
+					id: "5AE701A1D6F45FED"
+					type: "item"
+					item: "omgamod:music_disc_tree"
+				}
+				{
+					id: "48B83F3BA10F110C"
+					type: "item"
+					item: "minecraft:jukebox"
+				}
+			]
+		}
+		{
+			title: "FTB Teams"
+			x: -1.5d
+			y: 0.0d
+			subtitle: "Technically a teambuilding course"
+			description: ["If you're playing with friends, create a FTB team and join it altogether. That way, all the quests are shared!"]
+			dependencies: ["61298B66B65C63DB"]
+			id: "4561E232AA899115"
+			tasks: [{
+				id: "01FBB5A4E50BEC92"
+				type: "checkmark"
+				title: "gotcha"
+			}]
+			rewards: [{
+				id: "760296A5815E4025"
+				type: "item"
+				item: "farmersdelight:sweet_berry_cookie"
+			}]
+		}
+	]
+	quest_links: [ ]
+}

@@ -1,0 +1,103 @@
+{
+	id: "24970B250AB0317E"
+	group: "2A32F46B449F9545"
+	order_index: 1
+	filename: "chapter_41_efficiency_and_usefulness"
+	title: "Quality of Life"
+	icon: {
+		id: "omgamod:night_vision_helm"
+		Count: 1b
+		tag: {
+			Damage: 0
+		}
+	}
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Copper Utility"
+			icon: "create:copper_sheet"
+			x: 1.25d
+			y: 0.0d
+			subtitle: "Pump it! Louder!"
+			description: ["Copper allows us to work with fluids. It's the perfect time to make good use of it!"]
+			dependencies: ["749547C98FB3F7CE"]
+			id: "218A9B1D907BEE4A"
+			tasks: [
+				{
+					id: "2A2B7E6B04D757D6"
+					type: "item"
+					item: "create:fluid_pipe"
+					count: 16L
+				}
+				{
+					id: "2184F5C401FED3B0"
+					type: "item"
+					item: "create:spout"
+				}
+				{
+					id: "147EBC304E558325"
+					type: "item"
+					item: "create:mechanical_pump"
+				}
+			]
+		}
+		{
+			title: "Optional Chapter"
+			x: 0.0d
+			y: 0.0d
+			subtitle: "Better than nothing"
+			hide: true
+			id: "749547C98FB3F7CE"
+			tasks: [{
+				id: "67FCC1A3948DA894"
+				type: "checkmark"
+				title: "gotcha"
+			}]
+		}
+		{
+			title: "Redsteel Path"
+			x: 4.25d
+			y: -3.0d
+			description: ["You'll have to melt 4 ingots of redsteel and pump them into the Spout.\\n\\nIn case of any confusion, look at the recipe of Night Vision Helm"]
+			dependencies: ["218A9B1D907BEE4A"]
+			id: "626B32D3E386FA12"
+			tasks: [
+				{
+					id: "7476E31BA53BF889"
+					type: "item"
+					item: "create:spout"
+				}
+				{
+					id: "2375167398235600"
+					type: "item"
+					item: "create:deployer"
+					count: 2L
+				}
+				{
+					id: "7DB7071CF3FF7DE2"
+					type: "item"
+					item: "create:mechanical_press"
+				}
+				{
+					id: "6F6EBDE4AC469A79"
+					type: "item"
+					item: "omgamod:redsteel_ingot"
+					count: 4L
+				}
+				{
+					id: "61D2B49F01588BDC"
+					type: "item"
+					item: {
+						id: "omgamod:night_vision_helm"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+			]
+		}
+	]
+	quest_links: [ ]
+}

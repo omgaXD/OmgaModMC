@@ -1,0 +1,691 @@
+{
+	id: "5A9154471334F2D0"
+	group: "5623998BE532BC21"
+	order_index: 2
+	filename: "chapter_3_automation_and_trading"
+	title: "Chapter 3: Automation and Trading"
+	icon: "omgamod:woodsteel_ingot"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Mechanical Potential"
+			icon: "create:mechanical_drill"
+			x: 0.0d
+			y: 0.0d
+			shape: "hexagon"
+			subtitle: "Heavy metal"
+			description: ["Craft some destructive tools. They'll be used to automate various resources very, very soon!"]
+			dependencies: ["07589619978608B9"]
+			hide: true
+			size: 1.5d
+			id: "712BA37CCE273C09"
+			tasks: [
+				{
+					id: "3BD1D2BB2AD5A1E6"
+					type: "item"
+					item: "create:mechanical_drill"
+				}
+				{
+					id: "6B586D7B8146DCBE"
+					type: "item"
+					item: "create:mechanical_saw"
+				}
+				{
+					id: "4772AB4B4DAE1AAA"
+					type: "item"
+					item: "create:mechanical_harvester"
+				}
+			]
+			rewards: [{
+				id: "390E733123DCB49B"
+				type: "item"
+				item: "minecraft:iron_block"
+			}]
+		}
+		{
+			icon: {
+				id: "ftbquests:custom_icon"
+				Count: 1b
+				tag: {
+					Icon: "minecraft:textures/block/bamboo_stage0.png"
+				}
+			}
+			x: 4.0d
+			y: -0.75d
+			subtitle: "Are your parents pandas? Then why do you have so much bamboo on your island?"
+			description: ["Plant some bamboo. It'll be used to make the most useful block ever!"]
+			dependencies: ["712BA37CCE273C09"]
+			id: "6D0611CFD20CD758"
+			tasks: [
+				{
+					id: "2B61839B010D79A4"
+					type: "observation"
+					title: "Plant a Bamboo Stick"
+					icon: {
+						id: "ftbquests:custom_icon"
+						Count: 1b
+						tag: {
+							Icon: "minecraft:textures/block/bamboo_stage0.png"
+						}
+					}
+					timer: 0L
+					observe_type: 0
+					to_observe: "minecraft:bamboo"
+				}
+				{
+					id: "60137E1AED07021C"
+					type: "item"
+					item: "minecraft:bamboo"
+					count: 8L
+				}
+			]
+			rewards: [{
+				id: "04A03C4318475BB4"
+				type: "item"
+				item: "minecraft:bone_meal"
+			}]
+		}
+		{
+			title: "Cut Some Grass"
+			icon: {
+				id: "farmersdelight:iron_knife"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: 4.0d
+			y: 0.75d
+			subtitle: "Since when were you the one in control?"
+			description: ["There are several ways to craft Canvas. Either way, you need Straw, which you can get by cutting down grass, wheat or rice with Knife!"]
+			dependencies: ["712BA37CCE273C09"]
+			id: "0DF97FF40A1D7DAC"
+			tasks: [
+				{
+					id: "7B860BCDB64BECB2"
+					type: "item"
+					title: "Any #farmersdelight:tools/knives"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "farmersdelight:tools/knives"
+						}
+					}
+				}
+				{
+					id: "3B2E2A6CF80C08BB"
+					type: "item"
+					item: "farmersdelight:canvas"
+					count: 6L
+				}
+			]
+			rewards: [{
+				id: "64340CEB6D0D5270"
+				type: "item"
+				item: "minecraft:grass"
+			}]
+		}
+		{
+			title: "The Greatest Block of All Time"
+			x: 5.0d
+			y: 0.0d
+			subtitle: "The Greatest Block of All Time"
+			description: ["The Greatest Block of All Time\\n\\nSeriously. It instantly consumes any items one block ahead of it, making it PERFECT for various contraptions. It doesn't even burn!"]
+			dependencies: [
+				"0DF97FF40A1D7DAC"
+				"6D0611CFD20CD758"
+			]
+			id: "42A9953244285DC2"
+			tasks: [{
+				id: "6F02F422AC9EDF85"
+				type: "item"
+				item: "farmersdelight:basket"
+			}]
+			rewards: [{
+				id: "57E7B0BE31BEDAC5"
+				type: "item"
+				item: "farmersdelight:canvas_rug"
+				count: 8
+			}]
+		}
+		{
+			title: "Andesite Funnels"
+			x: 5.0d
+			y: 2.0d
+			subtitle: "Hoppers, but better and cheaper!"
+			description: ["Andesite Funnels are an essential part of each contraption before the Brass Age, so get some!\\n\\nDon't forget to Ponder your stuff."]
+			dependencies: ["712BA37CCE273C09"]
+			id: "43CF0B81528D5A02"
+			tasks: [{
+				id: "6670CB95FCF9F62F"
+				type: "item"
+				item: "create:andesite_funnel"
+				count: 4L
+			}]
+			rewards: [{
+				id: "1915629A17D80B9F"
+				type: "item"
+				item: "minecraft:hopper"
+			}]
+		}
+		{
+			title: "Transportation"
+			x: 5.0d
+			y: -2.0d
+			subtitle: "Move on!"
+			description: ["Mechanical belts are very great at transporting stuff.\\n\\nMechanical press, Spout and Deployer put above mechanical belt will apply their action to every item that passes under.\\n\\nBasin will cast its results onto Mechanical Belts.\\n\\nTo find out more, ponder stuff you make!"]
+			dependencies: ["712BA37CCE273C09"]
+			id: "6D89FDBA85900070"
+			tasks: [
+				{
+					id: "6333F7A6BDB9E22C"
+					type: "item"
+					item: "create:belt_connector"
+					count: 4L
+				}
+				{
+					id: "7F50C23FC9570B3B"
+					type: "item"
+					item: "create:portable_storage_interface"
+					count: 2L
+				}
+			]
+			rewards: [{
+				id: "5BC567BCD62C5004"
+				type: "item"
+				item: "create:shaft"
+				count: 4
+			}]
+		}
+		{
+			title: "Automate Cobblestone"
+			icon: "minecraft:cobblestone"
+			x: 8.0d
+			y: 0.0d
+			shape: "gear"
+			subtitle: "Even more excessive now!"
+			description: ["The contraption design is up to you. This is where we get inventive!\\n\\nFeel free to use it on deepslategen/bedrockgen to automate other materials, too!"]
+			dependencies: [
+				"42A9953244285DC2"
+				"43CF0B81528D5A02"
+				"7072B9978F77DE60"
+				"6D89FDBA85900070"
+				"52F0F60FC805556C"
+			]
+			id: "5E3AFB2B0A838E08"
+			tasks: [
+				{
+					id: "6ABF250090A2357A"
+					type: "item"
+					item: "minecraft:cobblestone"
+					count: 128L
+				}
+				{
+					id: "16FC0A60EE42A03B"
+					type: "checkmark"
+					title: "gotcha"
+				}
+			]
+		}
+		{
+			title: "Automate Wood"
+			icon: "minecraft:oak_wood"
+			x: 8.0d
+			y: -3.25d
+			shape: "gear"
+			subtitle: "Deforestation is real!"
+			description: ["Wood is a very convinient resource to semi-automate. Right now, you have nothing to plant saplings with - however you'll get Deployer arms to work soon! Right now, it's enough to only make the cutting mechanism, and leave replanting up for players.\\n\\nHint: use Windmill Bearing as your movement source AND power generator!"]
+			dependencies: [
+				"42A9953244285DC2"
+				"43CF0B81528D5A02"
+				"7072B9978F77DE60"
+				"6D89FDBA85900070"
+				"52F0F60FC805556C"
+			]
+			id: "3F039F6EF53B64B5"
+			tasks: [
+				{
+					id: "029B98E40C492174"
+					type: "item"
+					item: "minecraft:oak_log"
+					count: 128L
+				}
+				{
+					id: "1943E92A51B61A01"
+					type: "checkmark"
+					title: "gotcha"
+				}
+			]
+		}
+		{
+			title: "Automate Crops"
+			icon: "minecraft:hay_block"
+			x: 8.0d
+			y: 3.25d
+			shape: "gear"
+			subtitle: "It is much, and it still is honest work!"
+			description: ["This design might be the most unusual.\\n\\nHint: use Windmill Bearing as your movement source AND power generator!\\n\\n(You can also use Minecart or any other design. The important part is automation!)"]
+			dependencies: [
+				"42A9953244285DC2"
+				"43CF0B81528D5A02"
+				"7072B9978F77DE60"
+				"6D89FDBA85900070"
+				"52F0F60FC805556C"
+			]
+			id: "06F6F3B9A04D5C3A"
+			tasks: [
+				{
+					id: "333BA341E3E185C8"
+					type: "item"
+					item: "minecraft:wheat"
+					count: 128L
+				}
+				{
+					id: "17554CCED00C21FC"
+					type: "checkmark"
+					title: "gotcha"
+				}
+			]
+		}
+		{
+			x: 5.0d
+			y: 3.25d
+			subtitle: "Busted stress capacity!"
+			description: ["Water Wheel contraptions can get bulky quickly. Windmill is also bulky, but provides more power, so we take that!\\n\\nNotice that we're gonna switch to Large Waterwheels someday, because they're even cooler than windmills!"]
+			dependencies: ["712BA37CCE273C09"]
+			id: "52F0F60FC805556C"
+			tasks: [{
+				id: "05B4A24D47D88FDD"
+				type: "item"
+				item: "create:windmill_bearing"
+			}]
+			rewards: [{
+				id: "44D87ADF39652573"
+				type: "item"
+				item: "create:sail_frame"
+				count: 12
+			}]
+		}
+		{
+			title: "The Creator's Setup"
+			icon: {
+				id: "ftbquests:custom_icon"
+				Count: 1b
+				tag: {
+					Icon: "create:textures/gui/logo.png"
+				}
+			}
+			x: 5.0d
+			y: -3.25d
+			subtitle: "Investing into yourself!"
+			dependencies: ["712BA37CCE273C09"]
+			id: "7072B9978F77DE60"
+			tasks: [
+				{
+					id: "39FAB0125FFC219F"
+					type: "item"
+					item: "create:wrench"
+				}
+				{
+					id: "15A6677B74116CCF"
+					type: "item"
+					item: "create:goggles"
+				}
+			]
+			rewards: [{
+				id: "688F3A3554ED49A7"
+				type: "item"
+				item: "create:gearbox"
+				count: 4
+			}]
+		}
+		{
+			x: 0.0d
+			y: -2.0d
+			dependencies: ["712BA37CCE273C09"]
+			id: "3262A8B751831C2D"
+			tasks: [{
+				id: "04E32053D3AB6C88"
+				type: "item"
+				item: "minecraft:smithing_table"
+			}]
+			rewards: [{
+				id: "09FE69F3B3BA634C"
+				type: "item"
+				item: "minecraft:emerald"
+			}]
+		}
+		{
+			x: -1.75d
+			y: 1.0d
+			dependencies: ["712BA37CCE273C09"]
+			id: "51F39DD2BA640AC0"
+			tasks: [{
+				id: "71F1FFD01E986352"
+				type: "item"
+				item: "minecraft:composter"
+			}]
+			rewards: [{
+				id: "78107E173702C104"
+				type: "item"
+				item: "minecraft:emerald"
+			}]
+		}
+		{
+			x: -1.75d
+			y: -1.0d
+			dependencies: ["712BA37CCE273C09"]
+			id: "552DA5FA4D3A782A"
+			tasks: [{
+				id: "36B57EE1366686E6"
+				type: "item"
+				item: "minecraft:blast_furnace"
+			}]
+			rewards: [{
+				id: "6A5E86E650B96BA0"
+				type: "item"
+				item: "minecraft:emerald"
+			}]
+		}
+		{
+			x: -2.0d
+			y: 0.0d
+			dependencies: ["712BA37CCE273C09"]
+			id: "0460CEDC2506719C"
+			tasks: [{
+				id: "1026AE3F4DBDF6F7"
+				type: "item"
+				item: "minecraft:lectern"
+			}]
+			rewards: [{
+				id: "471C5D5C4EEC847D"
+				type: "item"
+				item: "minecraft:emerald"
+			}]
+		}
+		{
+			title: "Bed Time"
+			icon: "minecraft:red_bed"
+			x: -1.0d
+			y: 1.75d
+			subtitle: "Birds are singing, flowers are blooming..."
+			description: ["To set up a villager farm, you'll need two things: food and shelter. Both are needed to *chuckle* summon baby villagers."]
+			dependencies: ["712BA37CCE273C09"]
+			id: "3351A22F72B12C81"
+			tasks: [{
+				id: "0DED283295D11191"
+				type: "item"
+				title: "Any #minecraft:beds"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "minecraft:beds"
+					}
+				}
+				count: 4L
+			}]
+			rewards: [{
+				id: "56955AC52B686546"
+				type: "item"
+				item: "minecraft:emerald"
+			}]
+		}
+		{
+			title: "Build a Villager Breeder"
+			x: 0.0d
+			y: 2.0d
+			shape: "gear"
+			subtitle: "Hope Curseforge doesnt ban me for this one"
+			description: ["Those things are easy to build but... just look up any youtube tutorial, seriously. It won't even take you much material."]
+			dependencies: ["3351A22F72B12C81"]
+			id: "35180A6D84C93DB1"
+			tasks: [{
+				id: "5C4D3C2367643FDF"
+				type: "checkmark"
+				title: "gotcha"
+			}]
+		}
+		{
+			title: "[Optional] Breeder Automation"
+			x: 8.0d
+			y: 4.25d
+			shape: "square"
+			subtitle: "Optional quests go!"
+			description: ["You can throw wheat at villagers via andesite funnels. Fun thing about funnels is that they don't drop items unless block directly under them is empty. Use that to make a very efficient and automatic villager breeder!"]
+			dependencies: ["06F6F3B9A04D5C3A"]
+			size: 0.5d
+			id: "3A34E145F542AFC7"
+			tasks: [{
+				id: "6A53216BC60D85C3"
+				type: "checkmark"
+				title: "gotcha"
+			}]
+			rewards: [{
+				id: "6B427DD11A8128B8"
+				type: "item"
+				item: "create:andesite_funnel"
+			}]
+		}
+		{
+			title: "The Emerald Stone #3"
+			icon: "minecraft:deepslate_emerald_ore"
+			x: 10.125d
+			y: 0.0d
+			shape: "hexagon"
+			subtitle: "Gosh... I honestly don't get it anymore too."
+			description: ["Hint: You can look at dependencies (even if the lines are hidden) using a tiny triangle to the left of \"Tasks\" in this window!"]
+			hide_dependency_lines: true
+			dependencies: [
+				"51F39DD2BA640AC0"
+				"0460CEDC2506719C"
+				"552DA5FA4D3A782A"
+				"3262A8B751831C2D"
+				"35180A6D84C93DB1"
+				"5E3AFB2B0A838E08"
+				"06F6F3B9A04D5C3A"
+				"3F039F6EF53B64B5"
+				"376B2509CBFB631D"
+				"3ED2BA2F3D982439"
+			]
+			size: 1.5d
+			id: "1B7F4477E99D20A0"
+			tasks: [
+				{
+					id: "1F006E64B7C03C36"
+					type: "item"
+					item: "minecraft:emerald_block"
+				}
+				{
+					id: "51A39EF9F59B277B"
+					type: "item"
+					item: {
+						id: "minecraft:enchanted_book"
+						Count: 1b
+						tag: { }
+					}
+				}
+				{
+					id: "2EC6A04960F8474D"
+					type: "item"
+					item: "omgamod:woodsteel_plate"
+					count: 4L
+				}
+			]
+			rewards: [{
+				id: "2972116000F061EF"
+				type: "item"
+				item: "omgamod:music_disc_gears"
+			}]
+		}
+		{
+			title: "Getting Sapplies"
+			x: 1.75d
+			y: -4.0d
+			subtitle: "Deforestation is not real!"
+			description: ["Buy all possible kinds of saplings from the Wandering Trader. Plant them right away, too - you'll need lots of these in the future!"]
+			dependencies: ["2AADB511D328143D"]
+			id: "70DDB08CF4D1FCF6"
+			tasks: [
+				{
+					id: "0CA45D0B5524494F"
+					type: "item"
+					item: "minecraft:oak_sapling"
+				}
+				{
+					id: "42F1CF3B269D299F"
+					type: "item"
+					item: "minecraft:spruce_sapling"
+				}
+				{
+					id: "640E83870050F8F0"
+					type: "item"
+					item: "minecraft:birch_sapling"
+				}
+				{
+					id: "6AB7C41087CF0F1C"
+					type: "item"
+					item: "minecraft:jungle_sapling"
+				}
+				{
+					id: "41A94D298C9F9E3B"
+					type: "item"
+					item: "minecraft:acacia_sapling"
+				}
+				{
+					id: "158A6472B12C9D63"
+					type: "item"
+					item: "minecraft:dark_oak_sapling"
+				}
+			]
+			rewards: [{
+				id: "3089134FDFFF6BFC"
+				type: "item"
+				item: "minecraft:bone_meal"
+				count: 16
+			}]
+		}
+		{
+			x: 1.0d
+			y: -1.75d
+			subtitle: "Where did you come from??"
+			dependencies: ["712BA37CCE273C09"]
+			id: "03A2188462611CE3"
+			tasks: [{
+				id: "4C798B1EED99AE21"
+				type: "observation"
+				title: "Find a Wandering Trader"
+				icon: "minecraft:lead"
+				timer: 0L
+				observe_type: 5
+				to_observe: "minecraft:wandering_trader"
+			}]
+			rewards: [{
+				id: "3315D507D0F1C66C"
+				type: "item"
+				item: "minecraft:emerald"
+			}]
+		}
+		{
+			title: "Kill a Wandering Trader"
+			x: 0.0d
+			y: -3.25d
+			subtitle: "Actually, I don't care"
+			description: ["Don't worry, he'll drop his egg so you can resummon him.\\n\\nDon't forget about his llamas - they might overreact on his death!"]
+			dependencies: ["03A2188462611CE3"]
+			id: "2AADB511D328143D"
+			tasks: [{
+				id: "3FBC43F8CC948E9B"
+				type: "item"
+				item: "minecraft:wandering_trader_spawn_egg"
+			}]
+			rewards: [
+				{
+					id: "5DFE8505029A874A"
+					type: "item"
+					item: "minecraft:orange_carpet"
+				}
+				{
+					id: "5A8684508EEE6955"
+					type: "item"
+					item: "minecraft:light_blue_carpet"
+				}
+			]
+		}
+		{
+			x: 3.0d
+			y: -5.5d
+			subtitle: "Tastes like tree and broken teeth!"
+			description: ["Woodsteel is the next step in rainbow chain, so get some!\\n\\nNotice how you need four redsteel ingots for one woodsteel ingot. This sequence will go on - for next metal you'll need 16 redsteel ingots!"]
+			dependencies: ["70DDB08CF4D1FCF6"]
+			id: "376B2509CBFB631D"
+			tasks: [{
+				id: "4E8C3A09A1B1A81D"
+				type: "item"
+				item: "omgamod:woodsteel_ingot"
+			}]
+			rewards: [{
+				id: "45F5DE02D3A54DAC"
+				type: "item"
+				item: "minecraft:bone_block"
+			}]
+		}
+		{
+			x: -1.0d
+			y: -1.75d
+			dependencies: ["712BA37CCE273C09"]
+			id: "3ED2BA2F3D982439"
+			tasks: [{
+				id: "597E556DA6B7F0A1"
+				type: "item"
+				item: "minecraft:grindstone"
+			}]
+			rewards: [{
+				id: "6164AAD60A1B8FE5"
+				type: "item"
+				item: "minecraft:emerald"
+			}]
+		}
+		{
+			x: 1.0d
+			y: 1.75d
+			subtitle: "Actual dupe"
+			description: ["By combining Dirt and Gravel blocks, you get Coarse Dirt, which can be then turned into normal dirt with hoe. That way, you can further expand your island with farms."]
+			dependencies: ["712BA37CCE273C09"]
+			id: "7CBC957931E1E57E"
+			tasks: [{
+				id: "6D529220893A6315"
+				type: "item"
+				item: "minecraft:coarse_dirt"
+				count: 16L
+			}]
+			rewards: [
+				{
+					id: "725601330FF328EE"
+					type: "item"
+					item: {
+						id: "minecraft:iron_shovel"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "68176CD4725E5B81"
+					type: "item"
+					item: {
+						id: "minecraft:iron_hoe"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+			]
+		}
+	]
+	quest_links: [ ]
+}

@@ -6,12 +6,12 @@ settings.logSkippedRecipes = false
 settings.logErroringRecipes = true
 
 onEvent('recipes', event => {
-	// STEEL
+	/// STEEL
 	event.shapeless('omgamod:steel_ingot', ['minecraft:iron_ingot', '4x #coal'])
 	event.recipes.create.mixing('4x omgamod:steel_ingot', ['2x minecraft:iron_ingot', '3x #coal', '1x redstone']).heated()
 	event.recipes.create.mixing('2x omgamod:steel_block', ['minecraft:iron_block', '6x #coal', '2x omgamod:arsenicum', '1x redstone']).heated()
 
-	// COLORFUL MATERIALS
+	/// COLORFUL MATERIALS
 	all_metals.forEach(metal => handleMaterial(event, 'omgamod', metal))
 
 	event.shapeless('omgamod:redsteel_ingot', ['omgamod:steel_ingot', '4x minecraft:redstone'])
@@ -28,11 +28,11 @@ onEvent('recipes', event => {
 					]);
 	event.shaped('omgamod:creepersteel_block', ['s','s'], {s: "omgamod:creepersteel_slab"})
 	
-	// NETHERITE
+	/// NETHERITE
 	event.recipes.create.pressing('omgamod:netherite_plate', "minecraft:netherite_ingot");
 	cast(event, "plate", "tconstruct:molten_netherite", ingot, "omgamod:netherite_plate", 60)
 
-	// FOOD
+	/// FOOD
     event.shaped('omgamod:gshroom', [
     '121', '232', '121'
     ], {
@@ -45,7 +45,7 @@ onEvent('recipes', event => {
 		['minecraft:glistering_melon_slice', 'omgamod:gshroom', '2x minecraft:sugar', "omgamod:goldsteel_nugget"]
 	)
 
-	// COLORFUL STEEL GEAR
+	/// COLORFUL STEEL GEAR
 	const inter1 = 'create:incomplete_precision_mechanism'
 	event.recipes.createSequencedAssembly(['omgamod:night_vision_helm'],'minecraft:iron_helmet',[
 		event.recipes.createFilling(inter1, [inter1, Fluid.of('omgamod:molten_redsteel', ingot)]),
@@ -95,19 +95,35 @@ onEvent('recipes', event => {
 	]).transitionalItem(inter6).loops(4) // set the transitional item and the loops (amount of repetitions)
 
 	
-	// DABIUM LINE
+	/// DABIUM LINE
 	event.recipes.create.mixing(['omgamod:arsenicum', 'wet_sponge'], [Fluid.of('create:potion', 125, {Potion: 'minecraft:poison'}), 'sponge'])
 	event.recipes.create.filling('omgamod:omgium', ['minecraft:emerald', Fluid.of('omgamod:molten_raw_omgium', ingot)])
 
-	// MISC
-
+	/// MISC
 	event.shapeless('omgamod:spectral_catalyst', ['8x omgamod:freed_soul', 'minecraft:lapis_lazuli'])
 	event.recipes.create.mixing(Fluid.of('kubejs:fertilizer', 250), ['minecraft:bone_meal', Fluid.of('minecraft:water', 250), '2x ' + "#minecraft:flowers"])
 	event.recipes.create.mixing(Fluid.of('kubejs:fertilizer', 500), [Fluid.of('minecraft:water', 500), Fluid.of('omgamod:molten_woodsteel', 50)])
+	// bedrock substitute
+	event.recipes.minecraft.crafting_shaped('omgamod:bedrock_substitute', ['aaa','aaa','aaa'], {a: Item.of('cobblestone', 64)})
 
-	// RENEWABILITY
-	// renewable lava
-	event.recipes.create.mixing(Fluid.of("lava", 5), ["#forge:cobblestone"])
+
+	/// SPAWN EGGS
+	// Skeleton and Wither skelly
+	event.recipes.minecraft.crafting_shapeless('skeleton_spawn_egg', ['4x bone', 'egg', '4x bone'])
+	event.recipes.minecraft.crafting_shapeless('wither_skeleton_spawn_egg', ['4x #coal', 'skeleton_spawn_egg', '4x blaze_powder'])
+	// Slime and Magma cube
+	event.recipes.minecraft.crafting_shapeless('slime_spawn_egg', ['4x slime_ball', 'egg', '4x slime_ball'])
+	event.recipes.minecraft.crafting_shapeless('magma_cube_spawn_egg', ['4x blaze_powder', 'slime_spawn_egg', '4x blaze_powder'])
+	// Blaze
+	event.recipes.minecraft.crafting_shapeless('blaze_spawn_egg', ['4x blaze_rod', 'egg', '4x blaze_powder'])
+	// Animals
+	event.recipes.minecraft.crafting_shapeless('chicken_spawn_egg', ['4x egg', 'egg', '4x feather'])
+	event.recipes.minecraft.crafting_shapeless('cow_spawn_egg', ['4x leather', 'egg', '4x leather'])
+	event.recipes.minecraft.crafting_shapeless('sheep_spawn_egg', ['4x white_wool', 'egg', '4x white_wool'])
+
+
+
+	/// RENEWABILITY
 	// renewable netherrack and other stones
 	event.recipes.create.filling('netherrack', ['#forge:gravel', Fluid.of('lava', 50)])
 	event.recipes.create.filling('dripstone_block', ['#forge:gravel', Fluid.of('water', 50)])
@@ -124,10 +140,11 @@ onEvent('recipes', event => {
 	// tall grass/fern
 	event.shaped('tall_grass', ['h','h'], {h: 'grass'})
 	event.shaped('large_fern', ['h','h'], {h: 'fern'})
+	// coarse dirt
+	event.recipes.minecraft.crafting_shapeless('2x coarse_dirt', ['gravel', 'dirt'])
 
 
-
-	// CHANGES
+	/// CHANGES
 	// cogwheels
 	event.remove({'output':'create:cogwheel'})
 	event.shaped('8x create:cogwheel', ['bbb', 'bsb', 'bbb'], {
@@ -146,6 +163,38 @@ onEvent('recipes', event => {
 	event.remove({'output':'minecraft:red_sand', 'type':'create:milling'})
 	event.recipes.create.crushing('minecraft:red_sand', 'minecraft:granite')
 	event.recipes.create.crushing('3x minecraft:red_sand', 'minecraft:red_sandstone')
+
+	// add certain thresholds to crafts
+	// Mech. mixer -> gold
+	event.remove({'output':'create:mechanical_mixer'})
+	event.recipes.minecraft.crafting_shaped('create:mechanical_mixer', [' c ', 'rCr', ' w '], {c: 'create:cogwheel', r: 'gold_nugget', C: 'create:andesite_casing', w: 'create:whisk'})
+
+	// Windmill bearing, Drill, Sawmill, Comb., Basket, Spout -> redsteel and emeralds
+	event.remove({'output':'create:windmill_bearing'}) // Windmill bearing
+	event.remove({'output':'create:mechanical_drill'}) // Mech. Drill
+	event.remove({'output':'create:mechanical_saw'}) // Mech. Saw
+	event.remove({'output':'create:mechanical_harvester'}) // Mech. Harvester
+	event.remove({'output':'farmersdelight:basket'}) // Basket
+	event.remove({'output': 'create:spout'}) // Spout
+	event.recipes.minecraft.crafting_shaped('create:windmill_bearing', [' t ', 'rCr', ' s '], {t: 'create:turntable', r: 'omgamod:redsteel_nugget', C: 'create:andesite_casing', s: 'create:shaft'})
+	event.recipes.minecraft.crafting_shaped('create:mechanical_drill', [' a ', 'aRa', ' C '], {a: 'create:andesite_alloy', R: 'omgamod:redsteel_ingot', C: 'create:andesite_casing'})
+	event.recipes.minecraft.crafting_shaped('create:mechanical_saw', [' i ', 'iRi', ' C '], {i: 'create:iron_sheet', R: 'omgamod:redsteel_ingot', C: 'create:andesite_casing'})
+	event.recipes.minecraft.crafting_shaped('2x create:mechanical_harvester', ['iii', 'aRa', ' C '], {i: 'create:iron_sheet', a: 'create:andesite_alloy', R: 'omgamod:redsteel_ingot', C: 'create:andesite_casing'})
+	event.recipes.minecraft.crafting_shaped('farmersdelight:basket', ['b b', 'cec', 'bcb'], {b: 'bamboo', e: 'emerald', c: "farmersdelight:canvas"})
+	event.recipes.minecraft.crafting_shaped('create:spout', ['C', 'r', 'k'], {C: 'create:copper_casing', r: 'omgamod:redsteel_nugget', k: 'dried_kelp'})
+
+	// buffed large_water_wheel at cost of having brass in recipe
+	event.remove({'output': 'create:large_water_wheel'})
+	event.recipes.minecraft.crafting_shaped('create:large_water_wheel', ['bbb','bWb','bbb'], {b:'create:brass_sheet', W:'create:water_wheel'})
+
+	// ease up lava recipe
+	event.remove({'output': Fluid.of('lava'), 'mod':'create'})
+	event.recipes.create.mixing(Fluid.of("lava", 5), ["#forge:cobblestone"]).heated()
+
+	// buff gravel recipe
+	event.remove({'type':'create:splashing', 'input':'gravel'})
+	event.recipes.create.splashing([Item.of('iron_nugget').withChance(0.5)], "gravel")
+
 	//#region Fertilizer
 	Ingredient.of('#minecraft:tall_flowers').itemIds.forEach(element => {
 		event.recipes.create.filling('2x ' + element, [element, Fluid.of('kubejs:fertilizer', 25)])
@@ -220,6 +269,8 @@ onEvent('tags.fluids', event => {
 
 onEvent('block.tags', event => {
     event.get("minecraft:dirt").add("omgamod:woodsteel_block")
+
+	event.get("omgamod:bedrock").add(["bedrock", "omgamod:bedrock_substitute"])
 
 	colorful_metals.forEach(metal => {
 		event.get("minecraft:beacon_base_blocks").add("omgamod:" + metal + "_block")

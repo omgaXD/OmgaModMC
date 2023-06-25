@@ -21,9 +21,11 @@ build
 eclipse
 run/*
 !run/kubejs/
+!run/config/
 
 # Files from Forge MDK
 forge*changelog.txt
 
 # diff
 *.bbmodel
+/run/kubejs/probe/cache/

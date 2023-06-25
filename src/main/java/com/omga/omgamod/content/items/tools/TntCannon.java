@@ -1,26 +1,22 @@
 package com.omga.omgamod.content.items.tools;
 
 import com.mojang.logging.LogUtils;
-import com.omga.omgamod.init.ItemInit;
-import com.simibubi.create.content.curiosities.armor.BackTankUtil;
-import com.simibubi.create.content.curiosities.weapons.PotatoCannonItem;
-import com.simibubi.create.content.curiosities.weapons.PotatoProjectileTypeManager;
-import com.simibubi.create.foundation.config.AllConfigs;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.item.PrimedTnt;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.vehicle.MinecartTNT;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.ArrowItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ProjectileWeaponItem;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
-import org.apache.logging.log4j.Logger;
 
-import java.util.Optional;
+
 import java.util.function.Predicate;
 
 public class TntCannon extends ProjectileWeaponItem {

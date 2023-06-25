@@ -43,7 +43,7 @@ OH THE MISERY
     # Does this dependency have to exist - if not, ordering below must be specified
     mandatory=true #mandatory
     # The version range of the dependency
-    versionRange="[40.2.0,)" #mandatory
+    versionRange="[40.2.4,)" #mandatory
     # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
     ordering="NONE"
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
@@ -56,3 +56,24 @@ OH THE MISERY
     versionRange="[1.18.2,1.19)"
     ordering="NONE"
     side="BOTH"
+
+[[dependencies.omgamod]]
+    modId="tconstruct"
+    mandatory=true
+    ordering="AFTER"
+    versionRange="[3.6.3.111,4)"
+[[dependencies.omgamod]]
+    modId="jei"
+    mandatory=true
+    ordering="AFTER"
+    versionRange="[10.2.1.283, 11)"
+[[dependencies.omgamod]]
+    modId="create"
+    mandatory=true
+    ordering="AFTER"
+    versionRange="[0.5,1)"
+
+
+
+
+

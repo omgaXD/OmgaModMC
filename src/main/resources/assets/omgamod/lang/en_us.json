@@ -1,6 +1,6 @@
 {
   "itemGroup.omgamodtab": "Omgamod",
-  "itemGroup.loottablechesttab": "Omgamod Crates",
+  "itemGroup.loottablechesttab": "Omgamod Discs and Crates",
 
 
   "item.omgamod.steel_ingot": "Steel Ingot",
@@ -101,11 +101,18 @@
 
   "item.omgamod.crates.create_i": "Create Crate I",
 
+
+
   "item.omgamod.music_disc_tree": "Music Disc",
   "item.omgamod.music_disc_tree.desc": "vzizbek - Tree",
 
-  "item.omgamod.music_disc_gears": "Music Disc",
+  "item.omgamod.music_disc_rage": "Music Disc?",
+  "item.omgamod.music_disc_rage.desc": "vzizbek - Rage",
+
+  "item.omgamod.music_disc_gears": "Music Cog",
   "item.omgamod.music_disc_gears.desc": "vzizbek - Gears",
+
+
 
   "item.omgamod.arsenicum": "Arsenicum",
   
@@ -117,15 +124,15 @@
 
   "modifier.omgamod.haste.flavor": "Tires on fire!",
   "modifier.omgamod.haste.description": "You're not late, but you're still going fast!",
-  "modifier.omgamod.redsteel.encyclopedia": "Increases mining speed by 12% per level and attack speed by 4% per level",
+  "material.omgamod.redsteel.encyclopedia": "Increases mining speed by 12% per level and attack speed by 4% per level",
 
   "modifier.omgamod.woodmaster.flavor": "Chopping em enemies!",
   "modifier.omgamod.woodmaster.description": "Are the zombies made of wood, or is it your tool? WE DON'T CARE!",
-  "modifier.omgamod.woodsteel.encyclopedia": "Mobs have a chance to drop various tree logs and planks when hit. Scales with level and damage dealt",
+  "material.omgamod.woodsteel.encyclopedia": "Mobs have a chance to drop various tree logs and planks when hit. Scales with level and damage dealt",
 
   "modifier.omgamod.midas.flavor": "Shiny!",
   "modifier.omgamod.midas.description": "Cobblestone also drops gold nuggets",
-  "modifier.omgamod.goldsteel.encyclopedia": "Cobblestone drops gold nuggets, the bigger the level, the more nuggets",
+  "material.omgamod.goldsteel.encyclopedia": "Cobblestone drops gold nuggets, the bigger the level, the more nuggets",
 
   "item.omgamod.molten_redsteel_bucket": "Molten Redsteel Bucket",
   "item.omgamod.molten_woodsteel_bucket": "Molten Woodsteel Bucket",
@@ -133,5 +140,7 @@
   "item.omgamod.molten_creepersteel_bucket": "Molten Creepersteel Bucket",
   "item.omgamod.molten_prismasteel_bucket": "Molten Prismasteel Bucket",
   "item.omgamod.molten_skysteel_bucket": "Molten Skysteel Bucket",
-  "item.omgamod.molten_endersteel_bucket": "Molten Endersteel Bucket"
+  "item.omgamod.molten_endersteel_bucket": "Molten Endersteel Bucket",
+  
+  "block.omgamod.bedrock_substitute": "Bedrock Substitute"
 }

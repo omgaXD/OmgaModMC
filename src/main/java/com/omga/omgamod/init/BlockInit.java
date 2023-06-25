@@ -39,6 +39,7 @@ public class BlockInit {
 
     public static final RegistryObject<Block> CREEPERSTEEL_SLAB = BLOCKS.register("creepersteel_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(6f, 1200f).requiresCorrectToolForDrops()));
 
+    public static final RegistryObject<Block> BEDROCK_SUBST = BLOCKS.register("bedrock_substitute", () -> new Block(BlockBehaviour.Properties.of(Material.SAND).strength(0.5f).destroyTime(0.9f)));
     @SubscribeEvent
     public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
         final IForgeRegistry<Item> registry = event.getRegistry();

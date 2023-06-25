@@ -1,7 +1,7 @@
 {
     "primary": "#minecraft:lava",
     "secondary": "#omgamod:normal_water",
-    "below": "minecraft:bedrock",
+    "below": "#omgamod:bedrock",
     "secondary_pos":"Replace",
     "gens": [
         [25, "minecraft:stone"],

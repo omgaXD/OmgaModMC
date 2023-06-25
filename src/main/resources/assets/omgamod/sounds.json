@@ -24,5 +24,14 @@
         "stream":  true
       }
     ]
+  },
+  "music_disc.rage": {
+    "subtitle": "omgamod.subtitle.music_disc.rage",
+    "sounds": [
+      {
+        "name": "omgamod:music_disc/rage",
+        "stream":  true
+      }
+    ]
   }
 }

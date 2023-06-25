@@ -1,0 +1,707 @@
+{
+	id: "63509BDA1B9877CC"
+	group: "5623998BE532BC21"
+	order_index: 1
+	filename: "chapter_2_genocide_and_metallurgy"
+	title: "Chapter 2: Genocide and Metallurgy"
+	icon: "omgamod:redsteel_ingot"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Welcome to The Metallurgy"
+			x: 0.0d
+			y: 0.0d
+			shape: "hexagon"
+			subtitle: "Have a look around..."
+			dependencies: ["724F56633802E8FF"]
+			hide: true
+			size: 1.5d
+			id: "36BF0F2418E1ED8B"
+			tasks: [{
+				id: "2D60A60772B9B1D2"
+				type: "item"
+				item: "minecraft:iron_ingot"
+			}]
+			rewards: [{
+				id: "0DD2F2B0A2EE0509"
+				type: "item"
+				item: "minecraft:charcoal"
+				count: 3
+			}]
+		}
+		{
+			x: 3.5d
+			y: -1.75d
+			subtitle: "That's almost how you make it IRL!"
+			description: ["Steel is not super useful as of now - however we'll fix it right after we get our first ingot!\\n\\nIt's not possible to smelt steel on current stage - but redsteel (which we're gonna craft later) is totally smeltable!"]
+			dependencies: ["61D3F629A4A44DC1"]
+			id: "1C187BFB279B85A1"
+			tasks: [{
+				id: "69F5D016F9B1C2B0"
+				type: "item"
+				item: "omgamod:steel_ingot"
+			}]
+			rewards: [{
+				id: "7FCF535AA7C9C5CD"
+				type: "item"
+				item: "farmersdelight:honey_cookie"
+			}]
+		}
+		{
+			x: 3.5d
+			y: 1.75d
+			subtitle: "That's not metallurgy nor genocide tho??"
+			description: ["Surprisingly, clay is needed to make seared bricks. That means, if you get some, you'll be able to build a smeltery too!\\n\\nThe best way to get clay in skyblock is bulk-washing sand."]
+			dependencies: ["61D3F629A4A44DC1"]
+			id: "351DC55B885B83CD"
+			tasks: [{
+				id: "23345303D0E127F3"
+				type: "item"
+				item: "minecraft:clay_ball"
+			}]
+			rewards: [{
+				id: "5F9C52C11F03CFF8"
+				type: "item"
+				item: "minecraft:sand"
+				count: 16
+			}]
+		}
+		{
+			icon: "tconstruct:seared_brick"
+			x: 5.25d
+			y: 1.75d
+			subtitle: "Why not use normal bricks tho-"
+			description: ["Get some Seared Bricks. With them, you'll be able to build your first smeltery according to the Puny Smelting book!\\n\\nTo craft a book, you can use paper from sugar canes and leather from hoglins you killed in another quest!"]
+			dependencies: ["351DC55B885B83CD"]
+			id: "49C6F91056E92737"
+			tasks: [
+				{
+					id: "6E2CF0D08B5FC0D2"
+					type: "item"
+					item: "tconstruct:seared_brick"
+				}
+				{
+					id: "51D17574735A0FCC"
+					type: "item"
+					item: "tconstruct:puny_smelting"
+				}
+			]
+			rewards: [{
+				id: "78670A74BCF442B1"
+				type: "item"
+				item: "tconstruct:grout"
+				count: 4
+			}]
+		}
+		{
+			title: "Build a Basic Smeltery"
+			x: 7.0d
+			y: 0.0d
+			subtitle: "Think outside the bauxite"
+			description: ["According to the Puny Smelting book, build a Basic Smeltery. You'll be able to melt down most basic metals and create parts out of them!\\n\\nGet ready to craft some good tools.\\n\\n(Since Puny Smelting book doesn't provide much information, you might or might not need to use internet, too)"]
+			dependencies: [
+				"49C6F91056E92737"
+				"26A8B9623FF8C3A0"
+				"2C4646BCE0F284D4"
+			]
+			id: "20BFAADC4A38DEE3"
+			tasks: [{
+				id: "2469473E45A3A2F1"
+				type: "advancement"
+				advancement: "tconstruct:smeltery/melter"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "6BB5F57A5B9BD837"
+				type: "item"
+				item: "minecraft:charcoal"
+			}]
+		}
+		{
+			title: "Tinker's Stations"
+			icon: {
+				id: "tconstruct:crafting_station"
+				Count: 1b
+				tag: {
+					texture: "minecraft:stripped_oak_log"
+				}
+			}
+			x: 3.5d
+			y: 0.0d
+			subtitle: "Gotta craft 'em all!"
+			description: ["Crafting stations are essential to create various tools. You'll move on to much more powerful stations soon though!"]
+			dependencies: ["61D3F629A4A44DC1"]
+			id: "5DA0713CAED8D0C0"
+			tasks: [
+				{
+					id: "0655DCFAA3ACBA26"
+					type: "item"
+					item: {
+						id: "tconstruct:tinker_station"
+						Count: 1b
+						tag: { }
+					}
+				}
+				{
+					id: "3711D0534CEEDD25"
+					type: "item"
+					item: {
+						id: "tconstruct:part_builder"
+						Count: 1b
+						tag: { }
+					}
+				}
+			]
+			rewards: [{
+				id: "53BE954FBE06BC95"
+				type: "item"
+				item: "tconstruct:pattern"
+				count: 3
+			}]
+		}
+		{
+			title: "Tinker's Tools!"
+			x: 5.25d
+			y: 0.0d
+			subtitle: "It's actually very clamplicated"
+			description: ["It's very important to consider advantages and disadvantages of each tool - that way, you can make one perfectly suitable for your needs!\\n\\nMake any tool using the tinker's book you already have as reference."]
+			dependencies: ["5DA0713CAED8D0C0"]
+			id: "26A8B9623FF8C3A0"
+			tasks: [{
+				id: "6BE76084107B2E22"
+				type: "item"
+				title: "Any Tinker's Tool"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "tconstruct:modifiable"
+					}
+				}
+			}]
+			rewards: [{
+				id: "5631CDE913CC13D5"
+				type: "item"
+				item: "minecraft:charcoal"
+				count: 2
+			}]
+		}
+		{
+			title: "Ready for Meltin'"
+			x: 5.25d
+			y: -1.75d
+			subtitle: "It's not like you have excessive sand LOL-"
+			description: ["Sand casts are needed for casting parts (that you'll later combine into tools). Make some!"]
+			dependencies: ["1C187BFB279B85A1"]
+			id: "2C4646BCE0F284D4"
+			tasks: [{
+				id: "2505D4AAF35FBBA1"
+				type: "item"
+				item: "tconstruct:blank_sand_cast"
+				count: 4L
+			}]
+			rewards: [{
+				id: "2CEDD57F3121FC58"
+				type: "item"
+				item: "minecraft:raw_gold"
+			}]
+		}
+		{
+			x: -1.75d
+			y: 0.0d
+			shape: "diamond"
+			subtitle: "\"Your affinity for gold is apparent\" - Samuel Hayden, probably"
+			description: ["Kill a couple of piglins to get some gold...\\n\\nOr not a couple.\\n\\nIt's prefered to set up some sort of farm there too!"]
+			dependencies: ["36BF0F2418E1ED8B"]
+			id: "42F5BED09CDFDA3C"
+			tasks: [{
+				id: "648E7738DF35C8EF"
+				type: "kill"
+				title: "Bloodbath"
+				icon: "tconstruct:zombified_piglin_head"
+				entity: "minecraft:zombified_piglin"
+				value: 100L
+			}]
+			rewards: [{
+				id: "1A711AA840BEA73F"
+				type: "item"
+				item: "minecraft:golden_apple"
+			}]
+		}
+		{
+			title: "Bartering Time!"
+			x: -3.5d
+			y: 0.0d
+			subtitle: "Me when dream luck:"
+			description: ["Throw some gold at piglins and get something (probably) useful in return!"]
+			dependencies: ["42F5BED09CDFDA3C"]
+			id: "2545AD83763E7997"
+			tasks: [{
+				id: "27D550F4F9097ECF"
+				type: "advancement"
+				advancement: "minecraft:nether/distract_piglin"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "56D302AB3D0C8762"
+				type: "item"
+				item: {
+					id: "minecraft:potion"
+					Count: 1b
+					tag: {
+						Potion: "minecraft:luck"
+					}
+				}
+			}]
+		}
+		{
+			x: -5.25d
+			y: 0.0d
+			shape: "diamond"
+			subtitle: "I don't want to play with you anymore."
+			description: ["Traded enough? Now it's time to kill some!\\n\\nWhy? WHY THE NETHER NOT!"]
+			dependencies: ["2545AD83763E7997"]
+			id: "3CAF5B028B9D9E59"
+			tasks: [{
+				id: "35118992D71F1E58"
+				type: "kill"
+				title: "Bloodlust"
+				icon: "tconstruct:piglin_head"
+				entity: "minecraft:piglin"
+				value: 100L
+			}]
+			rewards: [{
+				id: "4AED728C76DE7151"
+				type: "item"
+				item: {
+					id: "tconstruct:crossbow"
+					Count: 1b
+					tag: {
+						tic_multipliers: {
+							"tconstruct:attack_damage": 1.25f
+							"tconstruct:durability": 2.0f
+						}
+						tic_stats: {
+							"tconstruct:attack_speed": 1.0f
+							"tconstruct:attack_damage": 0.0f
+							"tconstruct:durability": 180.0f
+							"tconstruct:accuracy": 0.85f
+							"tconstruct:velocity": 1.0f
+							"tconstruct:draw_speed": 1.5f
+						}
+						tic_broken: 0b
+						tic_modifiers: [
+							{
+								name: "tconstruct:quick_charge"
+								level: 2s
+							}
+							{
+								name: "tconstruct:emerald"
+								level: 1s
+							}
+							{
+								name: "tconstruct:cultivated"
+								level: 2s
+							}
+							{
+								name: "tconstruct:looting"
+								level: 1s
+							}
+						]
+						tic_upgrades: [
+							{
+								name: "tconstruct:quick_charge"
+								level: 2s
+							}
+							{
+								name: "tconstruct:emerald"
+								level: 1s
+							}
+						]
+						tic_materials: [
+							"tconstruct:wood"
+							"tconstruct:wood"
+							"tconstruct:darkthread"
+						]
+						Damage: 0
+						tic_volatile_data: {
+							"tconstruct:rarity": 1
+						}
+						tic_persistent_data: {
+							abilities: 1
+							"tconstruct:quick_charge": 45
+							"tconstruct:drawtime": 14
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: -7.0d
+			y: 0.0d
+			description: ["Apply Weakness effect to Zombie Villager, then feed it Golden Apple. That'll start the curing process which usually takes up to 10 minutes.\\n\\nThen, you'll get a normal villager that you can assign fletcher profession and work with that!"]
+			dependencies: [
+				"3CAF5B028B9D9E59"
+				"3BD119957CEDD999"
+				"0D5C7F212EF70655"
+			]
+			id: "2F5F9BBE11135D94"
+			tasks: [{
+				id: "3E25F246A3515C56"
+				type: "advancement"
+				title: "Cure a Villager"
+				advancement: "minecraft:story/cure_zombie_villager"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "2D792582F4537F8C"
+				type: "item"
+				item: "minecraft:villager_spawn_egg"
+			}]
+		}
+		{
+			icon: {
+				id: "minecraft:splash_potion"
+				Count: 1b
+				tag: {
+					Potion: "minecraft:weakness"
+				}
+			}
+			x: -3.5d
+			y: -1.75d
+			shape: "diamond"
+			subtitle: "It's not like they're not hunting ME"
+			description: ["Hunt down some Witches. If you kill a Witch when she is drinking a potion, she can drop it!\\n\\nThis quest is intended to ease up curing of your first villager."]
+			dependencies: ["42F5BED09CDFDA3C"]
+			id: "2E87434A51295E90"
+			tasks: [{
+				id: "1C34532DAD8B5E02"
+				type: "kill"
+				title: "Witch-hunt"
+				entity: "minecraft:witch"
+				value: 5L
+			}]
+			rewards: [{
+				id: "16358C3C3A6B3CE6"
+				type: "item"
+				item: {
+					id: "minecraft:splash_potion"
+					Count: 1b
+					tag: {
+						Potion: "minecraft:weakness"
+					}
+				}
+			}]
+		}
+		{
+			title: "Make a boat"
+			x: -5.25d
+			y: -1.75d
+			subtitle: "Safety first!"
+			description: ["You'll need to put your zombie villager into a boat UNDER SOME BLOCKS to ensure it doesn't die from something and doesn't despawn."]
+			dependencies: ["2E87434A51295E90"]
+			id: "3BD119957CEDD999"
+			tasks: [{
+				id: "2A4DB1C6199D9A75"
+				type: "item"
+				item: "minecraft:oak_boat"
+			}]
+			rewards: [{
+				id: "2BACC60BBCD65B0F"
+				type: "item"
+				item: "minecraft:oak_planks"
+				count: 16
+			}]
+		}
+		{
+			icon: "minecraft:fletching_table"
+			x: -5.25d
+			y: 1.75d
+			subtitle: "This job is in a very high demand!"
+			description: ["Your first villager will become fletcher - to get lots of emeralds, you'll need to sell lots of sticks."]
+			dependencies: ["38907C0C07C6E633"]
+			id: "0D5C7F212EF70655"
+			tasks: [
+				{
+					id: "0FDC22CFB18EBAB4"
+					type: "item"
+					item: "minecraft:fletching_table"
+				}
+				{
+					id: "5FD91329D2E1495C"
+					type: "item"
+					item: "minecraft:stick"
+					count: 64L
+				}
+			]
+			rewards: [{
+				id: "5561FECC1A1BB6A2"
+				type: "item"
+				item: "minecraft:oak_planks"
+				count: 16
+			}]
+		}
+		{
+			title: "Setup a Tree Farm"
+			x: -3.5d
+			y: 1.75d
+			subtitle: "We're eco-friendly!"
+			description: ["Set up a grid with tree farm. Don't forget to light it up and leave room for walking!\\n\\nDon't put too much effort into this. You're gonna semi-automate trees sooner or later! You need around 9 saplings growing at same time at this moment to have room for both tool making AND building!"]
+			dependencies: ["42F5BED09CDFDA3C"]
+			id: "38907C0C07C6E633"
+			tasks: [{
+				id: "356C67574D31C51E"
+				type: "item"
+				item: "minecraft:oak_sapling"
+				count: 32L
+			}]
+			rewards: [{
+				id: "589A8E33409D9A86"
+				type: "item"
+				item: "minecraft:cobblestone"
+				count: 16
+			}]
+		}
+		{
+			x: 1.75d
+			y: 0.0d
+			subtitle: "We just want to make sure you didn't throw it away"
+			dependencies: ["36BF0F2418E1ED8B"]
+			id: "61D3F629A4A44DC1"
+			tasks: [{
+				id: "2C69D5F04491A660"
+				type: "item"
+				item: "tconstruct:materials_and_you"
+			}]
+			rewards: [{
+				id: "2BA5A347453B188A"
+				type: "item"
+				item: "minecraft:glass"
+			}]
+		}
+		{
+			x: -5.25d
+			y: 3.5d
+			subtitle: "Active income!"
+			description: ["Get some emeralds. You'll need them to get much better gear than you have right now!"]
+			dependencies: ["30AAE545107754D1"]
+			id: "06ED9AF9B9F3927C"
+			tasks: [{
+				id: "72D7EF945C45111C"
+				type: "item"
+				item: "minecraft:emerald"
+				count: 5L
+			}]
+			rewards: [{
+				id: "6EFB8459C3C78717"
+				type: "item"
+				item: "minecraft:torch"
+				count: 8
+			}]
+		}
+		{
+			title: "The Optimal Solution"
+			x: 5.25d
+			y: 3.5d
+			subtitle: "9 out of 10 tinkers recommend this setup!"
+			description: ["This is one of the best of pickaxe setups for skyblock. If you think otherwise - make it anyway. You'll get some materials back!"]
+			dependencies: ["135647D6571CA1CC"]
+			id: "6C1BE5265F258334"
+			tasks: [{
+				id: "347DDF8BA404827F"
+				type: "item"
+				item: {
+					id: "tconstruct:pickaxe"
+					Count: 1b
+					tag: {
+						tic_stats: {
+							"tconstruct:attack_speed": 1.3728f
+							"tconstruct:mining_speed": 8.008f
+							"tconstruct:attack_damage": 1.1f
+							"tconstruct:harvest_tier": "minecraft:iron"
+							"tconstruct:durability": 236.0f
+						}
+						tic_broken: 0b
+						tic_modifiers: [
+							{
+								name: "tconstruct:piercing"
+								level: 1s
+							}
+							{
+								name: "tconstruct:searing"
+								level: 1s
+							}
+							{
+								name: "omgamod:haste"
+								level: 1s
+							}
+							{
+								name: "tconstruct:stringy"
+								level: 1s
+							}
+						]
+						tic_materials: [
+							"tconstruct:seared_stone"
+							"omgamod:redsteel"
+							"tconstruct:string"
+						]
+						Damage: 0
+						tic_volatile_data: {
+							"tconstruct:tank_capacity": 250
+						}
+						tic_persistent_data: {
+							abilities: 1
+							upgrades: 3
+						}
+					}
+				}
+			}]
+			rewards: [
+				{
+					id: "746349FB180C32E1"
+					type: "item"
+					item: "tconstruct:seared_brick"
+					count: 2
+				}
+				{
+					id: "21E4A0449FA997B8"
+					type: "item"
+					item: "omgamod:redsteel_ingot"
+					count: 2
+				}
+				{
+					id: "6670AC68B71B34A7"
+					type: "item"
+					item: "minecraft:string"
+					count: 2
+				}
+			]
+		}
+		{
+			x: 7.0d
+			y: 1.75d
+			subtitle: "Sethbling's favorite metal, probably"
+			description: ["Redsteel is easy-to-melt, rather durable and VERY fast material. Its modifier - Haste - increases speed of mining, making it very good for mining tools."]
+			dependencies: ["20BFAADC4A38DEE3"]
+			id: "135647D6571CA1CC"
+			tasks: [{
+				id: "6F30EC156D770902"
+				type: "item"
+				item: "omgamod:redsteel_ingot"
+			}]
+			rewards: [{
+				id: "02570A180C466633"
+				type: "item"
+				item: {
+					id: "minecraft:potion"
+					Count: 1b
+					tag: {
+						Potion: "minecraft:healing"
+					}
+				}
+			}]
+		}
+		{
+			title: "Insomnia"
+			icon: "minecraft:phantom_membrane"
+			x: -1.75d
+			y: 1.75d
+			shape: "diamond"
+			subtitle: "Tell me the truth, did you vote for it?"
+			description: ["As of now, killing phantoms is not crucial for progress. However they deserve it."]
+			dependencies: ["36BF0F2418E1ED8B"]
+			id: "463B673F9FDD2201"
+			tasks: [{
+				id: "14C05055E44C7501"
+				type: "kill"
+				entity: "minecraft:phantom"
+				value: 3L
+			}]
+			rewards: [{
+				id: "31484F713BD3B1F5"
+				type: "item"
+				item: "minecraft:red_bed"
+			}]
+		}
+		{
+			title: "Fastfood"
+			x: 1.75d
+			y: 1.75d
+			shape: "diamond"
+			subtitle: "Imagine eating this."
+			description: ["If you didn't get some cows and pigs to spawn - don't worry, this particular species drop both Leather and food!"]
+			dependencies: ["36BF0F2418E1ED8B"]
+			id: "5911DF891D254245"
+			tasks: [{
+				id: "7BA9BCD3CC62E198"
+				type: "kill"
+				entity: "minecraft:hoglin"
+				value: 10L
+			}]
+			rewards: [{
+				id: "4120E09FA017B5C8"
+				type: "item"
+				item: "minecraft:smoker"
+			}]
+		}
+		{
+			x: -7.0d
+			y: 1.75d
+			subtitle: "/!\\ Trade offer /!\\"
+			description: ["Sell the sticks to the villager. If he didn't get the sticks trade, break the fletching table and place it back (so the villager loses profession and gets it again)"]
+			dependencies: ["2F5F9BBE11135D94"]
+			id: "30AAE545107754D1"
+			tasks: [{
+				id: "24366AA8DC7723FE"
+				type: "advancement"
+				title: "Trade with Villager"
+				icon: "minecraft:villager_spawn_egg"
+				advancement: "minecraft:adventure/trade"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "608D69C72E28CF39"
+				type: "item"
+				item: "minecraft:bookshelf"
+				count: 4
+			}]
+		}
+		{
+			title: "The Mightstone #2"
+			icon: "tconstruct:mighty_smelting"
+			x: 0.0d
+			y: 3.5d
+			shape: "hexagon"
+			subtitle: "Milestone, Mightstone, get it? Uhh... Well..."
+			dependencies: [
+				"06ED9AF9B9F3927C"
+				"6C1BE5265F258334"
+				"463B673F9FDD2201"
+				"5911DF891D254245"
+			]
+			size: 1.5d
+			id: "07589619978608B9"
+			tasks: [{
+				id: "47C0817398B693CB"
+				type: "item"
+				item: "tconstruct:mighty_smelting"
+			}]
+			rewards: [
+				{
+					id: "19FABC2A2A053F3F"
+					type: "custom"
+					title: "Quests Tab Access"
+					icon: "ftbquests:book"
+					auto: "enabled"
+				}
+				{
+					id: "405B446D64477FF8"
+					type: "item"
+					item: "omgamod:music_disc_rage"
+				}
+			]
+		}
+	]
+	quest_links: [ ]
+}

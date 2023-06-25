@@ -11,6 +11,17 @@ onEvent('entity.loot_tables', (e) => {
             pool.addItem('omgamod:steel_ingot').randomChance("0.025")
         })
     }) 
+    e.modifyEntity('witch', table => {
+        table.clearPools()
+        table.addPool(pool => {
+            pool.addItem('redstone', 2, [1, 6])
+            pool.addItem('glowstone', 1, [1, 6])
+            pool.addItem('sugar', 1, [1, 6])
+        })
+        table.addPool(pool => {
+            pool.addItem('stick').randomChance(0.5)
+        })
+    })
     e.modifyEntity('enderman', table => {
         table.addPool((pool) => {
             pool.addCondition({

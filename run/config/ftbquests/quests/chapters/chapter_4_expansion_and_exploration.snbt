@@ -1,0 +1,461 @@
+{
+	id: "2E3EBFFB12292118"
+	group: "5623998BE532BC21"
+	order_index: 3
+	filename: "chapter_4_expansion_and_exploration"
+	title: "Chapter 4: Exploration and Improvement"
+	icon: "omgamod:goldsteel_ingot"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 1.75d
+			y: 0.0d
+			subtitle: "No fortress for ya!"
+			description: ["This is going to take the longest time of all tasks in this modpack. Blaze Spawners are rare Nether structures. \\n\\nSince you're in Skyblock, you'll need a while to locate one. Good luck!"]
+			dependencies: ["19C8D4FCA2BE2129"]
+			id: "7F72F332E64E0286"
+			tasks: [{
+				id: "0EF6211F0C864F4A"
+				type: "structure"
+				title: "Find the Blaze Spawner Structure"
+				structure: "omgamod:blaze_spawner"
+			}]
+			rewards: [
+				{
+					id: "5492960772D48943"
+					type: "advancement"
+					advancement: "minecraft:nether/find_fortress"
+					criterion: ""
+				}
+				{
+					id: "07E27F00B97A6AED"
+					type: "item"
+					item: "minecraft:crimson_fungus"
+				}
+				{
+					id: "6AFE8931B9B7BC8C"
+					type: "item"
+					item: "minecraft:warped_fungus"
+				}
+				{
+					id: "0037C64926A37DEB"
+					type: "item"
+					item: "minecraft:crimson_nylium"
+				}
+				{
+					id: "6C34A0D4547E1C1C"
+					type: "item"
+					item: "minecraft:warped_nylium"
+				}
+			]
+		}
+		{
+			title: "Various Minecart Prep"
+			icon: "create:cart_assembler"
+			x: 0.0d
+			y: 0.0d
+			shape: "hexagon"
+			subtitle: "Professional stealer equipment!"
+			description: ["Prepare the following things. You'll use them to get newfound spawners to your base.\\n\\nYou can craft the Slimeball using Dough and Lime Dye. Lime Dye can be crafted with Green Dye (Cacti) and White Dye (Bonemeal)"]
+			dependencies: ["1B7F4477E99D20A0"]
+			hide: true
+			size: 1.5d
+			id: "19C8D4FCA2BE2129"
+			tasks: [
+				{
+					id: "7951C00B89731252"
+					type: "item"
+					item: "create:cart_assembler"
+				}
+				{
+					id: "0450F3A5DCBA72E6"
+					type: "item"
+					item: "minecraft:minecart"
+				}
+				{
+					id: "7C7E2CE046BAA2E1"
+					type: "item"
+					item: "minecraft:rail"
+				}
+				{
+					id: "346E956FDB8A8096"
+					type: "item"
+					item: "minecraft:lever"
+				}
+				{
+					id: "2BC2FF039A5837C6"
+					type: "item"
+					item: "create:linear_chassis"
+					count: 2L
+				}
+				{
+					id: "5986236E6576303A"
+					type: "item"
+					item: "minecraft:slime_ball"
+				}
+				{
+					id: "5662A7E349EDA327"
+					type: "item"
+					item: "create:wrench"
+				}
+				{
+					id: "0F3356E89F836A2A"
+					type: "item"
+					item: "create:empty_blaze_burner"
+				}
+			]
+			rewards: [{
+				id: "43B76D28B69F76C4"
+				type: "item"
+				item: "tconstruct:seared_brick"
+				count: 16
+			}]
+		}
+		{
+			title: "Demon Slayer"
+			x: 3.75d
+			y: -2.0d
+			subtitle: "...are blazes even demons?"
+			description: ["Kill a couple of blazes to get blaze rods. You can do it on place, or save this quest for later."]
+			dependencies: ["7F72F332E64E0286"]
+			id: "11F779BFAA84CF93"
+			tasks: [
+				{
+					id: "2A8F01F5AD9CEEAA"
+					type: "kill"
+					entity: "minecraft:blaze"
+					value: 1L
+				}
+				{
+					id: "342F4B44B6F5CD5C"
+					type: "item"
+					item: "minecraft:blaze_rod"
+					count: 4L
+				}
+			]
+			rewards: [{
+				id: "505B013F0CDF3661"
+				type: "item"
+				item: "tconstruct:blaze_head"
+			}]
+		}
+		{
+			title: "GOTTEM"
+			icon: "minecraft:spawner"
+			x: 3.75d
+			y: 2.0d
+			subtitle: "Instructions unclear: crafted a quantum computer instead"
+			description: ["Assemble a contraption that will stick to the spawner. Use all the items you got in parent quest.\\n\\nSolution: place rail, minacart assembler and minecart on block right next to spawner. Place the lever to power the minecart assembler in future. Then, put linear chasis on top of both spawner and minecar assembler looking up/down. Double click with slimeball on the one above spawner. Power the lever. Right-click the minecart with wrench to finally steal the spawner!"]
+			dependencies: ["7F72F332E64E0286"]
+			id: "5CB4AD5C7A8AEE3D"
+			tasks: [
+				{
+					id: "04B2891986A3B2CB"
+					type: "checkmark"
+					title: "gotcha"
+				}
+				{
+					id: "1010E352B0CC8336"
+					type: "item"
+					item: {
+						id: "create:minecart_contraption"
+						Count: 1b
+						tag: { }
+					}
+				}
+			]
+			rewards: [{
+				id: "55A5584473A60C93"
+				type: "item"
+				item: "minecraft:bone"
+			}]
+		}
+		{
+			x: 5.75d
+			y: -2.0d
+			subtitle: "Enslaved!"
+			description: ["Ponder, ponder, ponder!"]
+			dependencies: ["11F779BFAA84CF93"]
+			id: "7C6F46BE77C46CF4"
+			tasks: [{
+				id: "433628675BA2455C"
+				type: "item"
+				item: "create:blaze_burner"
+			}]
+			rewards: [{
+				id: "619E92D13A25F2DC"
+				type: "item"
+				item: "minecraft:iron_bars"
+				count: 16
+			}]
+		}
+		{
+			x: 5.75d
+			y: 0.0d
+			subtitle: "Holy cow!"
+			description: ["Cleric villagers sell redstone. That's a great way of getting it before you automate it properly!"]
+			dependencies: ["11F779BFAA84CF93"]
+			id: "3EAF69B21200485E"
+			tasks: [{
+				id: "6972EF4508003905"
+				type: "item"
+				item: "minecraft:brewing_stand"
+			}]
+			rewards: [{
+				id: "6E7932CBBB7DB08E"
+				type: "item"
+				item: "minecraft:emerald"
+			}]
+		}
+		{
+			x: 5.75d
+			y: -1.0d
+			subtitle: "I see you."
+			dependencies: ["11F779BFAA84CF93"]
+			id: "108378D6272E8A96"
+			tasks: [{
+				id: "498C4BEE354C8C35"
+				type: "item"
+				item: "minecraft:ender_eye"
+			}]
+			rewards: [{
+				id: "5922D28140B7C80F"
+				type: "item"
+				item: {
+					id: "tconstruct:travelers_helmet"
+					Count: 1b
+					tag: {
+						tic_stats: {
+							"tconstruct:durability": 110.0f
+							"tconstruct:armor": 1.0f
+						}
+						tic_broken: 0b
+						Damage: 0
+						tic_modifiers: [ ]
+						tic_persistent_data: {
+							abilities: 1
+							defense: 2
+							upgrades: 3
+						}
+					}
+				}
+			}]
+		}
+		{
+			title: "Various Spawn Eggs"
+			x: 5.75d
+			y: 1.0d
+			subtitle: "Eggman"
+			description: ["You can apply those Spawn Eggs to spawner(s) to change mobs they spawn!\\n\\nAs a reward, you'll receive a spawner and some passive mob eggs to get a good start with animal farming! Notice that spawners have some limit of mobs, so you'll still have to breed animals to have more."]
+			dependencies: [
+				"11F779BFAA84CF93"
+				"5CB4AD5C7A8AEE3D"
+			]
+			id: "26263F27708CCE71"
+			tasks: [
+				{
+					id: "28D000A51CDEB629"
+					type: "item"
+					item: "minecraft:wither_skeleton_spawn_egg"
+				}
+				{
+					id: "43650DD8A0AB115D"
+					type: "item"
+					item: "minecraft:magma_cube_spawn_egg"
+				}
+				{
+					id: "37E3FB729BBE7DB7"
+					type: "item"
+					item: "minecraft:blaze_spawn_egg"
+				}
+			]
+			rewards: [
+				{
+					id: "357965ED2D991880"
+					type: "item"
+					item: "minecraft:spawner"
+				}
+				{
+					id: "37C2A3866C8AA101"
+					type: "item"
+					item: "minecraft:chicken_spawn_egg"
+				}
+				{
+					id: "1F2CE784341E5D55"
+					type: "item"
+					item: "minecraft:cow_spawn_egg"
+				}
+				{
+					id: "43ABBD62AAF70E4B"
+					type: "item"
+					item: "minecraft:sheep_spawn_egg"
+				}
+			]
+		}
+		{
+			x: 7.75d
+			y: -2.0d
+			subtitle: "We're getting SMART!"
+			description: ["Brass is the next major step in Create progression, so make some!"]
+			dependencies: ["7C6F46BE77C46CF4"]
+			id: "475E0FFBF0FCD8E2"
+			tasks: [{
+				id: "499B55F671250133"
+				type: "item"
+				item: "create:brass_ingot"
+			}]
+			rewards: [{
+				id: "65269F18A0CB17BA"
+				type: "item"
+				item: "create:brass_ingot"
+			}]
+		}
+		{
+			x: 5.75d
+			y: 2.0d
+			subtitle: "Snap back to reality"
+			dependencies: ["5CB4AD5C7A8AEE3D"]
+			id: "708930E37BFAF6AC"
+			tasks: [{
+				id: "7A12B2B229969860"
+				type: "observation"
+				title: "Place Spawner in Overworld"
+				icon: "minecraft:spawner"
+				timer: 0L
+				observe_type: 0
+				to_observe: "minecraft:spawner"
+			}]
+			rewards: [{
+				id: "09934493F6F62521"
+				type: "item"
+				item: "farmersdelight:organic_compost"
+				count: 16
+			}]
+		}
+		{
+			x: 7.75d
+			y: -1.0d
+			subtitle: "Blocks are getting SMARTER, too!"
+			dependencies: ["475E0FFBF0FCD8E2"]
+			id: "67CC358C2790BDF2"
+			tasks: [{
+				id: "6096F04E4A1180B6"
+				type: "item"
+				item: "create:brass_casing"
+			}]
+			rewards: [{
+				id: "0B8C2C6510080B12"
+				type: "item"
+				item: "create:brass_ingot"
+			}]
+		}
+		{
+			x: 7.75d
+			y: 0.0d
+			subtitle: "...and funnels!"
+			dependencies: ["67CC358C2790BDF2"]
+			id: "1250F89E8EA5AB38"
+			tasks: [{
+				id: "2C496C235C3BE3ED"
+				type: "item"
+				item: "create:brass_funnel"
+				count: 4L
+			}]
+			rewards: [{
+				id: "5B1D8AA1AEBF0F91"
+				type: "item"
+				item: "create:brass_ingot"
+			}]
+		}
+		{
+			x: 7.75d
+			y: 1.0d
+			subtitle: "...and tunnels!?"
+			dependencies: ["1250F89E8EA5AB38"]
+			id: "37D96D5EE7616843"
+			tasks: [{
+				id: "36086A7ADD6E0FFD"
+				type: "item"
+				item: "create:brass_tunnel"
+				count: 4L
+			}]
+			rewards: [{
+				id: "2B2F49BA112A4805"
+				type: "item"
+				item: "create:brass_ingot"
+			}]
+		}
+		{
+			x: 7.75d
+			y: 2.0d
+			subtitle: "...and... hands???"
+			description: ["The chain of various brass things you just crafted opens up a lot of possibilities. So what are we waiting for? TIME FOR IMPROVEMENTS!"]
+			dependencies: ["37D96D5EE7616843"]
+			id: "77F10D758B994878"
+			tasks: [{
+				id: "7F3DAA3198C68874"
+				type: "item"
+				item: "create:brass_hand"
+			}]
+			rewards: [{
+				id: "71C7F85FBC5385F8"
+				type: "item"
+				item: "create:brass_ingot"
+			}]
+		}
+		{
+			x: 9.75d
+			y: 2.0d
+			subtitle: "Comes in very handy"
+			dependencies: ["77F10D758B994878"]
+			id: "5A7653384BD48F8F"
+			tasks: [{
+				id: "1EB3DB3C6E0D6B8A"
+				type: "item"
+				item: "create:deployer"
+			}]
+			rewards: [{
+				id: "1C2B81C80BB601EF"
+				type: "item"
+				item: "create:brass_ingot"
+			}]
+		}
+		{
+			title: "Improving Older Contraptions"
+			icon: "create:brass_nugget"
+			x: 9.75d
+			y: 1.0d
+			subtitle: "Improvement is the key of success!"
+			description: ["Go back to the old things you build (like cobblestone, wood and crop farms). Feel free to rethink them, given new capabilities of brass: advanced filtering, conveyor splitting and very cool block placers suitable for placing down saplings!"]
+			dependencies: ["5A7653384BD48F8F"]
+			id: "5F5A7078B6749C13"
+			tasks: [{
+				id: "383AC0716F9DDF17"
+				type: "checkmark"
+				title: "gotcha"
+			}]
+			rewards: [{
+				id: "399CDB9FC6050BE7"
+				type: "item"
+				item: "create:brass_ingot"
+			}]
+		}
+		{
+			title: "Lava Dupe"
+			x: 6.75d
+			y: -1.0d
+			subtitle: "Cobblegen expansion!"
+			description: ["You can mix cobblestone with itself in heated mixer to create lava. Make a second bucket for yourself!\\n\\nYou'll need 200 cobblestone for one lava bucket, so get ready!"]
+			dependencies: ["7C6F46BE77C46CF4"]
+			id: "5B0257F26AE3C38A"
+			tasks: [{
+				id: "02BB335F9AE76DF9"
+				type: "item"
+				item: "minecraft:lava_bucket"
+				count: 2L
+			}]
+		}
+	]
+	quest_links: [ ]
+}

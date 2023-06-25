@@ -28,8 +28,9 @@ public class ItemInit {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, OmgaMod.MODID);
 
-    public static final RegistryObject<Item> MUSIC_DISC_TREE = ITEMS.register("music_disc_tree", () -> new RecordItem(5, () -> SoundInit.MUSIC_DISC_TREE, OMTab().stacksTo(1).rarity(Rarity.RARE)));
-    public static final RegistryObject<Item> MUSIC_DISC_GEARS= ITEMS.register("music_disc_gears", () -> new RecordItem(6, () -> SoundInit.MUSIC_DISC_GEARS, OMTab().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> MUSIC_DISC_TREE = ITEMS.register("music_disc_tree", () -> new RecordItem(5, () -> SoundInit.MUSIC_DISC_TREE, LTTab().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> MUSIC_DISC_RAGE = ITEMS.register("music_disc_rage", () -> new RecordItem(6, () -> SoundInit.MUSIC_DISC_RAGE, LTTab().stacksTo(1).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> MUSIC_DISC_GEARS= ITEMS.register("music_disc_gears", () -> new RecordItem(7, () -> SoundInit.MUSIC_DISC_GEARS, LTTab().stacksTo(1).rarity(Rarity.RARE)));
 
     // # # # # #
 

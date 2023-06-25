@@ -1,0 +1,614 @@
+{
+	id: "16340DD954C1A669"
+	group: "2A32F46B449F9545"
+	order_index: 0
+	filename: "quests"
+	title: "Quests"
+	default_quest_shape: ""
+	default_hide_dependency_lines: true
+	images: [{
+		x: 0.0d
+		y: 0.0d
+		width: 5.9d
+		height: 5.9d
+		rotation: 0.0d
+		image: "omgamod:textures/quests/portal_frame.png"
+		hover: [ ]
+		click: ""
+		dev: false
+		corner: false
+	}]
+	quests: [
+		{
+			title: "Open the Quests Tab"
+			x: 0.0d
+			y: 0.0d
+			subtitle: "Looks promising"
+			description: ["Quests are what you're supposed to do when you don't want to think much. They involve a lot of grind and/or preparation - and some of the very good rewards!"]
+			dependencies: ["07589619978608B9"]
+			hide: true
+			id: "6CA7673250483532"
+			tasks: [{
+				id: "117DF6182F1FEE49"
+				type: "checkmark"
+				title: "gotcha"
+			}]
+			rewards: [{
+				id: "1488F61784798C54"
+				type: "item"
+				item: "minecraft:emerald"
+			}]
+		}
+		{
+			title: "The Rainbow Chain"
+			x: 3.75d
+			y: 1.0d
+			subtitle: "*insert homosexuality joke here*"
+			dependencies: ["6CA7673250483532"]
+			id: "6E5968F296FCB4F7"
+			tasks: [
+				{
+					id: "1924BEBAFED04690"
+					type: "item"
+					item: "omgamod:redsteel_ingot"
+					consume_items: true
+				}
+				{
+					id: "53BC95388B116F99"
+					type: "item"
+					item: "omgamod:woodsteel_ingot"
+					consume_items: true
+				}
+				{
+					id: "2464F01E696B8FD5"
+					type: "item"
+					item: "omgamod:goldsteel_ingot"
+					consume_items: true
+				}
+				{
+					id: "60215C26BDB07E6B"
+					type: "item"
+					item: "omgamod:creepersteel_ingot"
+					consume_items: true
+				}
+				{
+					id: "1862102A12AC0E4B"
+					type: "item"
+					item: "omgamod:prismasteel_ingot"
+					consume_items: true
+				}
+				{
+					id: "210CE87376AA9AD7"
+					type: "item"
+					item: "omgamod:skysteel_ingot"
+					consume_items: true
+				}
+				{
+					id: "09F3DDFF32E07138"
+					type: "item"
+					item: "omgamod:endersteel_ingot"
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "744E2302A15B0DD3"
+				type: "item"
+				item: "create:precision_mechanism"
+				count: 16
+			}]
+		}
+		{
+			title: "Slaughterhouse"
+			icon: {
+				id: "minecraft:netherite_sword"
+				Count: 1b
+				tag: {
+					Damage: 0
+					Enchantments: [{ }]
+				}
+			}
+			x: 2.0d
+			y: 1.0d
+			subtitle: "Not to confuse with crazy hard Geometry Dash levels-"
+			dependencies: ["6CA7673250483532"]
+			id: "530D68F6F9A736D5"
+			tasks: [
+				{
+					id: "73DEA5E8353C6565"
+					type: "kill"
+					entity: "minecraft:pig"
+					value: 100L
+				}
+				{
+					id: "36FD04F53FB9A241"
+					type: "kill"
+					entity: "minecraft:cow"
+					value: 100L
+				}
+				{
+					id: "4BEED5F29AE82608"
+					type: "kill"
+					entity: "minecraft:chicken"
+					value: 100L
+				}
+			]
+			rewards: [
+				{
+					id: "19FAB1EBF7A9F379"
+					type: "item"
+					item: "minecraft:end_portal_frame"
+				}
+				{
+					id: "6352517CEDCC14FD"
+					type: "item"
+					item: "minecraft:blue_ice"
+				}
+			]
+		}
+		{
+			title: "Mineral Collection"
+			icon: "minecraft:bundle"
+			x: 1.0d
+			y: -2.0d
+			subtitle: "Where do you even get that from?"
+			dependencies: ["6CA7673250483532"]
+			id: "54BECDFE37192500"
+			tasks: [
+				{
+					id: "0A88430FBDB19500"
+					type: "item"
+					item: "minecraft:lapis_lazuli"
+					count: 32L
+					consume_items: true
+				}
+				{
+					id: "43EC0CFAE5148638"
+					type: "item"
+					item: "minecraft:emerald"
+					count: 32L
+					consume_items: true
+				}
+				{
+					id: "269FB5E5C280B094"
+					type: "item"
+					item: "minecraft:diamond"
+					count: 32L
+					consume_items: true
+				}
+				{
+					id: "4858A6FFC82BDA8E"
+					type: "item"
+					item: "minecraft:redstone"
+					count: 32L
+					consume_items: true
+				}
+				{
+					id: "2FD23021A0EAA457"
+					type: "item"
+					item: "minecraft:amethyst_shard"
+					count: 32L
+					consume_items: true
+				}
+				{
+					id: "097843E8A9F92B6B"
+					type: "item"
+					item: "minecraft:quartz"
+					count: 32L
+					consume_items: true
+				}
+			]
+			rewards: [
+				{
+					id: "0272907F9602ACAC"
+					type: "item"
+					item: "minecraft:end_portal_frame"
+				}
+				{
+					id: "381EA837F181AF2E"
+					type: "item"
+					item: {
+						id: "minecraft:enchanted_book"
+						Count: 1b
+						tag: {
+							StoredEnchantments: [
+								{
+									lvl: 5s
+									id: "minecraft:efficiency"
+								}
+								{
+									lvl: 3s
+									id: "minecraft:fortune"
+								}
+								{
+									lvl: 1s
+									id: "minecraft:mending"
+								}
+							]
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Skyblock Traveller"
+			x: 0.0d
+			y: -3.75d
+			dependencies: ["6CA7673250483532"]
+			id: "7D49ED04194C1096"
+			tasks: [{
+				id: "1602D3C02773C47A"
+				type: "advancement"
+				title: "Visit Every Biome"
+				advancement: "minecraft:adventure/adventuring_time"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "48FB8DE713672BC7"
+				type: "item"
+				item: "minecraft:totem_of_undying"
+			}]
+		}
+		{
+			title: "Reach Level 100"
+			icon: {
+				id: "create:experience_block"
+				Count: 1b
+				tag: {
+					Enchantments: [{ }]
+				}
+			}
+			x: 3.75d
+			y: 0.0d
+			subtitle: "You can probably be called \"wise\" at this point"
+			dependencies: ["6CA7673250483532"]
+			id: "26DA6E0FC84655B3"
+			tasks: [{
+				id: "0BCA690CC22707C6"
+				type: "xp"
+				value: 100L
+				points: false
+			}]
+			rewards: [
+				{
+					id: "11DE207E161B52F1"
+					type: "item"
+					item: "minecraft:totem_of_undying"
+					count: 3
+				}
+				{
+					id: "58CF59D0B3AC315A"
+					type: "xp_levels"
+					title: "Backup"
+					exclude_from_claim_all: true
+					xp_levels: 100
+				}
+				{
+					id: "5BBEC40C744F969D"
+					type: "xp_levels"
+					title: "Cashback"
+					auto: "enabled"
+					xp_levels: 100
+				}
+			]
+		}
+		{
+			title: "I'll Be Back"
+			x: 3.75d
+			y: -1.0d
+			dependencies: ["6CA7673250483532"]
+			can_repeat: true
+			id: "6CA623F388D7D842"
+			tasks: [{
+				id: "6CC33A73686E152E"
+				type: "kill"
+				title: "Kill Two Ender Dragons"
+				icon: "minecraft:dragon_head"
+				entity: "minecraft:ender_dragon"
+				value: 2L
+			}]
+			rewards: [{
+				id: "1A682BF7B9150507"
+				type: "item"
+				item: {
+					id: "minecraft:elytra"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+		}
+		{
+			title: "Ready for Action"
+			x: 2.0d
+			y: -1.0d
+			subtitle: "1.8 vibes!"
+			dependencies: ["6CA7673250483532"]
+			id: "655FAD3020BEB90B"
+			tasks: [
+				{
+					id: "7474616365E17405"
+					type: "item"
+					item: {
+						id: "minecraft:diamond_helmet"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "7C2F11DD503EEA05"
+					type: "item"
+					item: {
+						id: "minecraft:diamond_chestplate"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "29043FA88DBD2C96"
+					type: "item"
+					item: {
+						id: "minecraft:diamond_leggings"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "6E288C5A4D32807F"
+					type: "item"
+					item: {
+						id: "minecraft:diamond_boots"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+			]
+			rewards: [{
+				id: "145BDFE7873A37E0"
+				type: "item"
+				item: "minecraft:end_portal_frame"
+			}]
+		}
+		{
+			x: 2.0d
+			y: 0.0d
+			subtitle: "Finally, enchanting potential"
+			description: ["You'll get your XP back right after submitting it."]
+			dependencies: ["6CA7673250483532"]
+			id: "482149FF8DEACA62"
+			tasks: [{
+				id: "6ADD2006608C1B26"
+				type: "xp"
+				icon: "create:experience_nugget"
+				value: 30L
+				points: false
+			}]
+			rewards: [
+				{
+					id: "01486338CA54B442"
+					type: "item"
+					item: "minecraft:end_portal_frame"
+				}
+				{
+					id: "5B9335ABBB5BF6DC"
+					type: "item"
+					item: "minecraft:book"
+					count: 32
+				}
+				{
+					id: "318ED9920B70B3F2"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+		}
+		{
+			title: "Good Vision"
+			x: 0.0d
+			y: -2.0d
+			subtitle: "Supposed to be completed last!"
+			dependencies: ["6CA7673250483532"]
+			id: "74B503C5C6FBB7E0"
+			tasks: [{
+				id: "12FDF52AC6A7DCCC"
+				type: "item"
+				item: "minecraft:ender_eye"
+				count: 12L
+				consume_items: false
+			}]
+			rewards: [{
+				id: "63F7D56D7F26D8A2"
+				type: "item"
+				item: "minecraft:end_portal_frame"
+			}]
+		}
+		{
+			x: -2.0d
+			y: -1.0d
+			dependencies: ["6CA7673250483532"]
+			id: "01729461C969A391"
+			tasks: [{
+				id: "1510468D127C2421"
+				type: "checkmark"
+			}]
+			rewards: [{
+				id: "2488F9CBCB948EF6"
+				type: "item"
+				item: "minecraft:end_portal_frame"
+			}]
+		}
+		{
+			x: -2.0d
+			y: 0.0d
+			dependencies: ["6CA7673250483532"]
+			id: "18AF6B9E36DBCE16"
+			tasks: [{
+				id: "537B4E7819986271"
+				type: "checkmark"
+			}]
+			rewards: [{
+				id: "58CEA0290BBEBE24"
+				type: "item"
+				item: "minecraft:end_portal_frame"
+			}]
+		}
+		{
+			x: -2.0d
+			y: 1.0d
+			dependencies: ["6CA7673250483532"]
+			id: "2C15B6EAEA346913"
+			tasks: [{
+				id: "27A0F7C601259B4E"
+				type: "checkmark"
+			}]
+			rewards: [{
+				id: "2237ED69C8A203B9"
+				type: "item"
+				item: "minecraft:end_portal_frame"
+			}]
+		}
+		{
+			x: -1.0d
+			y: 2.0d
+			dependencies: ["6CA7673250483532"]
+			id: "40483FB4ED364F69"
+			tasks: [{
+				id: "298CAF1C88BEE8F1"
+				type: "checkmark"
+			}]
+			rewards: [{
+				id: "09ABC932046237B5"
+				type: "item"
+				item: "minecraft:end_portal_frame"
+			}]
+		}
+		{
+			x: 0.0d
+			y: 2.0d
+			dependencies: ["6CA7673250483532"]
+			id: "6BBD06DDE862E1D5"
+			tasks: [{
+				id: "489F7F3DED2D15FC"
+				type: "checkmark"
+			}]
+			rewards: [{
+				id: "6688A9EFEAC5790F"
+				type: "item"
+				item: "minecraft:end_portal_frame"
+			}]
+		}
+		{
+			x: 1.0d
+			y: 2.0d
+			dependencies: ["6CA7673250483532"]
+			id: "469A27F539CEFD4A"
+			tasks: [{
+				id: "6AF8AE17C9639B44"
+				type: "checkmark"
+			}]
+			rewards: [{
+				id: "001F8819316973AF"
+				type: "item"
+				item: "minecraft:end_portal_frame"
+			}]
+		}
+		{
+			x: -1.0d
+			y: -2.0d
+			dependencies: ["6CA7673250483532"]
+			id: "19BE2E73B2525310"
+			tasks: [{
+				id: "070BE1F0E05B4B82"
+				type: "checkmark"
+			}]
+			rewards: [{
+				id: "15A89C0395D9EE05"
+				type: "item"
+				item: "minecraft:end_portal_frame"
+			}]
+		}
+		{
+			title: "Impossible is Possible"
+			x: 1.0d
+			y: -3.75d
+			subtitle: "Probably a very easy quest"
+			description: ["(Two days later I realize I literally have a quest where this is a reward. I keep it anyway)"]
+			dependencies: ["6CA7673250483532"]
+			id: "6A8AE9FB95054F61"
+			tasks: [{
+				id: "335DD1D37C99DAA7"
+				type: "item"
+				item: "minecraft:grass_block"
+			}]
+			rewards: [{
+				id: "1A2FE3DDEE478868"
+				type: "item"
+				item: "minecraft:ender_pearl"
+				count: 4
+			}]
+		}
+		{
+			title: "The Drip"
+			x: 3.75d
+			y: -2.0d
+			subtitle: "1.16 vibes!"
+			dependencies: ["6CA7673250483532"]
+			id: "68C80F2DD23FAAF0"
+			tasks: [
+				{
+					id: "1AD02FEB303F90D0"
+					type: "item"
+					item: {
+						id: "minecraft:netherite_helmet"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "36DFED8E48000FA1"
+					type: "item"
+					item: {
+						id: "minecraft:netherite_chestplate"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "518B64EC8C866EA3"
+					type: "item"
+					item: {
+						id: "minecraft:netherite_leggings"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "3ABB35C6F53D2CFC"
+					type: "item"
+					item: {
+						id: "minecraft:netherite_boots"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+			]
+		}
+	]
+	quest_links: [ ]
+}
