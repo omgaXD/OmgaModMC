@@ -20,13 +20,14 @@ build
 # other
 eclipse
 run/*
-!run/kubejs/
-!run/config/
 
+!run/kubejs/
+run/kubejs/probe/
+run/kubejs/exported/
+
+!run/config/
 # Files from Forge MDK
 forge*changelog.txt
 
 # diff
 *.bbmodel
-/run/kubejs/probe/
-/run/kubejs/exported/
