@@ -28,4 +28,5 @@ forge*changelog.txt
 
 # diff
 *.bbmodel
-/run/kubejs/probe/cache/
+/run/kubejs/probe/
+/run/kubejs/exported/
