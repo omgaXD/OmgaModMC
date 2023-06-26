@@ -1,0 +1,13 @@
+{
+    "primary": "#minecraft:lava",
+    "secondary": "#omgamod:normal_water",
+    "below": "#omgamod:bedrock",
+    "secondary_pos":"N",
+    "gens": [
+        [25, "minecraft:cobblestone"],
+        [25, "minecraft:granite"],
+        [25, "minecraft:andesite"],
+        [25, "minecraft:diorite"]
+    ],
+    "priority": 107
+}
