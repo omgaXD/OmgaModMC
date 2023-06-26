@@ -243,8 +243,8 @@ dependencies {
 
     runtimeOnly fg.deobf("curse.maven:jer-240630:3831559")
 
-    runtimeOnly fg.deobf("curse.maven:omgen-842355:4607552")
-    runtimeOnly fg.deobf("curse.maven:distant_spawners-873439:4582050")
+    runtimeOnly fg.deobf("curse.maven:omgen-842355:4608375")
+    runtimeOnly fg.deobf("curse.maven:distant_spawners-873439:4608337")
     // runtimeOnly fg.deobf("curse.maven:lightspeedmod-821790:4533213")
     implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.18:3.0.57')
 
