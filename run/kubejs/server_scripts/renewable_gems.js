@@ -16,5 +16,7 @@ onEvent('recipes', event => {
     // Emerald
     renewable("emerald", "lime_dye", "glistering_melon_slice", true)
     // Diamond
-    renewable("diamond", "light_blue_dye", "minecraft:dragon_head", true)
+    renewable("diamond", "light_blue_dye", "dragon_head", true)
+    // Amethyst
+    renewable("amethyst_shard", "purple_dye", "quartz", false)
 })

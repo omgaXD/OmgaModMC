@@ -104,8 +104,7 @@ onEvent('recipes', event => {
 	event.recipes.create.mixing(Fluid.of('kubejs:fertilizer', 250), ['minecraft:bone_meal', Fluid.of('minecraft:water', 250), '2x ' + "#minecraft:flowers"])
 	event.recipes.create.mixing(Fluid.of('kubejs:fertilizer', 500), [Fluid.of('minecraft:water', 500), Fluid.of('omgamod:molten_woodsteel', 50)])
 	// bedrock substitute
-	event.recipes.minecraft.crafting_shaped('omgamod:bedrock_substitute', ['aaa','aaa','aaa'], {a: Item.of('cobblestone', 64)})
-
+	event.recipes.minecraft.crafting_shaped('omgamod:bedrock_substitute', ['lll','lol','lll'], {l: Ingredient.of("lava_bucket"), o: "gravel"})
 
 	/// SPAWN EGGS
 	// Skeleton and Wither skelly
@@ -135,13 +134,16 @@ onEvent('recipes', event => {
 	// sand
 	event.recipes.create.milling('sand', 'gravel')
 	// soul sand
-	event.recipes.create.crushing('soul_sand', 'netherrack')
+	event.recipes.create.milling('soul_sand', 'netherrack')
 	event.recipes.create.compacting('soul_soil', '4x soul_sand')
 	// tall grass/fern
 	event.shaped('tall_grass', ['h','h'], {h: 'grass'})
 	event.shaped('large_fern', ['h','h'], {h: 'fern'})
 	// coarse dirt
 	event.recipes.minecraft.crafting_shapeless('2x coarse_dirt', ['gravel', 'dirt'])
+	// crimson and warped nylium
+	event.recipes.create.item_application('crimson_nylium', ['netherrack', 'redstone'])
+	event.recipes.create.item_application('warped_nylium', ['netherrack', 'emerald'])
 
 
 	/// CHANGES
@@ -194,6 +196,10 @@ onEvent('recipes', event => {
 	// buff gravel recipe
 	event.remove({'type':'create:splashing', 'input':'gravel'})
 	event.recipes.create.splashing([Item.of('iron_nugget').withChance(0.5)], "gravel")
+
+	// smeltery controller locked behind blaze powder
+	event.remove({'output':'tconstruct:smeltery_controller'})
+	event.recipes.minecraft.crafting_shaped("tconstruct:smeltery_controller", ['ccc','bSb','ccc'], {c: "copper_ingot", b: 'blaze_powder', S: '#tconstruct:seared_bricks'})
 
 	//#region Fertilizer
 	Ingredient.of('#minecraft:tall_flowers').itemIds.forEach(element => {
