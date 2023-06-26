@@ -319,7 +319,7 @@
 			}
 			x: 5.0d
 			y: -3.25d
-			subtitle: "Investing into yourself!"
+			subtitle: "Take control, brain pow-er!"
 			dependencies: ["712BA37CCE273C09"]
 			id: "7072B9978F77DE60"
 			tasks: [
@@ -489,6 +489,7 @@
 				"3F039F6EF53B64B5"
 				"376B2509CBFB631D"
 				"3ED2BA2F3D982439"
+				"7CBC957931E1E57E"
 			]
 			size: 1.5d
 			id: "1B7F4477E99D20A0"
@@ -590,7 +591,7 @@
 		}
 		{
 			title: "Kill a Wandering Trader"
-			x: 0.0d
+			x: 0.25d
 			y: -3.25d
 			subtitle: "Actually, I don't care"
 			description: ["Don't worry, he'll drop his egg so you can resummon him.\\n\\nDon't forget about his llamas - they might overreact on his death!"]
@@ -630,6 +631,7 @@
 				id: "45F5DE02D3A54DAC"
 				type: "item"
 				item: "minecraft:bone_block"
+				count: 5
 			}]
 		}
 		{

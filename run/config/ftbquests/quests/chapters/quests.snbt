@@ -23,10 +23,12 @@
 			title: "Open the Quests Tab"
 			x: 0.0d
 			y: 0.0d
+			shape: "hexagon"
 			subtitle: "Looks promising"
 			description: ["Quests are what you're supposed to do when you don't want to think much. They involve a lot of grind and/or preparation - and some of the very good rewards!"]
 			dependencies: ["07589619978608B9"]
 			hide: true
+			size: 1.5d
 			id: "6CA7673250483532"
 			tasks: [{
 				id: "117DF6182F1FEE49"
@@ -109,7 +111,7 @@
 			}
 			x: 2.0d
 			y: 1.0d
-			subtitle: "Not to confuse with crazy hard Geometry Dash levels-"
+			subtitle: "Not to be confused with crazy hard Geometry Dash levels-"
 			dependencies: ["6CA7673250483532"]
 			id: "530D68F6F9A736D5"
 			tasks: [
@@ -231,6 +233,7 @@
 		}
 		{
 			title: "Skyblock Traveller"
+			icon: "minecraft:compass"
 			x: 0.0d
 			y: -3.75d
 			dependencies: ["6CA7673250483532"]
@@ -431,19 +434,77 @@
 			}]
 		}
 		{
+			title: "Big Smoke's Order"
 			x: -2.0d
 			y: -1.0d
+			subtitle: "I’ll have two number 9s, a number 9 large, a number 6 with extra dip, a number 7, two number 45s, one with cheese, and a large soda."
 			dependencies: ["6CA7673250483532"]
 			id: "01729461C969A391"
-			tasks: [{
-				id: "1510468D127C2421"
-				type: "checkmark"
-			}]
-			rewards: [{
-				id: "2488F9CBCB948EF6"
-				type: "item"
-				item: "minecraft:end_portal_frame"
-			}]
+			tasks: [
+				{
+					id: "13B1418184A85975"
+					type: "item"
+					item: "farmersdelight:barbecue_stick"
+					count: 2L
+					consume_items: true
+				}
+				{
+					id: "3BB1085671FD052D"
+					type: "item"
+					item: "farmersdelight:hamburger"
+					consume_items: true
+				}
+				{
+					id: "614E1648F43A7F2B"
+					type: "item"
+					item: "farmersdelight:dumplings"
+					consume_items: true
+				}
+				{
+					id: "431157E77478390F"
+					type: "item"
+					item: "farmersdelight:roast_chicken_block"
+					consume_items: true
+				}
+				{
+					id: "0BE2E586AB8E1D9D"
+					type: "item"
+					item: "farmersdelight:honey_glazed_ham_block"
+					count: 2L
+					consume_items: true
+				}
+				{
+					id: "5126631115008559"
+					type: "item"
+					item: "farmersdelight:sweet_berry_cheesecake"
+					consume_items: true
+				}
+				{
+					id: "33A70ADA23CC0A6D"
+					type: "item"
+					item: {
+						id: "tconstruct:potion_bucket"
+						Count: 1b
+						tag: {
+							Potion: "minecraft:water"
+						}
+					}
+					consume_items: true
+				}
+			]
+			rewards: [
+				{
+					id: "2488F9CBCB948EF6"
+					type: "item"
+					item: "minecraft:end_portal_frame"
+				}
+				{
+					id: "79C637B5D6FDBDCA"
+					type: "item"
+					item: "minecraft:golden_carrot"
+					count: 64
+				}
+			]
 		}
 		{
 			x: -2.0d
@@ -521,13 +582,18 @@
 			}]
 		}
 		{
+			title: "The Boring Company"
 			x: -1.0d
 			y: -2.0d
+			subtitle: "Seriously. Automate this."
 			dependencies: ["6CA7673250483532"]
 			id: "19BE2E73B2525310"
 			tasks: [{
-				id: "070BE1F0E05B4B82"
-				type: "checkmark"
+				id: "411C0CD66DB8F403"
+				type: "item"
+				item: "minecraft:cobblestone"
+				count: 4096L
+				consume_items: true
 			}]
 			rewards: [{
 				id: "15A89C0395D9EE05"

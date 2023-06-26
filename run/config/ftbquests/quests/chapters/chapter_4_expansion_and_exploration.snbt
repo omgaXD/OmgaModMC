@@ -9,7 +9,7 @@
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			x: 1.75d
+			x: 0.75d
 			y: 0.0d
 			subtitle: "No fortress for ya!"
 			description: ["This is going to take the longest time of all tasks in this modpack. Blaze Spawners are rare Nether structures. \\n\\nSince you're in Skyblock, you'll need a while to locate one. Good luck!"]
@@ -21,39 +21,17 @@
 				title: "Find the Blaze Spawner Structure"
 				structure: "omgamod:blaze_spawner"
 			}]
-			rewards: [
-				{
-					id: "5492960772D48943"
-					type: "advancement"
-					advancement: "minecraft:nether/find_fortress"
-					criterion: ""
-				}
-				{
-					id: "07E27F00B97A6AED"
-					type: "item"
-					item: "minecraft:crimson_fungus"
-				}
-				{
-					id: "6AFE8931B9B7BC8C"
-					type: "item"
-					item: "minecraft:warped_fungus"
-				}
-				{
-					id: "0037C64926A37DEB"
-					type: "item"
-					item: "minecraft:crimson_nylium"
-				}
-				{
-					id: "6C34A0D4547E1C1C"
-					type: "item"
-					item: "minecraft:warped_nylium"
-				}
-			]
+			rewards: [{
+				id: "5492960772D48943"
+				type: "advancement"
+				advancement: "minecraft:nether/find_fortress"
+				criterion: ""
+			}]
 		}
 		{
 			title: "Various Minecart Prep"
 			icon: "create:cart_assembler"
-			x: 0.0d
+			x: -0.375d
 			y: 0.0d
 			shape: "hexagon"
 			subtitle: "Professional stealer equipment!"
@@ -114,6 +92,7 @@
 		}
 		{
 			title: "Demon Slayer"
+			icon: "tconstruct:blaze_head"
 			x: 3.75d
 			y: -2.0d
 			subtitle: "...are blazes even demons?"
@@ -244,10 +223,11 @@
 		}
 		{
 			title: "Various Spawn Eggs"
+			icon: "farmersdelight:fried_egg"
 			x: 5.75d
 			y: 1.0d
 			subtitle: "Eggman"
-			description: ["You can apply those Spawn Eggs to spawner(s) to change mobs they spawn!\\n\\nAs a reward, you'll receive a spawner and some passive mob eggs to get a good start with animal farming! Notice that spawners have some limit of mobs, so you'll still have to breed animals to have more."]
+			description: ["You can apply those Spawn Eggs to spawner(s) to change mobs they spawn!\\n\\nAs a reward, you'll receive a spawner and some passive mob eggs to get a good start with animal farming! Notice that spawners have some limit of mobs, so you'll still have to breed animals to have more.\\n\\nNotice animals only spawn on grass blocks and such."]
 			dependencies: [
 				"11F779BFAA84CF93"
 				"5CB4AD5C7A8AEE3D"
@@ -291,10 +271,21 @@
 					type: "item"
 					item: "minecraft:sheep_spawn_egg"
 				}
+				{
+					id: "0CB533BFFD52B7D4"
+					type: "item"
+					item: "minecraft:bee_spawn_egg"
+					count: 3
+				}
+				{
+					id: "721A72C31F9172C9"
+					type: "item"
+					item: "minecraft:beehive"
+				}
 			]
 		}
 		{
-			x: 7.75d
+			x: 8.75d
 			y: -2.0d
 			subtitle: "We're getting SMART!"
 			description: ["Brass is the next major step in Create progression, so make some!"]
@@ -334,27 +325,10 @@
 			}]
 		}
 		{
-			x: 7.75d
+			x: 8.75d
 			y: -1.0d
-			subtitle: "Blocks are getting SMARTER, too!"
-			dependencies: ["475E0FFBF0FCD8E2"]
-			id: "67CC358C2790BDF2"
-			tasks: [{
-				id: "6096F04E4A1180B6"
-				type: "item"
-				item: "create:brass_casing"
-			}]
-			rewards: [{
-				id: "0B8C2C6510080B12"
-				type: "item"
-				item: "create:brass_ingot"
-			}]
-		}
-		{
-			x: 7.75d
-			y: 0.0d
 			subtitle: "...and funnels!"
-			dependencies: ["67CC358C2790BDF2"]
+			dependencies: ["475E0FFBF0FCD8E2"]
 			id: "1250F89E8EA5AB38"
 			tasks: [{
 				id: "2C496C235C3BE3ED"
@@ -369,8 +343,8 @@
 			}]
 		}
 		{
-			x: 7.75d
-			y: 1.0d
+			x: 8.75d
+			y: 0.0d
 			subtitle: "...and tunnels!?"
 			dependencies: ["1250F89E8EA5AB38"]
 			id: "37D96D5EE7616843"
@@ -387,8 +361,8 @@
 			}]
 		}
 		{
-			x: 7.75d
-			y: 2.0d
+			x: 8.75d
+			y: 1.0d
 			subtitle: "...and... hands???"
 			description: ["The chain of various brass things you just crafted opens up a lot of possibilities. So what are we waiting for? TIME FOR IMPROVEMENTS!"]
 			dependencies: ["37D96D5EE7616843"]
@@ -405,10 +379,13 @@
 			}]
 		}
 		{
-			x: 9.75d
+			x: 8.75d
 			y: 2.0d
 			subtitle: "Comes in very handy"
-			dependencies: ["77F10D758B994878"]
+			dependencies: [
+				"77F10D758B994878"
+				"63813DC8E192FD3F"
+			]
 			id: "5A7653384BD48F8F"
 			tasks: [{
 				id: "1EB3DB3C6E0D6B8A"
@@ -425,7 +402,7 @@
 			title: "Improving Older Contraptions"
 			icon: "create:brass_nugget"
 			x: 9.75d
-			y: 1.0d
+			y: 2.0d
 			subtitle: "Improvement is the key of success!"
 			description: ["Go back to the old things you build (like cobblestone, wood and crop farms). Feel free to rethink them, given new capabilities of brass: advanced filtering, conveyor splitting and very cool block placers suitable for placing down saplings!"]
 			dependencies: ["5A7653384BD48F8F"]
@@ -454,6 +431,563 @@
 				type: "item"
 				item: "minecraft:lava_bucket"
 				count: 2L
+			}]
+			rewards: [{
+				id: "1B80BAF0C93D5288"
+				type: "item"
+				item: "minecraft:cobblestone"
+				count: 200
+			}]
+		}
+		{
+			title: "The Brassstone #4"
+			icon: "create:brass_block"
+			x: 12.75d
+			y: 0.0d
+			shape: "hexagon"
+			subtitle: "Sounds kinda like snake"
+			dependencies: [
+				"5F5A7078B6749C13"
+				"248C5E004DE2BF26"
+				"0BAD73DECF46BE1E"
+			]
+			size: 1.5d
+			id: "4BC3734AA426E8BF"
+			tasks: [
+				{
+					id: "73164D45F5ADBAE2"
+					type: "item"
+					item: "minecraft:porkchop"
+				}
+				{
+					id: "677DD372F426084A"
+					type: "item"
+					item: "minecraft:chicken"
+				}
+				{
+					id: "116E2AB348406B75"
+					type: "item"
+					item: "minecraft:beef"
+				}
+				{
+					id: "590C441D55233012"
+					type: "item"
+					item: "minecraft:lava_bucket"
+					count: 2L
+				}
+				{
+					id: "5D841C17586D7F09"
+					type: "item"
+					item: "minecraft:ender_eye"
+				}
+				{
+					id: "60BA731BFD1480D4"
+					type: "item"
+					item: "omgamod:goldsteel_ingot"
+				}
+			]
+			rewards: [{
+				id: "765C0D0767E4D334"
+				type: "custom"
+				title: "Quality of Life quest tab Access"
+				icon: "ftbquests:book"
+				auto: "enabled"
+			}]
+		}
+		{
+			x: 6.75d
+			y: 0.0d
+			subtitle: "Undercover gravel"
+			description: ["Crafting multiple Bedrock Substitutes will allow you to have multiple andesite generators!"]
+			dependencies: ["5B0257F26AE3C38A"]
+			id: "62E2433CD6847AF2"
+			tasks: [{
+				id: "0C5F5702557F0485"
+				type: "item"
+				item: "omgamod:bedrock_substitute"
+			}]
+			rewards: [{
+				id: "0F2D4FF6D161EA4B"
+				type: "item"
+				item: "create:mechanical_drill"
+				count: 4
+			}]
+		}
+		{
+			title: "Minerals"
+			icon: "minecraft:bundle"
+			x: 6.75d
+			y: 1.0d
+			subtitle: "Precious treasure!"
+			description: ["Cleric Villagers sell redstone and lapis lazuli, so get some!"]
+			dependencies: ["3EAF69B21200485E"]
+			id: "0120971FD8874013"
+			tasks: [
+				{
+					id: "7D6B1B72D0C50FC4"
+					type: "item"
+					item: "minecraft:redstone"
+					count: 16L
+				}
+				{
+					id: "1791522A7DC2EC2B"
+					type: "item"
+					item: "minecraft:lapis_lazuli"
+					count: 16L
+				}
+			]
+			rewards: [{
+				id: "11D7A28ABE5F0570"
+				type: "item"
+				item: "minecraft:redstone"
+				count: 64
+			}]
+		}
+		{
+			x: 3.75d
+			y: -1.0d
+			subtitle: "Getting better at smelting!"
+			description: ["Craft a Smeltery Controller. Very soon, you'll build an actually good smeltery with it!"]
+			dependencies: ["11F779BFAA84CF93"]
+			id: "4BAC347607DEBDF2"
+			tasks: [{
+				id: "17E5E67E0F2AEBA0"
+				type: "item"
+				item: {
+					id: "tconstruct:smeltery_controller"
+					Count: 1b
+					tag: { }
+				}
+			}]
+			rewards: [{
+				id: "6C8A543D586C0168"
+				type: "item"
+				item: "tconstruct:grout"
+				count: 64
+			}]
+		}
+		{
+			title: "Build the Mighty Smeltery"
+			icon: "tconstruct:mighty_smelting"
+			x: 4.0d
+			y: 0.0d
+			subtitle: "It *might* help us!"
+			description: ["Build the Mighty Smeltery according to the \"Mighty Smelting\" book. It requires a lot of resources, but you'll make it!"]
+			dependencies: ["4BAC347607DEBDF2"]
+			id: "37596C35D7DCF333"
+			tasks: [{
+				id: "7C7154C5FECECD3F"
+				type: "advancement"
+				advancement: "tconstruct:smeltery/structure"
+				criterion: ""
+			}]
+			rewards: [
+				{
+					id: "31333E37BC4FDD18"
+					type: "item"
+					item: "tconstruct:part_chest"
+				}
+				{
+					id: "6DE9507D46DBB887"
+					type: "item"
+					item: "tconstruct:cast_chest"
+				}
+			]
+		}
+		{
+			x: 4.75d
+			y: 0.75d
+			subtitle: "Normal Anvils aren't enough, I guess."
+			description: ["It's time to go BIG!\\n\\nCraft the Tinker's Anvil. It'll enable you to make various cool tools, that are much more cool than what you have right now!"]
+			dependencies: ["37596C35D7DCF333"]
+			id: "111856D498681076"
+			tasks: [{
+				id: "28E5F2A541EF24CB"
+				type: "item"
+				item: {
+					id: "tconstruct:tinkers_anvil"
+					Count: 1b
+					tag: { }
+				}
+			}]
+			rewards: [{
+				id: "188ADA55294E8510"
+				type: "item"
+				item: "tconstruct:pattern"
+				count: 64
+			}]
+		}
+		{
+			x: 2.75d
+			y: 0.5d
+			subtitle: "Very hot"
+			description: ["Blazing Blood is ESSENTIAL since it has a very high temperature when used as fuel in the smeltery. So get some!\\n\\nSpoiler: you can smelt diamond armor with it, and get diamonds."]
+			dependencies: ["37596C35D7DCF333"]
+			id: "2C0C118C54897965"
+			tasks: [{
+				id: "012734BBE8C7E103"
+				type: "item"
+				item: "tconstruct:blazing_blood_bucket"
+			}]
+			rewards: [{
+				id: "077454B577E58016"
+				type: "item"
+				item: "minecraft:blaze_rod"
+				count: 16
+			}]
+		}
+		{
+			title: "Diamonds!"
+			icon: "minecraft:diamond"
+			x: 3.75d
+			y: 1.0d
+			dependencies: ["2C0C118C54897965"]
+			id: "5D4A35DBF1EA1F03"
+			tasks: [
+				{
+					id: "5643F33FD257272A"
+					type: "item"
+					item: {
+						id: "itemfilters:or"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "tconstruct:gem_sand_cast"
+									Count: 1b
+								}
+								{
+									id: "tconstruct:gem_red_sand_cast"
+									Count: 1b
+								}
+								{
+									id: "tconstruct:gem_cast"
+									Count: 1b
+								}
+							]
+						}
+					}
+				}
+				{
+					id: "4A7935B2E0AC1A07"
+					type: "item"
+					item: "minecraft:diamond"
+				}
+			]
+			rewards: [{
+				id: "74F3D2D354DEEE30"
+				type: "item"
+				item: "tconstruct:molten_diamond_bucket"
+			}]
+		}
+		{
+			x: 9.75d
+			y: -2.0d
+			subtitle: "Back to water power!"
+			description: ["Large Waterwheels produce great amounts of Stress capacity, however they move twice as slow in comparison to normal Waterwheels. They're still much, much better than windmills, so craft some!"]
+			dependencies: ["475E0FFBF0FCD8E2"]
+			id: "248C5E004DE2BF26"
+			tasks: [{
+				id: "26A20A3A52200CF0"
+				type: "item"
+				item: "create:large_water_wheel"
+				count: 8L
+			}]
+			rewards: [{
+				id: "48E2B7F1A26A4AFD"
+				type: "item"
+				item: "minecraft:water_bucket"
+				count: 4
+			}]
+		}
+		{
+			x: 9.75d
+			y: -1.0d
+			subtitle: "Don't you dare not pondering this!"
+			description: ["Mechanical Crafters are super useful - they allow you to craft various QoL items like Extendo Grip and Wand of Symmetry. Also, they're needed to craft Crushing Wheels which are gonna be needed soon.\\n\\nSo get some!"]
+			dependencies: ["475E0FFBF0FCD8E2"]
+			id: "79E6A5434294B570"
+			tasks: [{
+				id: "7592A73CCE8851B9"
+				type: "item"
+				item: "create:mechanical_crafter"
+				count: 9L
+			}]
+			rewards: [{
+				id: "5BB78411945792BF"
+				type: "item"
+				item: "create:mechanical_crafter"
+				count: 12
+			}]
+		}
+		{
+			icon: "create:mechanical_pump"
+			x: 7.75d
+			y: -1.0d
+			subtitle: "Copper in Brass age?? smh"
+			description: ["Copper allows you to manipulate fluids. We'll use it to get some netherrack from lava you just got and gravel.\\n\\nIronical, that both are direct products of cobblestone, isn't it?"]
+			dependencies: ["5B0257F26AE3C38A"]
+			id: "4EED78EFF088507D"
+			tasks: [
+				{
+					id: "3040BFE55378F63B"
+					type: "item"
+					item: "create:spout"
+				}
+				{
+					id: "72A6A0246FD54FA9"
+					type: "item"
+					item: "create:item_drain"
+				}
+				{
+					id: "1B62BD6830681BF8"
+					type: "item"
+					item: "create:fluid_pipe"
+					count: 16L
+				}
+				{
+					id: "2C3635212708CF68"
+					type: "item"
+					item: "create:mechanical_pump"
+				}
+			]
+			rewards: [{
+				id: "445BA55C07B07CA9"
+				type: "item"
+				item: "create:fluid_tank"
+				count: 8
+			}]
+		}
+		{
+			x: 7.75d
+			y: 0.0d
+			subtitle: "How."
+			description: ["Spout some lava onto gravel, and you'll see how!"]
+			dependencies: ["4EED78EFF088507D"]
+			id: "51AB601DC3070935"
+			tasks: [{
+				id: "365361AF8BA794E1"
+				type: "item"
+				item: "minecraft:netherrack"
+			}]
+			rewards: [{
+				id: "48E948B17C0F396E"
+				type: "item"
+				item: "minecraft:gravel"
+				count: 16
+			}]
+		}
+		{
+			icon: "minecraft:quartz"
+			x: 7.75d
+			y: 1.0d
+			subtitle: "Rich in minerals (and souls)"
+			dependencies: ["51AB601DC3070935"]
+			id: "660F7EE54C3B0FE2"
+			tasks: [
+				{
+					id: "6713169A70151812"
+					type: "item"
+					item: "minecraft:soul_sand"
+				}
+				{
+					id: "4F12C1B8B068AA0A"
+					type: "item"
+					item: "minecraft:quartz"
+				}
+			]
+			rewards: [{
+				id: "095EF227358EAA08"
+				type: "item"
+				item: "minecraft:quartz"
+				count: 16
+			}]
+		}
+		{
+			title: "Polish the Rose Quartz!"
+			icon: "create:polished_rose_quartz"
+			x: 7.75d
+			y: 2.0d
+			subtitle: "Kid named Rose Quartz:"
+			dependencies: [
+				"660F7EE54C3B0FE2"
+				"0120971FD8874013"
+				"39D83054CE983FBE"
+			]
+			id: "63813DC8E192FD3F"
+			tasks: [
+				{
+					id: "41E90E85D3C0030E"
+					type: "item"
+					item: "create:polished_rose_quartz"
+				}
+				{
+					id: "6F52F15554420F1E"
+					type: "item"
+					item: "create:electron_tube"
+				}
+			]
+			rewards: [{
+				id: "120A717E65F2C5C8"
+				type: "item"
+				item: {
+					id: "create:sand_paper"
+					Count: 1b
+					tag: {
+						Damage: 0
+						Enchantments: [{
+							lvl: 3
+							id: "unbreaking"
+						}]
+					}
+				}
+			}]
+		}
+		{
+			x: 9.75d
+			y: 0.0d
+			subtitle: "Millstone mk2"
+			description: ["Crushing Wheels are very tough to power but they provide much more productive milling experience than millstone."]
+			dependencies: ["79E6A5434294B570"]
+			id: "0BAD73DECF46BE1E"
+			tasks: [{
+				id: "7B5115DB51EF5DA4"
+				type: "item"
+				item: "create:crushing_wheel"
+				count: 2L
+			}]
+			rewards: [
+				{
+					id: "51233A8DA055B0E4"
+					type: "item"
+					item: "minecraft:raw_iron_block"
+				}
+				{
+					id: "0047AE69ADF870E4"
+					type: "item"
+					item: "minecraft:raw_copper_block"
+				}
+				{
+					id: "63057B72C1BBD83E"
+					type: "item"
+					item: "create:raw_zinc_block"
+				}
+			]
+		}
+		{
+			title: "Drax the Destroyer"
+			icon: "create:crushed_raw_zinc"
+			x: 9.75d
+			y: 1.0d
+			subtitle: "Now we all have a crush!"
+			description: ["Crushing ores provides you with a way to automate redstone and other things (that we already automated)"]
+			dependencies: ["0BAD73DECF46BE1E"]
+			id: "7C1849B2611E31E3"
+			tasks: [
+				{
+					id: "1E1C78AFB949901E"
+					type: "item"
+					item: "create:crushed_raw_iron"
+				}
+				{
+					id: "56A1AF9575363F60"
+					type: "item"
+					item: "create:crushed_raw_copper"
+				}
+				{
+					id: "4F49C472FDD98062"
+					type: "item"
+					item: "create:crushed_raw_zinc"
+				}
+			]
+			rewards: [
+				{
+					id: "3E6C93CB6E4EA083"
+					type: "item"
+					item: "minecraft:redstone"
+				}
+				{
+					id: "12FE87B4F2828ED8"
+					type: "item"
+					item: "minecraft:clay_ball"
+				}
+				{
+					id: "1D8BDF6A02BE9A3D"
+					type: "item"
+					item: "minecraft:gunpowder"
+				}
+			]
+		}
+		{
+			title: "Sandpaper"
+			icon: {
+				id: "create:sand_paper"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: 6.75d
+			y: 2.0d
+			subtitle: "Rough"
+			hide_dependency_lines: true
+			dependencies: ["19C8D4FCA2BE2129"]
+			id: "39D83054CE983FBE"
+			tasks: [{
+				id: "30F018A1FF03250C"
+				type: "item"
+				title: "Any #create:sandpaper"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "create:sandpaper"
+					}
+				}
+			}]
+			rewards: [{
+				id: "222C745BFA6215A5"
+				type: "item"
+				item: "minecraft:sugar_cane"
+				count: 3
+			}]
+		}
+		{
+			x: 1.75d
+			y: 0.0d
+			subtitle: "Blending in crafting table? What?"
+			description: ["Fact 1: clicking bonemeal on top block of Sunflowers produces another sunflower.\\n\\nFact 2: haunting sweetberries turns them into glowberries.\\n\\nFact 3: haunting is available later in the chapter. Come back to this quest later if you don't have soul sand yet."]
+			dependencies: ["2C0C118C54897965"]
+			id: "3C613A3E53F6D8AD"
+			tasks: [{
+				id: "5CBDA8B4C3F9DC06"
+				type: "item"
+				item: "omgamod:goldsteel_blend"
+			}]
+			rewards: [{
+				id: "369FFB0391594505"
+				type: "item"
+				item: "omgamod:woodsteel_plate"
+				count: 4
+			}]
+		}
+		{
+			x: 2.75d
+			y: -0.5d
+			subtitle: "What about just normal gold?"
+			description: ["Making goldsteel is not an easy task. Automating it is not much harder though - when pipes leak, they create a source block. Automating gold will become trivial in next chapter, too!\\n\\nHint: ponder this ingot to understand how to craft it.\\n\\nAs you can see, it requires three liquids: Honey, Blazing blood and Molten gold, in this order. You can get bees from another quest here. The other way of getting bees is written on Minecraft wikipedia. The more you know!"]
+			dependencies: ["3C613A3E53F6D8AD"]
+			id: "4DF8462F044F55AA"
+			tasks: [{
+				id: "6AFD0E5D61165AFF"
+				type: "item"
+				item: "omgamod:goldsteel_ingot"
+			}]
+			rewards: [{
+				id: "5E95D3C58BF2944F"
+				type: "item"
+				item: "omgamod:redsteel_ingot"
+				count: 64
 			}]
 		}
 	]

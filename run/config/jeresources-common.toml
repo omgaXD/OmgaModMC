@@ -4,8 +4,8 @@ itemsPerColumn = 4
 itemsPerRow = 4
 diyData = true
 showDevData = false
-enchantsBlacklist = ["worldgen", "dungeon"]
-hiddenTabs = ["worldgen"]
+enchantsBlacklist = []
+hiddenTabs = ["worldgen", "dungeon", "enchantment"]
 dimensionsBlacklist = [-11]
 disableLootManagerReloading = false
 

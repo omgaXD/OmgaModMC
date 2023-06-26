@@ -15,39 +15,15 @@
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			title: "Copper Utility"
-			icon: "create:copper_sheet"
-			x: 1.25d
-			y: 0.0d
-			subtitle: "Pump it! Louder!"
-			description: ["Copper allows us to work with fluids. It's the perfect time to make good use of it!"]
-			dependencies: ["749547C98FB3F7CE"]
-			id: "218A9B1D907BEE4A"
-			tasks: [
-				{
-					id: "2A2B7E6B04D757D6"
-					type: "item"
-					item: "create:fluid_pipe"
-					count: 16L
-				}
-				{
-					id: "2184F5C401FED3B0"
-					type: "item"
-					item: "create:spout"
-				}
-				{
-					id: "147EBC304E558325"
-					type: "item"
-					item: "create:mechanical_pump"
-				}
-			]
-		}
-		{
-			title: "Optional Chapter"
+			title: "Quality of Life"
 			x: 0.0d
 			y: 0.0d
-			subtitle: "Better than nothing"
+			shape: "hexagon"
+			subtitle: "Enjoying the process!"
+			description: ["This Chapter will guide you through creation of Quality of Life items. Those are not necessary for playthrough, but they're making the gameplay easier in some way.\\n\\nMore items will become visible as you progress further!"]
+			dependencies: ["4BC3734AA426E8BF"]
 			hide: true
+			size: 1.5d
 			id: "749547C98FB3F7CE"
 			tasks: [{
 				id: "67FCC1A3948DA894"
@@ -56,11 +32,17 @@
 			}]
 		}
 		{
-			title: "Redsteel Path"
-			x: 4.25d
+			title: "Night Vision Helm"
+			icon: "omgamod:redsteel_ingot"
+			x: 3.0d
 			y: -3.0d
+			subtitle: "Night be your friend!"
 			description: ["You'll have to melt 4 ingots of redsteel and pump them into the Spout.\\n\\nIn case of any confusion, look at the recipe of Night Vision Helm"]
-			dependencies: ["218A9B1D907BEE4A"]
+			dependencies: [
+				"749547C98FB3F7CE"
+				"07589619978608B9"
+			]
+			hide: true
 			id: "626B32D3E386FA12"
 			tasks: [
 				{
@@ -97,6 +79,177 @@
 					}
 				}
 			]
+			rewards: [{
+				id: "006051C6C10B6F74"
+				type: "xp_levels"
+				xp_levels: 3
+			}]
+		}
+		{
+			title: "Fertilizer Spray"
+			icon: "omgamod:woodsteel_ingot"
+			x: 3.0d
+			y: -2.0d
+			subtitle: "Farm be your friend!"
+			description: ["Fertilizer Spray is allowing you to use bonemeal many times more effectively. Fill it with fertilizer via spout and enchant it with Unbreaking and you'll get a very efficient bonemeal item!"]
+			dependencies: [
+				"749547C98FB3F7CE"
+				"1B7F4477E99D20A0"
+			]
+			hide: true
+			id: "13C9BB51E95A7D72"
+			tasks: [
+				{
+					id: "66826EE60C285C8E"
+					type: "item"
+					item: "create:spout"
+				}
+				{
+					id: "28A647CFA11EEC45"
+					type: "item"
+					item: "create:deployer"
+					count: 2L
+				}
+				{
+					id: "2C9032C576876EA5"
+					type: "item"
+					item: "create:mechanical_saw"
+				}
+				{
+					id: "6169729A59421D18"
+					type: "item"
+					item: "omgamod:woodsteel_ingot"
+					count: 4L
+				}
+				{
+					id: "3561AE5B7B4EEE75"
+					type: "item"
+					item: "omgamod:fertilizer_spray_empty"
+				}
+				{
+					id: "44A89BF074D12317"
+					type: "item"
+					item: {
+						id: "omgamod:fertilizer_spray"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+			]
+			rewards: [{
+				id: "779000CA52368F5E"
+				type: "item"
+				item: "kubejs:fertilizer_bucket"
+			}]
+		}
+		{
+			title: "Goldsteel Drill"
+			icon: "omgamod:goldsteel_ingot"
+			x: 3.0d
+			y: -1.0d
+			subtitle: "Stone be your friend!"
+			description: ["Goldsteel drill is not good in terms of mining power. But it mines cobblestone and such INSTANTLY. If you want to get rid of a huge stony building, this tool is made for you!"]
+			dependencies: [
+				"749547C98FB3F7CE"
+				"4BC3734AA426E8BF"
+			]
+			hide: true
+			id: "7CFB5CF52FEF0F2B"
+			tasks: [
+				{
+					id: "4D0DFE5588B25D16"
+					type: "item"
+					item: "create:spout"
+				}
+				{
+					id: "6D342E771DA0F711"
+					type: "item"
+					item: "create:deployer"
+					count: 2L
+				}
+				{
+					id: "36B672BC9FF35E12"
+					type: "item"
+					item: "create:mechanical_press"
+				}
+				{
+					id: "0A01BB3768EAC9EA"
+					type: "item"
+					item: "omgamod:goldsteel_ingot"
+					count: 4L
+				}
+				{
+					id: "62D6505B5FA06A4A"
+					type: "item"
+					item: {
+						id: "omgamod:goldsteel_drill"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+			]
+			rewards: [{
+				id: "034792E4ECBA0D17"
+				type: "item"
+				item: "minecraft:cobblestone"
+				count: 64
+			}]
+		}
+		{
+			title: "TNT Cannon"
+			icon: "omgamod:creepersteel_ingot"
+			x: 3.0d
+			y: 0.0d
+			subtitle: "Boom be your friend!"
+			description: ["(DISCLAIMER: THIS THING WILL BLOW UP YOUR ENTIRE ISLAND IF YOU SERIOUSLY USE IT)\\n\\nThis cannon, primarily made for fun PvPs and such, is actually a very devastating tool of destruction. It shoots TNT far ahead of you."]
+			dependencies: ["749547C98FB3F7CE"]
+			hide: true
+			id: "6A167104C95BF8D1"
+			tasks: [
+				{
+					id: "7CF5B3411C5F596C"
+					type: "item"
+					item: "create:spout"
+				}
+				{
+					id: "2DC282182A7370F4"
+					type: "item"
+					item: "create:deployer"
+					count: 2L
+				}
+				{
+					id: "36F306B7DA16C671"
+					type: "item"
+					item: "create:mechanical_saw"
+				}
+				{
+					id: "0E24127958EE5EC7"
+					type: "item"
+					item: "omgamod:creepersteel_ingot"
+					count: 4L
+				}
+				{
+					id: "71A5909B696FAE4B"
+					type: "item"
+					item: {
+						id: "omgamod:tnt_cannon"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+			]
+			rewards: [{
+				id: "7E38768845EEE7E8"
+				type: "item"
+				item: "minecraft:tnt"
+				count: 16
+			}]
 		}
 	]
 	quest_links: [ ]
