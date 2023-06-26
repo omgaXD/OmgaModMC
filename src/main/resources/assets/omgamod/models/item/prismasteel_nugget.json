@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "omgamod:items/prismasteel_nugget"
+    "layer0": "omgamod:items/rainbow_chain/5prismasteel/prismasteel_nugget"
   }
 }

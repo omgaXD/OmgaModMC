@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "omgamod:items/creepersteel_nugget"
+    "layer0": "omgamod:items/rainbow_chain/4creepersteel/creepersteel_nugget"
   }
 }

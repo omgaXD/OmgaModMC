@@ -3,6 +3,7 @@ package com.omga.omgamod.init;
 import com.omga.omgamod.OmgaMod;
 import com.omga.omgamod.traits.MidasModifier;
 import com.omga.omgamod.traits.WoodmasterModifier;
+import net.minecraftforge.eventbus.api.Event;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.dynamic.StatBoostModifier;
 import slimeknights.tconstruct.library.modifiers.util.ModifierDeferredRegister;
@@ -17,6 +18,5 @@ public class TraitInit {
             .build());
     public static final StaticModifier<Modifier> WOODMASTER_TRAIT = MODIFIERS.register("woodmaster", WoodmasterModifier::new);
     public static final StaticModifier<Modifier> MIDAS_TRAIT = MODIFIERS.register("midas", MidasModifier::new);
-
 
 }

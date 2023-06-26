@@ -34,7 +34,7 @@ public class LoottableChestsTab extends CreativeModeTab {
     }
 
     private static final String loottables_namespace = "omgamod:chests/crates";
-    private static final String lang_string = "item.omgamod.crates";
+    private static final String LANG_STRING = "item.omgamod.crates";
     private static final String CRATES_JSON_DIR = "data/omgamod/loot_tables/chests/crates/crates.json";
 
 
@@ -63,7 +63,7 @@ public class LoottableChestsTab extends CreativeModeTab {
                 blockentitytag.put("BlockEntityTag", loottable);
                 chest.setTag(blockentitytag);
                 // translatable name
-                chest.setHoverName(new TranslatableComponent(MessageFormat.format("{0}.{1}", lang_string, crate)));
+                chest.setHoverName(new TranslatableComponent(MessageFormat.format("{0}.{1}", LANG_STRING, crate)));
                 list.add(chest);
             }
         } catch (Exception e) {

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "omgamod:items/goldsteel_ingot"
+    "layer0": "omgamod:items/rainbow_chain/3goldsteel/goldsteel_ingot"
   }
 }

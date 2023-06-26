@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "omgamod:items/woodsteel_plate"
+    "layer0": "omgamod:items/rainbow_chain/2woodsteel/woodsteel_plate"
   }
 }
