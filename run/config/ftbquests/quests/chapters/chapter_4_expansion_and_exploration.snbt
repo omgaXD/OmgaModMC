@@ -423,7 +423,7 @@
 			x: 6.75d
 			y: -1.0d
 			subtitle: "Cobblegen expansion!"
-			description: ["You can mix cobblestone with itself in heated mixer to create lava. Make a second bucket for yourself!\\n\\nYou'll need 200 cobblestone for one lava bucket, so get ready!"]
+			description: ["You can mix cobblestone with itself in heated mixer to create lava. Make a second bucket for yourself!\\n\\nYou'll need 200 cobblestone for one lava bucket. Hopefully, you already have automated that."]
 			dependencies: ["7C6F46BE77C46CF4"]
 			id: "5B0257F26AE3C38A"
 			tasks: [{
@@ -880,7 +880,7 @@
 			x: 9.75d
 			y: 1.0d
 			subtitle: "Now we all have a crush!"
-			description: ["Crushing ores provides you with a way to automate redstone and other things (that we already automated)"]
+			description: ["Crushing ores provides you with a way to automate redstone and other things (that we already have automated)"]
 			dependencies: ["0BAD73DECF46BE1E"]
 			id: "7C1849B2611E31E3"
 			tasks: [

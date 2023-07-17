@@ -1,0 +1,12 @@
+{
+	id: "52AF82B35A7FCE9D"
+	group: "5623998BE532BC21"
+	order_index: 4
+	filename: "transportation_and_explosions"
+	title: "Transportation and Explosions"
+	icon: "omgamod:creepersteel_ingot"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [ ]
+	quest_links: [ ]
+}

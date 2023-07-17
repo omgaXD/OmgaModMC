@@ -119,7 +119,14 @@ onEvent('recipes', event => {
 	event.recipes.minecraft.crafting_shapeless('chicken_spawn_egg', ['4x egg', 'egg', '4x feather'])
 	event.recipes.minecraft.crafting_shapeless('cow_spawn_egg', ['4x leather', 'egg', '4x leather'])
 	event.recipes.minecraft.crafting_shapeless('sheep_spawn_egg', ['4x white_wool', 'egg', '4x white_wool'])
-
+	// Fish
+	const fish_obj = {b: 'water_bucket', e: 'egg'}
+	event.recipes.minecraft.crafting_shaped('salmon_spawn_egg', ['b b', ' e ', 'b b'], fish_obj)
+	event.recipes.minecraft.crafting_shaped('cod_spawn_egg', [' b ', 'beb', ' b '], fish_obj)
+	// Guardian
+	event.recipes.minecraft.crafting_shaped('guardian_spawn_egg', ['bbb', 'beb', 'bbb'], fish_obj)
+	event.recipes.minecraft.crafting_shaped('guardian_spawn_egg', ['ppp', 'pep', 'ppp'], {b: 'water_bucket', p: 'prismarine_shard'})
+	
 
 
 	/// RENEWABILITY
@@ -144,6 +151,8 @@ onEvent('recipes', event => {
 	// crimson and warped nylium
 	event.recipes.create.item_application('crimson_nylium', ['netherrack', 'redstone'])
 	event.recipes.create.item_application('warped_nylium', ['netherrack', 'emerald'])
+	// -- spawner --
+	event.recipes.create.mechanical_crafting('spawner', ['bbb', 'bSb', 'bbb'], {b: 'iron_bars', S: 'omgamod:soul_catalyst'})
 
 
 	/// CHANGES
