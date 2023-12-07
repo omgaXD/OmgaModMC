@@ -44,7 +44,6 @@ import slimeknights.tconstruct.tools.data.sprite.TinkerMaterialSpriteProvider;
 import slimeknights.tconstruct.tools.data.sprite.TinkerPartSpriteProvider;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
 
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod("omgamod")
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class OmgaMod
@@ -118,7 +117,6 @@ public class OmgaMod
 
     }
 
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
@@ -147,11 +145,9 @@ public class OmgaMod
         BlockPos cropPos = event.getPos();
         BlockPos dirtPos = cropPos.below();
 
-        LOGGER.debug("LOOKING FOR IMPOSTOR");
         for (int x = -3; x <= 3; x++) {
             for (int z = -3; z <= 3; z++) {
                 if (event.getWorld().getFluidState(dirtPos.offset(x, 0, z)).getType().getRegistryName().equals(new ResourceLocation("kubejs:fertilizer"))) {
-                    LOGGER.debug("FOUND THE IMPOSTOR");
                     event.setResult(Event.Result.DENY);
                     event.getWorld().setBlock(dirtPos, Blocks.DIRT.defaultBlockState(), 3);
                     //Blocks.GRASS_BLOCK
