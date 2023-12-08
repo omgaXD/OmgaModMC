@@ -111,7 +111,7 @@
 			}
 			x: 2.0d
 			y: 1.0d
-			subtitle: "Not to be confused with crazy hard Geometry Dash levels-"
+			subtitle: "Not to be confused with crazy hard Geometry Dash levels"
 			dependencies: ["6CA7673250483532"]
 			id: "530D68F6F9A736D5"
 			tasks: [
@@ -236,6 +236,7 @@
 			icon: "minecraft:compass"
 			x: 0.0d
 			y: -3.75d
+			subtitle: "Adventure of a Lifetime"
 			dependencies: ["6CA7673250483532"]
 			id: "7D49ED04194C1096"
 			tasks: [{
@@ -672,6 +673,98 @@
 							Damage: 0
 						}
 					}
+				}
+			]
+		}
+		{
+			title: "Very Rich"
+			x: 2.0d
+			y: -3.75d
+			subtitle: "Tax evasion is crucial with those!"
+			dependencies: ["6CA7673250483532"]
+			id: "2E3ECB9BFE478A00"
+			tasks: [
+				{
+					id: "40BD592FF0AC49EB"
+					type: "item"
+					item: "minecraft:lapis_block"
+					count: 64L
+				}
+				{
+					id: "0847796532726E32"
+					type: "item"
+					item: "minecraft:emerald_block"
+					count: 64L
+				}
+				{
+					id: "4C4F79B196FF605C"
+					type: "item"
+					item: "minecraft:diamond_block"
+					count: 64L
+				}
+			]
+		}
+		{
+			title: "Genocide"
+			x: 3.75d
+			y: 2.0d
+			subtitle: "=)"
+			dependencies: ["6CA7673250483532"]
+			id: "547E6085DA089A0F"
+			tasks: [
+				{
+					id: "55F06C0105E6E50E"
+					type: "kill"
+					entity: "minecraft:goat"
+					value: 3L
+				}
+				{
+					id: "6F15DEBA9620CE89"
+					type: "kill"
+					entity: "minecraft:cod"
+					value: 1L
+				}
+				{
+					id: "42194495B9CB9174"
+					type: "kill"
+					entity: "minecraft:wolf"
+					value: 5L
+				}
+				{
+					id: "3C99177B80A2EEA3"
+					type: "kill"
+					entity: "minecraft:skeleton"
+					value: 2L
+				}
+				{
+					id: "65A7AB73F1A4DAD0"
+					type: "kill"
+					entity: "minecraft:iron_golem"
+					value: 1L
+				}
+				{
+					id: "187DA710FEFF9E32"
+					type: "kill"
+					entity: "minecraft:armor_stand"
+					value: 1L
+				}
+			]
+			rewards: [
+				{
+					id: "79F7ED06BCEEFC34"
+					type: "item"
+					item: {
+						id: "farmersdelight:netherite_knife"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "71F83A8DD2AFA514"
+					type: "item"
+					item: "create:bar_of_chocolate"
 				}
 			]
 		}

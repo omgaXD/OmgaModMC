@@ -125,7 +125,7 @@
 			x: 3.75d
 			y: 2.0d
 			subtitle: "Instructions unclear: crafted a quantum computer instead"
-			description: ["Assemble a contraption that will stick to the spawner. Use all the items you got in parent quest.\\n\\nSolution: place rail, minacart assembler and minecart on block right next to spawner. Place the lever to power the minecart assembler in future. Then, put linear chasis on top of both spawner and minecar assembler looking up/down. Double click with slimeball on the one above spawner. Power the lever. Right-click the minecart with wrench to finally steal the spawner!"]
+			description: ["Assemble a contraption that will stick to the spawner. Use all the items you got in parent quest.\\n\\nSolution: place rail, minecart assembler and minecart on block right next to spawner. Place the lever to power the minecart assembler in future. Then, put linear chasis on top of both spawner and minecar assembler looking up/down. Double click with slimeball on the one above spawner. Power the lever. Right-click the minecart with wrench to finally steal the spawner!"]
 			dependencies: ["7F72F332E64E0286"]
 			id: "5CB4AD5C7A8AEE3D"
 			tasks: [
@@ -190,7 +190,7 @@
 		{
 			x: 5.75d
 			y: -1.0d
-			subtitle: "I see you."
+			subtitle: "*deep ungodly stare*"
 			dependencies: ["11F779BFAA84CF93"]
 			id: "108378D6272E8A96"
 			tasks: [{
@@ -404,7 +404,7 @@
 			x: 9.75d
 			y: 2.0d
 			subtitle: "Improvement is the key of success!"
-			description: ["Go back to the old things you build (like cobblestone, wood and crop farms). Feel free to rethink them, given new capabilities of brass: advanced filtering, conveyor splitting and very cool block placers suitable for placing down saplings!"]
+			description: ["Go back to the old things that you built (like cobblestone, wood and crop farms). Feel free to rethink them, given new capabilities of brass: advanced filtering, conveyor splitting and very cool block placers suitable for placing down saplings!"]
 			dependencies: ["5A7653384BD48F8F"]
 			id: "5F5A7078B6749C13"
 			tasks: [{

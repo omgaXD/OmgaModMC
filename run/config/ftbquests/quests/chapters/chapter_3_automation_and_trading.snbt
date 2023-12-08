@@ -53,7 +53,7 @@
 			}
 			x: 4.0d
 			y: -0.75d
-			subtitle: "Are your parents pandas? Then why do you have so much bamboo on your island?"
+			subtitle: "Bamboo Forest of the Lost"
 			description: ["Plant some bamboo. It'll be used to make the most useful block ever!"]
 			dependencies: ["712BA37CCE273C09"]
 			id: "6D0611CFD20CD758"
@@ -174,7 +174,7 @@
 			title: "Transportation"
 			x: 5.0d
 			y: -2.0d
-			subtitle: "Move on!"
+			subtitle: "Carry on, carry on..."
 			description: ["Mechanical belts are very great at transporting stuff.\\n\\nMechanical press, Spout and Deployer put above mechanical belt will apply their action to every item that passes under.\\n\\nBasin will cast its results onto Mechanical Belts.\\n\\nTo find out more, ponder stuff you make!"]
 			dependencies: ["712BA37CCE273C09"]
 			id: "6D89FDBA85900070"
@@ -320,6 +320,7 @@
 			x: 5.0d
 			y: -3.25d
 			subtitle: "Take control, brain pow-er!"
+			description: ["Those items will provide you with very important Create mod functionality.\\n\\nThe Wrench will let you configurate Create blocks with right click, and block them instantly with shift+right click!\\n\\nEngineer's Goggles will help you see stats about various Create blocks."]
 			dependencies: ["712BA37CCE273C09"]
 			id: "7072B9978F77DE60"
 			tasks: [
@@ -618,7 +619,7 @@
 		{
 			x: 3.0d
 			y: -5.5d
-			subtitle: "Tastes like tree and broken teeth!"
+			subtitle: "Tastes like tree! Why'd you lick it though..."
 			description: ["Woodsteel is the next step in rainbow chain, so get some!\\n\\nNotice how you need four redsteel ingots for one woodsteel ingot. This sequence will go on - for next metal you'll need 16 redsteel ingots!"]
 			dependencies: ["70DDB08CF4D1FCF6"]
 			id: "376B2509CBFB631D"
@@ -654,7 +655,7 @@
 			x: 1.0d
 			y: 1.75d
 			subtitle: "Actual dupe"
-			description: ["By combining Dirt and Gravel blocks, you get Coarse Dirt, which can be then turned into normal dirt with hoe. That way, you can further expand your island with farms."]
+			description: ["By combining Dirt and Gravel blocks, you get Coarse Dirt, which can be then turned into normal dirt with an hoe or a shovel. That way, you can further expand your island with farms."]
 			dependencies: ["712BA37CCE273C09"]
 			id: "7CBC957931E1E57E"
 			tasks: [{

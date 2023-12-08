@@ -36,8 +36,8 @@
 			icon: "omgamod:redsteel_ingot"
 			x: 3.0d
 			y: -3.0d
-			subtitle: "Night be your friend!"
-			description: ["You'll have to melt 4 ingots of redsteel and pump them into the Spout.\\n\\nIn case of any confusion, look at the recipe of Night Vision Helm"]
+			subtitle: "Not bird-eyed anymore!"
+			description: ["You'll have to melt 4 ingots of redsteel and pump them into the Spout.\\n\\nIn case of any confusion, look at the recipe of Night Vision Helm."]
 			dependencies: [
 				"749547C98FB3F7CE"
 				"07589619978608B9"
@@ -205,7 +205,7 @@
 			x: 3.0d
 			y: 0.0d
 			subtitle: "Boom be your friend!"
-			description: ["(DISCLAIMER: THIS THING WILL BLOW UP YOUR ENTIRE ISLAND IF YOU SERIOUSLY USE IT)\\n\\nThis cannon, primarily made for fun PvPs and such, is actually a very devastating tool of destruction. It shoots TNT far ahead of you."]
+			description: ["(WARNING: THIS THING WILL BLOW UP YOUR ENTIRE ISLAND IF YOU SERIOUSLY USE IT)\\n\\nThis cannon, primarily made for fun PvPs and such, is actually a very devastating tool of destruction. It shoots TNT far ahead of you."]
 			dependencies: ["749547C98FB3F7CE"]
 			hide: true
 			id: "6A167104C95BF8D1"

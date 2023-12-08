@@ -163,7 +163,7 @@
 			}
 			x: 6.0d
 			y: 0.0d
-			subtitle: "Stone age time!"
+			subtitle: "Stone age!"
 			description: ["Aquire all types of stone tools, you'll make a good use of them later."]
 			dependencies: ["302C1E7F45C022DD"]
 			id: "5257431095CA215D"
@@ -235,7 +235,7 @@
 			x: 5.5d
 			y: -3.75d
 			subtitle: "Wait, is that even fair?"
-			description: ["Deepslategen rarely creates ores. That'll make a good passive income later, when we get to automation!"]
+			description: ["Deepslategen occasionally creates ores. That'll make a good passive income later, when we get to automation!"]
 			dependencies: ["7DAD32B7BD208F7D"]
 			id: "3F89AC51D9E76163"
 			tasks: [{
@@ -275,7 +275,7 @@
 		{
 			x: 3.75d
 			y: -3.75d
-			subtitle: "Turn the lights on!"
+			subtitle: "Enlighten me."
 			description: ["Get some charcoal by smelting wooden logs."]
 			dependencies: ["5799597AA90CA733"]
 			id: "39932E4A3189B602"
@@ -353,7 +353,7 @@
 			x: 9.25d
 			y: -2.0d
 			subtitle: "It ain't much, but it's honest work"
-			description: ["Harvest some crops kindly provided by local grass and zombies. This will be automated sooner or later too, by the way!"]
+			description: ["Harvest some crops kindly provided by local grass and zombies. By the way, this will be automated sooner or later too!"]
 			dependencies: [
 				"145FF826D3B5FD9E"
 				"1B5A48E4A225C3DC"
@@ -429,10 +429,11 @@
 			]
 		}
 		{
-			icon: "minecraft:iron_ingot"
+			title: "Smelt Raw Iron"
+			icon: "minecraft:raw_iron"
 			x: 3.75d
 			y: -5.0d
-			subtitle: "Bread -> Iron ingot conversion"
+			subtitle: "The bread ore"
 			description: ["Smelt raw ore aquired from deepslategen to iron ingot."]
 			dependencies: [
 				"39932E4A3189B602"
@@ -463,7 +464,7 @@
 			icon: "minecraft:water_bucket"
 			x: 8.25d
 			y: 2.5d
-			subtitle: "Infinite, infi-infinite power!"
+			subtitle: "Solving global issues"
 			description: ["Put kelp into a flowing water block to turn it to source block. That'll give you infinite water source with no struggle!"]
 			dependencies: ["5257431095CA215D"]
 			id: "274A203DC82073ED"
@@ -621,8 +622,8 @@
 			title: "Andesite"
 			x: 4.5d
 			y: 2.75d
-			subtitle: "The essentialiest stone kind"
-			description: ["Start by placing cobblestone on top of bedrock found in your island. Then place water to side, encapsulate it from all sides.\\nPlace lava above the cobblestone, also make sure it's contained properly. Now break the cobblestone.\\n\\nYou got an advanced stone generator, which will produce you andesite and other similar stones!"]
+			subtitle: "Apparently more technical than other stones"
+			description: ["Build a cobblestone generator in such a way, so that the cobblestone is generated above bedrock.\\n\\nYou got an advanced stone generator, which will produce you andesite and other similar stones!"]
 			dependencies: ["302C1E7F45C022DD"]
 			id: "746902990FB35637"
 			tasks: [{
@@ -663,6 +664,7 @@
 			]
 		}
 		{
+			title: "Get Small Cog"
 			x: 5.75d
 			y: 5.0d
 			subtitle: "It's average"
@@ -697,9 +699,10 @@
 			}]
 		}
 		{
+			title: "Get Large Cog"
 			x: 6.25d
 			y: 4.0d
-			subtitle: "Clockwork!"
+			subtitle: "Cogratulations!"
 			dependencies: ["3A27173F1B576C98"]
 			id: "051FFA38B367EBCA"
 			tasks: [{
@@ -742,7 +745,7 @@
 		{
 			x: 3.25d
 			y: 5.0d
-			subtitle: "Get your hands on it!"
+			subtitle: "Well if that's the case"
 			description: ["Andesite casing is used to craft most of Create machines and logistics.\\n\\nYou should always have some around for ease of life."]
 			dependencies: ["3A27173F1B576C98"]
 			id: "0DEA4AB41FF9276D"
@@ -762,7 +765,7 @@
 			icon: "create:andesite_encased_large_cogwheel"
 			x: 4.5d
 			y: 7.25d
-			subtitle: "Blessing for compact designs"
+			subtitle: "A blessing for compact designs"
 			description: ["Get some basic utility to transfer rotational force in Create mod.\\n\\nDon't forget to ponder everything you make!"]
 			dependencies: [
 				"0DEA4AB41FF9276D"
@@ -970,7 +973,7 @@
 			icon: "minecraft:raw_iron_block"
 			x: 5.5d
 			y: -5.0d
-			subtitle: "Hope this one doesn't take you years"
+			subtitle: "The explorative side of this modpack"
 			description: ["Those are all ores the deepslategen provides you. Discover them all!"]
 			dependencies: ["3F89AC51D9E76163"]
 			id: "3F7E33C997985B54"
@@ -1010,6 +1013,24 @@
 					timer: 0L
 					observe_type: 0
 					to_observe: "minecraft:deepslate_iron_ore"
+				}
+				{
+					id: "56A12314257737D6"
+					type: "observation"
+					title: "Discover Zinc Ore"
+					icon: "create:zinc_ore"
+					timer: 0L
+					observe_type: 0
+					to_observe: "create:zinc_ore"
+				}
+				{
+					id: "4D1535085DB7472A"
+					type: "observation"
+					title: "Discover Deepslate Zinc Ore"
+					icon: "create:deepslate_zinc_ore"
+					timer: 0L
+					observe_type: 0
+					to_observe: "create:deepslate_zinc_ore"
 				}
 			]
 			rewards: [{
@@ -1072,7 +1093,7 @@
 			x: -1.5d
 			y: 0.0d
 			subtitle: "Technically a teambuilding course"
-			description: ["If you're playing with friends, create a FTB team and join it altogether. That way, all the quests are shared!"]
+			description: ["If you're playing with friends, create a FTB team and join it together. That way, all the quests are shared!"]
 			dependencies: ["61298B66B65C63DB"]
 			id: "4561E232AA899115"
 			tasks: [{

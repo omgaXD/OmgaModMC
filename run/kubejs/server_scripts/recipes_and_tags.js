@@ -124,8 +124,8 @@ onEvent('recipes', event => {
 	event.recipes.minecraft.crafting_shaped('salmon_spawn_egg', ['b b', ' e ', 'b b'], fish_obj)
 	event.recipes.minecraft.crafting_shaped('cod_spawn_egg', [' b ', 'beb', ' b '], fish_obj)
 	// Guardian
-	event.recipes.minecraft.crafting_shaped('guardian_spawn_egg', ['bbb', 'beb', 'bbb'], fish_obj)
-	event.recipes.minecraft.crafting_shaped('guardian_spawn_egg', ['ppp', 'pep', 'ppp'], {b: 'water_bucket', p: 'prismarine_shard'})
+	event.recipes.minecraft.crafting_shapeless('guardian_spawn_egg', ['4x water_bucket', 'egg', '4x water_bucket'])
+	event.recipes.minecraft.crafting_shapeless('guardian_spawn_egg', ['4x prismarine_shard', 'egg', '4x prismarine_shard у '])
 	
 
 
@@ -152,7 +152,7 @@ onEvent('recipes', event => {
 	event.recipes.create.item_application('crimson_nylium', ['netherrack', 'redstone'])
 	event.recipes.create.item_application('warped_nylium', ['netherrack', 'emerald'])
 	// -- spawner --
-	event.recipes.create.mechanical_crafting('spawner', ['bbb', 'bSb', 'bbb'], {b: 'iron_bars', S: 'omgamod:soul_catalyst'})
+	event.recipes.create.mechanical_crafting('spawner', ['bbb', 'bSb', 'bbb'], {b: 'iron_bars', S: 'omgamod:spectral_catalyst'})
 
 
 	/// CHANGES
