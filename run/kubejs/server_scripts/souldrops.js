@@ -1,6 +1,4 @@
-onEvent('entity.death', event => {
-    soulsLogic(event)
-}) 
+onEvent('entity.death', soulsLogic) 
 
 let spawnSoulAt = (e, playSound) => {
     console.log("spawning soul at " + e.x + " " + e.y + " " + e.z)
@@ -35,8 +33,8 @@ let soulsLogic = (event) => {
 }
 
 let checkSoulDrops = (event) => {
-    for (const x of event.level.players) {
-        if (x.stages.has("drop_souls")) {
+    for (const player of event.level.players) {
+        if (player.stages.has("drop_souls")) {
             return true;
         }
     }
@@ -45,13 +43,13 @@ let checkSoulDrops = (event) => {
 
 onEvent('player.logged_in', event => {
     if (event.player.stages.has("drop_souls")) {
-        for (const x of event.level.players) {
-            if (x.stages.has("drop_souls")) continue;
-            x.stages.give("drop_souls")
+        for (const player of event.level.players) {
+            if (player.stages.has("drop_souls")) continue;
+            player.stages.give("drop_souls")
         }
     } else {
-        for (const x of event.level.players) {
-            if (x.stages.has("drop_souls")) {
+        for (const player of event.level.players) {
+            if (player.stages.has("drop_souls")) {
                 event.player.stages.give("drop_souls")
                 break;
             }

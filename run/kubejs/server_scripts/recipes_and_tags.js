@@ -26,7 +26,8 @@ onEvent('recipes', event => {
 					'omgamod:woodsteel_plate', 'minecraft:glow_berries', 'omgamod:woodsteel_plate',
 					'minecraft:golden_carrot', 'omgamod:woodsteel_plate', 'minecraft:sunflower'
 					]);
-	event.shaped('omgamod:creepersteel_block', ['s','s'], {s: "omgamod:creepersteel_slab"})
+	event.shaped('omgamod:creepersteel_block', ['s',
+												's'], {s: "omgamod:creepersteel_slab"})
 	
 	/// NETHERITE
 	event.recipes.create.pressing('omgamod:netherite_plate', "minecraft:netherite_ingot");
@@ -46,53 +47,7 @@ onEvent('recipes', event => {
 	)
 
 	/// COLORFUL STEEL GEAR
-	const inter1 = 'create:incomplete_precision_mechanism'
-	event.recipes.createSequencedAssembly(['omgamod:night_vision_helm'],'minecraft:iron_helmet',[
-		event.recipes.createFilling(inter1, [inter1, Fluid.of('omgamod:molten_redsteel', ingot)]),
-		event.recipes.createDeploying(inter1, [inter1, 'minecraft:glass']),
-		event.recipes.createDeploying(inter1, [inter1, 'minecraft:string']),
-		event.recipes.createPressing(inter1, inter1)
-	]).transitionalItem(inter1).loops(4) // set the transitional item and the loops (amount of repetitions)
-
-	const inter2 = 'create:incomplete_precision_mechanism'
-	event.recipes.createSequencedAssembly(['omgamod:fertilizer_spray_empty'],'minecraft:glass_bottle',[ 
-	event.recipes.createFilling(inter2, [inter2, Fluid.of('omgamod:molten_woodsteel', ingot)]),
-	event.recipes.createDeploying(inter2, [inter2, 'create:mechanical_pump']),
-	event.recipes.createDeploying(inter2, [inter2, 'minecraft:lever']),
-	event.recipes.create.cutting(inter2, inter2)
-	]).transitionalItem(inter2).loops(4) // set the transitional item and the loops (amount of repetitions)
-
-	const inter3 = 'create:incomplete_precision_mechanism'
-	event.recipes.createSequencedAssembly(['omgamod:goldsteel_drill'],"create:mechanical_drill",[ 
-	event.recipes.createFilling(inter3, [inter3, Fluid.of('omgamod:molten_goldsteel', ingot)]),
-	event.recipes.createDeploying(inter3, [inter3, 'minecraft:redstone']),
-	event.recipes.createDeploying(inter3, [inter3, "create:cogwheel"]),
-	event.recipes.create.pressing(inter3, inter3)
-	]).transitionalItem(inter3).loops(4) // set the transitional item and the loops (amount of repetitions)
-
-	const inter4 = 'create:incomplete_precision_mechanism'
-	event.recipes.createSequencedAssembly(['omgamod:tnt_cannon'],"create:potato_cannon",[ 
-	event.recipes.createFilling(inter4, [inter4, Fluid.of('omgamod:molten_creepersteel', ingot)]),
-	event.recipes.createDeploying(inter4, [inter4, 'minecraft:flint_and_steel']),
-	event.recipes.createDeploying(inter4, [inter4, "minecraft:dropper"]),
-	event.recipes.create.cutting(inter4, inter4)
-	]).transitionalItem(inter4).loops(4) // set the transitional item and the loops (amount of repetitions)
-
-	const inter5 = 'create:incomplete_precision_mechanism'
-	event.recipes.createSequencedAssembly(['omgamod:prismasteel_flippers'],"diamond_boots",[ 
-	event.recipes.createFilling(inter5, [inter5, Fluid.of('omgamod:molten_prismasteel', ingot)]),
-	event.recipes.createDeploying(inter5, [inter5, Item.of('tconstruct:large_plate', '{Material:"tconstruct:cobalt"}')]),
-	event.recipes.createDeploying(inter5, [inter5, "minecraft:phantom_membrane"]),
-	event.recipes.create.cutting(inter5, inter5)
-	]).transitionalItem(inter5).loops(4) // set the transitional item and the loops (amount of repetitions)
-
-	const inter6 = 'create:incomplete_precision_mechanism'
-	event.recipes.createSequencedAssembly(['omgamod:skyseekers'],"elytra",[ 
-	event.recipes.createFilling(inter6, [inter6, Fluid.of('omgamod:molten_skysteel', ingot)]),
-	event.recipes.createDeploying(inter6, [inter6, "minecraft:leather_chestplate"]),
-	event.recipes.createDeploying(inter6, [inter6, "feather"]),
-	event.recipes.create.pressing(inter6, inter6)
-	]).transitionalItem(inter6).loops(4) // set the transitional item and the loops (amount of repetitions)
+	colorfulGear(event) // set the transitional item and the loops (amount of repetitions)
 
 	
 	/// DABIUM LINE
@@ -125,7 +80,7 @@ onEvent('recipes', event => {
 	event.recipes.minecraft.crafting_shaped('cod_spawn_egg', [' b ', 'beb', ' b '], fish_obj)
 	// Guardian
 	event.recipes.minecraft.crafting_shapeless('guardian_spawn_egg', ['4x water_bucket', 'egg', '4x water_bucket'])
-	event.recipes.minecraft.crafting_shapeless('guardian_spawn_egg', ['4x prismarine_shard', 'egg', '4x prismarine_shard у '])
+	event.recipes.minecraft.crafting_shapeless('guardian_spawn_egg', ['4x prismarine_shard', 'egg', '4x prismarine_shard'])
 	
 
 
@@ -291,3 +246,53 @@ onEvent('block.tags', event => {
 		event.get("minecraft:beacon_base_blocks").add("omgamod:" + metal + "_block")
 	})
 })
+
+function colorfulGear(event) {
+	const inter1 = 'create:incomplete_precision_mechanism'
+	event.recipes.createSequencedAssembly(['omgamod:night_vision_helm'], 'minecraft:iron_helmet', [
+		event.recipes.createFilling(inter1, [inter1, Fluid.of('omgamod:molten_redsteel', ingot)]),
+		event.recipes.createDeploying(inter1, [inter1, 'minecraft:glass']),
+		event.recipes.createDeploying(inter1, [inter1, 'minecraft:string']),
+		event.recipes.createPressing(inter1, inter1)
+	]).transitionalItem(inter1).loops(4) // set the transitional item and the loops (amount of repetitions)
+
+	const inter2 = 'create:incomplete_precision_mechanism'
+	event.recipes.createSequencedAssembly(['omgamod:fertilizer_spray_empty'], 'minecraft:glass_bottle', [
+		event.recipes.createFilling(inter2, [inter2, Fluid.of('omgamod:molten_woodsteel', ingot)]),
+		event.recipes.createDeploying(inter2, [inter2, 'create:mechanical_pump']),
+		event.recipes.createDeploying(inter2, [inter2, 'minecraft:lever']),
+		event.recipes.create.cutting(inter2, inter2)
+	]).transitionalItem(inter2).loops(4) // set the transitional item and the loops (amount of repetitions)
+
+	const inter3 = 'create:incomplete_precision_mechanism'
+	event.recipes.createSequencedAssembly(['omgamod:goldsteel_drill'], "create:mechanical_drill", [
+		event.recipes.createFilling(inter3, [inter3, Fluid.of('omgamod:molten_goldsteel', ingot)]),
+		event.recipes.createDeploying(inter3, [inter3, 'minecraft:redstone']),
+		event.recipes.createDeploying(inter3, [inter3, "create:cogwheel"]),
+		event.recipes.create.pressing(inter3, inter3)
+	]).transitionalItem(inter3).loops(4) // set the transitional item and the loops (amount of repetitions)
+
+	const inter4 = 'create:incomplete_precision_mechanism'
+	event.recipes.createSequencedAssembly(['omgamod:tnt_cannon'], "create:potato_cannon", [
+		event.recipes.createFilling(inter4, [inter4, Fluid.of('omgamod:molten_creepersteel', ingot)]),
+		event.recipes.createDeploying(inter4, [inter4, 'minecraft:flint_and_steel']),
+		event.recipes.createDeploying(inter4, [inter4, "minecraft:dropper"]),
+		event.recipes.create.cutting(inter4, inter4)
+	]).transitionalItem(inter4).loops(4) // set the transitional item and the loops (amount of repetitions)
+
+	const inter5 = 'create:incomplete_precision_mechanism'
+	event.recipes.createSequencedAssembly(['omgamod:prismasteel_flippers'], "diamond_boots", [
+		event.recipes.createFilling(inter5, [inter5, Fluid.of('omgamod:molten_prismasteel', ingot)]),
+		event.recipes.createDeploying(inter5, [inter5, Item.of('tconstruct:large_plate', '{Material:"tconstruct:cobalt"}')]),
+		event.recipes.createDeploying(inter5, [inter5, "minecraft:phantom_membrane"]),
+		event.recipes.create.cutting(inter5, inter5)
+	]).transitionalItem(inter5).loops(4) // set the transitional item and the loops (amount of repetitions)
+
+	const inter6 = 'create:incomplete_precision_mechanism'
+	event.recipes.createSequencedAssembly(['omgamod:skyseekers'], "elytra", [
+		event.recipes.createFilling(inter6, [inter6, Fluid.of('omgamod:molten_skysteel', ingot)]),
+		event.recipes.createDeploying(inter6, [inter6, "minecraft:leather_chestplate"]),
+		event.recipes.createDeploying(inter6, [inter6, "feather"]),
+		event.recipes.create.pressing(inter6, inter6)
+	]).transitionalItem(inter6).loops(4)
+}
